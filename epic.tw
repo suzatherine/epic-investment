@@ -622,7 +622,7 @@ And one word that demonstrates some kind of strength.
 
 
 :: EI-07 {"position":"448,476","size":"100,100"}
-<<set $passage to "EI-05">><<set $nextpassage to "EI-08">><<audio ":all" stop>><<audio "EI_07" play>><<set $map = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
+<<set $passage to "EI-05">><<set $nextpassage to "EI-08">><<audio ":all" stop>><<audio "EI_07" play>><<set $map = setup.generateDirectionsMap([51.51694851585253, -0.08974665457793725],[51.51712210122807, -0.0905405884134174])>>
 <main>
  
 <h2 class="tradingname">$stabilityname $opportunityname $strengthname</h2>
@@ -667,7 +667,7 @@ You have space in your portfolio for one. Which will you close on?
 
 
 :: EI-09A {"position":"390,716","size":"100,100"}
-<<set $passage to "EI-09A">><<set $nextpassage to "EI-10">><<audio ":all" stop>><<audio "EI_09A" play>><<set $map1 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
+<<set $passage to "EI-09A">><<set $nextpassage to "EI-10">><<audio ":all" stop>><<audio "EI_09A" play>><<set $map1 = setup.generateDirectionsMap([51.51712210122807, -0.0905405884134174],[51.51318914905516, -0.09147383074234947])>>
 <main><<set $tally -= 1>>
  
 Signed off by client. Closing on Girdler, 1449, quarter century. Sec, sec. It’s yours! 
@@ -700,7 +700,7 @@ $map1
 
 
 :: EI-09B {"position":"513,716","size":"100,100"}
-<<set $passage to "EI-09B">><<set $nextpassage to "EI-10">><<audio ":all" stop>><<audio "EI_09B" play>><<set $map2 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
+<<set $passage to "EI-09B">><<set $nextpassage to "EI-10">><<audio ":all" stop>><<audio "EI_09B" play>><<set $map2 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.515441063732275, -0.09241821563548816])>>
 <main><<set $tally += 1>>
  
 Signed off by client. Closing on Armourer, 1449, quarter century. Sec, sec. It’s yours!
@@ -821,7 +821,7 @@ All I need is your sign-off.
 
 
 :: EI-13A {"position":"381,1196","size":"100,100"}
-<<set $passage to "EI-13A">><<set $nextpassage to "EI-14">><<audio ":all" stop>><<audio "EI_13A" play>><<set $map3 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
+<<set $passage to "EI-13A">><<set $nextpassage to "EI-14">><<audio ":all" stop>><<audio "EI_13A" play>><<set $map3 = setup.generateDirectionsMap([51.515441063732275, -0.09241821563548816],[51.51773077098211, -0.08785270985178921])>>
 <main><<set $tally -= 1>>
 Got it. Sec, sec. Done. You’ve invested in a new surveillance system. Two additional guards and a refurb for their living quarters. It’s the best CCTV available in the 1920s.
 
@@ -844,7 +844,7 @@ $map3
 
 
 :: EI-13B {"position":"521,1195","size":"100,100"}
-<<set $passage to "EI-13B">><<set $nextpassage to "EI-14">><<audio ":all" stop>><<audio "EI_13B" play>><<set $map4 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
+<<set $passage to "EI-13B">><<set $nextpassage to "EI-14">><<audio ":all" stop>><<audio "EI_13B" play>><<set $map4 = setup.generateDirectionsMap([51.515441063732275, -0.09241821563548816],[51.516641366744395, -0.08926837307096959])>>
 <main><<set $tally += 1>>
 Got it. Sec, sec. Done. You’ve sold your floor of the building.
 
@@ -896,7 +896,7 @@ Cable and Wireless Ltd promise a fast return but it’s unclear if they have any
 
 
 :: EI-15A {"position":"393,1458","size":"100,100"}
-<<set $passage to "EI-15A">><<set $nextpassage to "EI-16A">><<audio ":all" stop>><<audio "EI_15A" play>><<set $map6 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
+<<set $passage to "EI-15A">><<set $nextpassage to "EI-16A">><<audio ":all" stop>><<audio "EI_15A" play>>
 <main>
 <<set $tally -= 1>>
  
@@ -911,8 +911,6 @@ And that’s just the beginning. Oh dear.
 When your floor faced damage from the Blitz, you had to fork out huge amounts of cash. If you had signed with Foreign Office’s insurance plan, the government would have covered your loss. This is not good.
 
 I can mitigate the damage but I will need to sell some core assets. We need to look like we’re humbling ourselves for the financial regulators too. So don’t take it personally, but I need you to remove a word from your trading name.
-
-$map6
 
 
 <<timed 10s>>
