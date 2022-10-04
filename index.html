@@ -99,6 +99,10 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
 	<!-- UUID://50CA173C-50F4-4323-A03D-66B99D5E62AB// --><tw-storydata name="Epic Investment" startnode="7" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="50CA173C-50F4-4323-A03D-66B99D5E62AB" zoom="1" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+@font-face {
+  font-family: "Big John";
+  src: url("/assets/fonts/bigjohn.otf") format("opentype");
+}
 
 /* GENERICS */
 html {
@@ -369,25 +373,9 @@ margin-inline-end: 10px;
 margin-block-end: 10px
 }
 
-.door-container{
-  display:flex;
-  flex-direction: row;
-justify-content: space-around;
-  align-items:center;
-  text-align: right;
-}
-
-.door-item{
-  display:flex;
-  flex-direction:column
-}
-
-.door-item > button > img {
-  max-width: 7rem
-}
-
-.door-item > span {
-  text-align: center
+h2.tradingname{
+   font-family: "Big John";
+  font-size: 2.5rem
 }
 
 textarea{
@@ -564,7 +552,7 @@ setup.checkForRepeats = (array,element) => {
 &lt;&lt;cacheaudio &quot;EI_11A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_11A.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;EI_11B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_11B.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;EI_12&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_12.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;EI_13&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_13.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;EI_13B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_13B.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;EI_13A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_13A.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;EI_13A(1)&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_13A(1).mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;EI_14&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_14.mp3&quot;&gt;&gt;
@@ -604,7 +592,7 @@ You have two options:
 &lt;&lt;button &quot;start&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;EI-05&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="end" tags="" position="100,625" size="100,100">&lt;&lt;set $passage to &quot;end&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;end&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $endMap = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])&gt;&gt;
+/* &lt;&lt;include &quot;footer&quot;&gt;&gt; */</tw-passagedata><tw-passagedata pid="8" name="end" tags="" position="100,625" size="100,100">&lt;&lt;set $passage to &quot;end&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;end&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $endMap = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])&gt;&gt;
 &lt;main&gt;
 End location
 
@@ -673,7 +661,7 @@ And one word that demonstrates some kind of strength.
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="EI-07" tags="" position="448,476" size="100,100">&lt;&lt;set $passage to &quot;EI-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;EI-08&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;EI_07&quot; play&gt;&gt;&lt;&lt;set $map = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])&gt;&gt;
 &lt;main&gt;
  
-$stabilityname $opportunityname $strengthname
+&lt;h2 class=&quot;tradingname&quot;&gt;$stabilityname $opportunityname $strengthname&lt;/h2&gt;
 
 Sounds perfectly obtuse. Let’s get this show on the road.
 
@@ -918,16 +906,19 @@ I can mitigate the damage but I will need to sell some core assets. We need to l
 
 $map6
 
-&lt;div class=&quot;namespace&quot;&gt;
-$stabilityname $opportunityname $strengthname
-&lt;/div&gt;
 
+&lt;&lt;timed 10s&gt;&gt;
+
+&lt;div class=&quot;namespace&quot;&gt;
+&lt;h2 class=&quot;tradingname&quot;&gt;$stabilityname $opportunityname $strengthname&lt;/h2&gt;
+&lt;/div&gt;
 &lt;&lt;button &quot;Remove a word&quot;&gt;&gt;
 &lt;&lt;replace &quot;.namespace&quot;&gt;&gt;
-	$stabilityname $opportunityname
+	&lt;h2 class=&quot;tradingname&quot;&gt;$stabilityname $opportunityname&lt;/h2&gt;
 &lt;&lt;/replace&gt;&gt;
 &lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;EI-16A&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/button&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
  
  
 &lt;/main&gt;
@@ -946,7 +937,7 @@ And that’s just the beginning. When your floor faced damage from the Blitz, yo
 This is a magnificent aspect of your portfolio. We should signal to the market that you’re bouncing back. Let’s add another word to your trading name. Something to demonstrate expansion?
 
 &lt;div class=&quot;namespace&quot;&gt;
-$stabilityname $opportunityname $strengthname
+&lt;h2 class=&quot;tradingname&quot;&gt;$stabilityname $opportunityname $strengthname&lt;/h2&gt;
 &lt;/div&gt;
 
 &lt;&lt;textbox &quot;$addedname&quot; &quot;&quot;&gt;&gt;
@@ -968,7 +959,7 @@ $stabilityname $opportunityname $strengthname
 &lt;main&gt;
 &lt;&lt;set $name to $stabilityname +&quot; &quot;+$opportunityname&gt;&gt;
 
-$name
+&lt;h2 class=&quot;tradingname&quot;&gt;$name&lt;/h2&gt;
 
 Ah, it doesn&#39;t sound the same, but I’m sure you can come up with a good explanation for the change to keep shareholders happy? Maybe rehearse something on our way to the park?
 
@@ -979,7 +970,7 @@ $map7
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="EI-16B" tags="" position="520,1585" size="100,100">&lt;&lt;set $passage to &quot;EI-16B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;EI-17&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;EI_16B&quot; play&gt;&gt;&lt;&lt;set $map8 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])&gt;&gt;
 &lt;main&gt;
-$name
+&lt;h2 class=&quot;tradingname&quot;&gt;$name&lt;/h2&gt;
 
 How does that work for you? I love the four words. In a way, they now tell a story. I wonder if you could put together a slogan before we reach our next destination?
 

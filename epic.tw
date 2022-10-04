@@ -14,6 +14,10 @@ Epic Investment
 
 :: Story Stylesheet [stylesheet]
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+@font-face {
+  font-family: "Big John";
+  src: url("/assets/fonts/bigjohn.otf") format("opentype");
+}
 
 /* GENERICS */
 html {
@@ -284,25 +288,9 @@ margin-inline-end: 10px;
 margin-block-end: 10px
 }
 
-.door-container{
-  display:flex;
-  flex-direction: row;
-justify-content: space-around;
-  align-items:center;
-  text-align: right;
-}
-
-.door-item{
-  display:flex;
-  flex-direction:column
-}
-
-.door-item > button > img {
-  max-width: 7rem
-}
-
-.door-item > span {
-  text-align: center
+h2.tradingname{
+   font-family: "Big John";
+  font-size: 2.5rem
 }
 
 textarea{
@@ -487,7 +475,7 @@ setup.checkForRepeats = (array,element) => {
 <<cacheaudio "EI_11A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_11A.mp3">>
 <<cacheaudio "EI_11B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_11B.mp3">>
 <<cacheaudio "EI_12" "https://www.youhavefoundconey.net/tgksnd/EI/EI_12.mp3">>
-<<cacheaudio "EI_13" "https://www.youhavefoundconey.net/tgksnd/EI/EI_13.mp3">>
+<<cacheaudio "EI_13B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_13B.mp3">>
 <<cacheaudio "EI_13A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_13A.mp3">>
 <<cacheaudio "EI_13A(1)" "https://www.youhavefoundconey.net/tgksnd/EI/EI_13A(1).mp3">>
 <<cacheaudio "EI_14" "https://www.youhavefoundconey.net/tgksnd/EI/EI_14.mp3">>
@@ -548,7 +536,7 @@ You have two options:
 <<button "start">><<set $prevpass to $passage>><<goto "EI-05">><</button>>
 
 </main>
-<<include "footer">>
+/* <<include "footer">> */
 
 
 :: end {"position":"100,625","size":"100,100"}
@@ -637,7 +625,7 @@ And one word that demonstrates some kind of strength.
 <<set $passage to "EI-05">><<set $nextpassage to "EI-08">><<audio ":all" stop>><<audio "EI_07" play>><<set $map = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
 <main>
  
-$stabilityname $opportunityname $strengthname
+<h2 class="tradingname">$stabilityname $opportunityname $strengthname</h2>
 
 Sounds perfectly obtuse. Let’s get this show on the road.
 
@@ -926,16 +914,19 @@ I can mitigate the damage but I will need to sell some core assets. We need to l
 
 $map6
 
-<div class="namespace">
-$stabilityname $opportunityname $strengthname
-</div>
 
+<<timed 10s>>
+
+<div class="namespace">
+<h2 class="tradingname">$stabilityname $opportunityname $strengthname</h2>
+</div>
 <<button "Remove a word">>
 <<replace ".namespace">>
-	$stabilityname $opportunityname
+	<h2 class="tradingname">$stabilityname $opportunityname</h2>
 <</replace>>
 <<timed 3s>><<set $prevpass to $passage>><<goto "EI-16A">><</timed>>
 <</button>>
+<</timed>>
  
  
 </main>
@@ -958,7 +949,7 @@ And that’s just the beginning. When your floor faced damage from the Blitz, yo
 This is a magnificent aspect of your portfolio. We should signal to the market that you’re bouncing back. Let’s add another word to your trading name. Something to demonstrate expansion?
 
 <div class="namespace">
-$stabilityname $opportunityname $strengthname
+<h2 class="tradingname">$stabilityname $opportunityname $strengthname</h2>
 </div>
 
 <<textbox "$addedname" "">>
@@ -984,7 +975,7 @@ $stabilityname $opportunityname $strengthname
 <main>
 <<set $name to $stabilityname +" "+$opportunityname>>
 
-$name
+<h2 class="tradingname">$name</h2>
 
 Ah, it doesn't sound the same, but I’m sure you can come up with a good explanation for the change to keep shareholders happy? Maybe rehearse something on our way to the park?
 
@@ -999,7 +990,7 @@ $map7
 :: EI-16B {"position":"520,1585","size":"100,100"}
 <<set $passage to "EI-16B">><<set $nextpassage to "EI-17">><<audio ":all" stop>><<audio "EI_16B" play>><<set $map8 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
 <main>
-$name
+<h2 class="tradingname">$name</h2>
 
 How does that work for you? I love the four words. In a way, they now tell a story. I wonder if you could put together a slogan before we reach our next destination?
 
