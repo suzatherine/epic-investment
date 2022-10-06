@@ -6,7 +6,7 @@ Epic Investment
 {
 	"ifid": "50CA173C-50F4-4323-A03D-66B99D5E62AB",
 	"format": "SugarCube",
-	"format-version": "2.34.1",
+	"format-version": "2.36.1",
 	"start": "landing",
 	"zoom": 1
 }
@@ -500,11 +500,12 @@ setup.checkForRepeats = (array,element) => {
 <header>Epic Investment</header>
 
 
-:: footer {"position":"100,353","size":"100,100"}
+:: footersimple {"position":"100,353","size":"100,100"}
 <footer><div class="nav-item replay"><<button "Replay">><<goto $passage>><</button>> </div>
 <div class="nav-item end"><<button "Take me to the end">><<set $prevpass to $passage>><<goto "lost">><</button>></div></footer>
 
-:: footer2 {"position":"99,485","size":"100,100"}
+
+:: footer {"position":"99,485","size":"100,100"}
 <footer>
 <div class="nav-item back"><<button "<">><<goto $prevpass>><</button>></div>
 <div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div>
@@ -512,10 +513,12 @@ setup.checkForRepeats = (array,element) => {
 <div class="nav-item forward"><<button ">">><<set $prevpass to $passage>><<goto $nextpassage>><</button>></div>
 </footer>
 
-:: footerend {"position":"99,485","size":"100,100"}
+
+:: footerend {"position":"219,485","size":"100,100"}
 <footer>
 <div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div>
 </footer>
+
 
 :: lost {"position":"253,41","size":"100,100"}
 <<set $passage to "lost">>
@@ -550,58 +553,70 @@ $endMap
 <<include "footerend">>
 
 
-
 :: EI-05 {"position":"449,226","size":"100,100"}
 <<set $passage to "EI-05">><<set $nextpassage to "EI-06">><<audio ":all" stop>><<audio "EI_05" play>>
 <main>
-Hi, hi, yes: it’s me. Shreya. It’s such a pleasure to cross paths again. In the same timezone, in the same place. Welcome back to the city!
+<div id="mount"></div>
+  
+<<timed 0s>><<replace "#mount">><<type 55ms>>Hi, yes, it's me, Shreya. 
 
-Wow. Your reputation really does proceed you, I remember your suits being special, but this one is another level. You must be turning heads and stopping traffic. Sorry, I know you’re a down-to-business person. I should give you the headlines.
+It's such a pleasure to cross paths again, in the same timezone in the same place. 
 
-I’ve been managing your portfolio: it’s all pretty stable at the moment.
+Welcome back to the city! <</type>><</replace>><</timed>>  
+<<timed 12s>><<replace "#mount">><<type 65ms>>Wow, your reputation really does precede you. 
 
-I took your instructions seriously. You are, after all, my most important client. And no, I don’t say that to everyone. 
+I remember your suits being special. But this one is another level. 
 
-I know your time is valuable. I’ve tried to do as much as I can independently. I've already acted on your two Moorgate investments, 84 is doing well, but there are other local opportunities I want to run past you. 
+You must be turning heads and stopping traffic. Sorry, I know you're a down-to-business person. <</type>><</replace>><</timed>>  
+<<timed 30s>><<replace "#mount">><<type 53ms>>I should give you the headlines. 
 
-Some major openings have appeared across time in the city. We’re going to open the market tomorrow with a stronger portfolio than we have today, right? 
+I've been managing your portfolios - all pretty stable at the moment. I took your instructions seriously. 
 
-I know. I’m being a bit optimistic. Which reminds me, as your banker, I’ll always try to be realistic with you. Optimism is good in hospitals, but today I’m going to ask you to make some huge decisions. I’ve done as much research as I can, but my predictions can only take me so far. It’s much easier to track actual investments.
+You are, after all, my most important client. And no, I don't say that to everyone. <</type>><</replace>><</timed>>  
+<<timed 46s>><<replace "#mount">><<type 55ms>>I know your time is valuable. I've tried to do as much as I can independently. 
 
-I will advise you as best I can, but ultimately your assets are traded with your sign-off, and you need to be prepared for the unexpected.
+I've already acted on your two Morgate investments, 84 is doing well, but there are other local opportunities I want to run past you. <</type>><</replace>><</timed>>  
+<<timed 60s>><<replace "#mount">><<type 50ms>>Some major openings have appeared across time in the city. 
 
-But you know this. Sorry, I don’t want to patronise you. If you weren’t ready to deal with the unexpected, you’d never make a deal! You wouldn’t be in the industry of prediction. And you wouldn’t be the best.
+We're going to open the market tomorrow with a stronger portfolio than we have today, right? <</type>><</replace>><</timed>>  
+<<timed 70s>><<replace "#mount">><<type 55ms>>I know I'm being a bit optimistic. 
 
+Which reminds me, as your banker, I'll always try to be realistic with you. 
 
-<<timed 60s>><<set $prevpass to $passage>><<goto "EI-06">><</timed>>
+Optimism is good in hospitals, but today I'm going to ask you to make some huge decisions. <</type>><</replace>><</timed>>  
+<<timed 85s>><<replace "#mount">><<type 50ms>>I've done as much research as I can, but my predictions can only take me so far. 
 
- 
- 
+It's much easier to track actual investments. <</type>><</replace>><</timed>>  
+<<timed 94s>><<replace "#mount">><<type 50ms>>I will advise you as best I can. 
+
+But ultimately your assets are traded with your sign-off. And you need to be prepared for the unexpected. <</type>><</replace>><</timed>>  
+<<timed 102s>><<replace "#mount">><<type 55ms>>But you know this, sorry, I don't want to patronize you. 
+
+If you weren't ready to deal with the unexpected. You'd never make a deal. You wouldn't be in the industry of prediction. And you wouldn't be the best.<</type>><</replace>><</timed>>
+
+/*CHECK TIMESTAMP*/
+<<timed 120s>><<set $prevpass to $passage>><<goto "EI-06">><</timed>>
 </main>
-<<include "footer2">>
-
-
-
+<<include "footer">>
 
 
 :: EI-06 {"position":"445,344","size":"100,100"}
 <<set $passage to "EI-05">><<set $nextpassage to "EI-07">><<audio ":all" stop>><<audio "EI_06" play>>
 <main>
-That’s the market about to open. Quick, we need a trading name for today. I want to make the assets easier to track through time. I need something with three words. You can delegate and discuss this with your team or give me all three. We want to keep it vague but easy to remember.
+<div id="mount"></div>
 
-I need one word that demonstrates stability.
+<<timed 1s>><<replace "#mount">><<type 50ms>>That's the market about to open. Quick, we need a trading name for today. I want to make the assets easier to track through time. <</type>><</replace>><</timed>>
+<<timed 9s>><<replace "#mount">><<type 50ms>>I need something with three words. You can delegate and discuss this with your team, or give me all three. We want to keep it vague but easy to remember. <</type>><</replace>><</timed>>
 
+<<timed 18s>><<replace "#mount">><<type 50ms>>I need one word that demonstrates stability.<</type>>
 <<textbox "$stabilityname" "">>
 
-I need one word that demonstrates opportunity.
-
+<<type 50ms>>I need one word that demonstrates opportunity.<</type>>
 <<textbox "$opportunityname" "">>
 
-And one word that demonstrates some kind of strength.
-
+<<type 50ms>>And one word that demonstrates some kind of strength. <</type>>
 <<textbox "$strengthname" "">>
-
-<<button "Enter">>
+<</replace>><</timed>><<timed 23s>><<button "Enter">>
   <<if $stabilityname isnot "" and $opportunityname isnot "" and $strengthname isnot "">>
   <<set $prevpass to $passage>>
   <<goto "EI-07">>
@@ -610,7 +625,7 @@ And one word that demonstrates some kind of strength.
   	Fill in all your names, please.
   <</replace>>
   <</if>>
-<</button>>
+<</button>><</timed>>
 <div class="feedback">
 </div>
 
@@ -622,16 +637,13 @@ And one word that demonstrates some kind of strength.
 
 
 :: EI-07 {"position":"448,476","size":"100,100"}
-<<set $passage to "EI-05">><<set $nextpassage to "EI-08">><<audio ":all" stop>><<audio "EI_07" play>><<set $map = setup.generateDirectionsMap([51.51694851585253, -0.08974665457793725],[51.51712210122807, -0.0905405884134174])>>
-<main>
- 
+<<set $passage to "EI-05">><<set $nextpassage to "EI-08">><<audio ":all" stop>><<audio "EI_07" play>><<set $map = setup.generateDirectionsMap([51.51711535985901, -0.09051914401030728],[51.517326229857304, -0.08935757297797439])>>
+<main><div id="mount"></div>
 <h2 class="tradingname">$stabilityname $opportunityname $strengthname</h2>
+<<type 50ms>> Sounds perfectly obtuse. Let’s get this show on the road. <</type>>
+<<timed 5s>>$map
 
-Sounds perfectly obtuse. Let’s get this show on the road.
-
-$map
-
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-08">><</button>>
+<<button "We're here">><<set $prevpass to $passage>><<goto "EI-08">><</button>><</timed>>
 
  
  
@@ -639,181 +651,273 @@ $map
 <<include "footer">>
 
 
-:: EI-08 {"position":"449,595","size":"100,100"}
+:: EI-08 {"position":"448,595","size":"100,100"}
 <<set $passage to "EI-08">><<audio ":all" stop>><<audio "EI_08" play>>
-<main><<set $tally to 0>>
+<main><<set $tally to 0>><div id="mount"></div>
  
-Here’s our first stop. Market’s opened in the 1400s and I have some prime real estate for you. Some real deals to be found in 1449.
+<<timed 0s>><<replace "#mount">><<type 57ms>>Here's our first stop. 
 
-This is the Girdler’s Company. Weird name, but they make… let me check. They make Girdles. Belts, straps, fine leather goods, the best Medieval cords on the market: there’s whispers that they’re going to get the Royal Charter in 1450. And you can see the developments they’ve made to the building.
+Markets opened in the 1400s and I have some prime real estate for you. Some real deals to be found in 1449. <</type>><</replace>><</timed>>  
+<<timed 11s>><<replace "#mount">><<type 50ms>>This is the Girdler's Company. 
 
-Keep that in mind. 1450 is really hot right now. I also have an opportunity round the corner, coming in at Armourer’s Hall. Take a look.
+Weird name but they make. let me check. <</type>><</replace>><</timed>>  
+<<timed 17s>><<replace "#mount">><<type 50ms>>They make girdles, belts, straps, fine leather goods, the best medieval cords on the market. 
 
-That’s a prime facade, a metallurgical gem in the heart of the City. This is another up-and-coming Medieval hot-spot. Apparently it’s the place to be for Brass and metal repair. Surely destined for Charter in the next five to ten.
+There's whispers that they're going to get the Royal Charter in 1450. <</type>><</replace>><</timed>>  
+<<timed 30s>><<replace "#mount">><<type 50ms>>And you can see the developments they've made to the building. 
 
-You got it? I’ll crunch the numbers. Sec. Sec. Okay. I can get you a juicy stake in either the Armourer’s Hall or the Girdler’s Company. Both are coming in at 1449, almost identical share price and both asking for a quarter-century probation period.
+Keep that in mind. 1450 is really hot right now. <</type>><</replace>><</timed>>  
+<<timed 39s>><<replace "#mount">><<type 55ms>>I also have an opportunity around the corner coming in at Armourer's Hall.
 
-You have space in your portfolio for one. Which will you close on?
+Take a look. That's a prime facade. A metallurgical gem in the heart of the city. <</type>><</replace>><</timed>>  
+<<timed 52s>><<replace "#mount">><<type 50ms>>This is another up-and-coming medieval hotspot. 
+
+Apparently it's the place to be for brass and metal repair. Surely destined for charter in the next five to ten. <</type>><</replace>><</timed>>  
+<<timed 64s>><<replace "#mount">><<type 50ms>>You got it? I'll crunch the numbers. Sec. Sec. <</type>><</replace>><</timed>>  
+<<timed 69s>><<replace "#mount">><<type 50ms>>Okay, I can get you a juicy stake in either the Armourers' Hall or the Girdlers' Company. 
+
+Both are coming in at 1449 almost identical share price and both asking for a quarter century probation period. <</type>><</replace>><</timed>>  
+<<timed 85s>><<replace "#mount">><<type 50ms>>You have space in your portfolio for one. Which will you close on?<</type>>
 
 <div class="menu-wrapper">
   <<button "The Girdler's Company">><<set $prevpass to $passage>><<goto "EI-09A">><</button>>
   
-  <<button "The Armourer's Hall">><<set $prevpass to $passage>><<goto "EI-09B">><</button>>
-</div>
+  <<button "The Armourer's Hall">><<set $prevpass to $passage>><<goto "EI-09B">><</button>></div><</replace>><</timed>>
+
  
  
 </main>
-<<include "footer">>
+<<include "footersimple">>
 
 
 :: EI-09A {"position":"390,716","size":"100,100"}
 <<set $passage to "EI-09A">><<set $nextpassage to "EI-10">><<audio ":all" stop>><<audio "EI_09A" play>><<set $map1 = setup.generateDirectionsMap([51.51712210122807, -0.0905405884134174],[51.51318914905516, -0.09147383074234947])>>
 <main><<set $tally -= 1>>
+<div id="mount"></div>
  
-Signed off by client. Closing on Girdler, 1449, quarter century. Sec, sec. It’s yours! 
+<<timed 0s>><<replace "#mount">><<type 55ms>>Signed off by client. Closing on Girdler, 1449, quarter century. 
 
-I’m going to run the numbers, see how it goes. Sec, sec.
+Sec. Sec. It's yours! I'm going to run the numbers. See how it goes. Sec. Sec. <</type>><</replace>><</timed>>  
+<<timed 13s>><<replace "#mount">><<type 50ms>>Ah, that wasn't the best call. 
 
-Ah.
+The Girdlers' Company had a small spike at the start of your investment. <</type>><</replace>><</timed>>  
+<<timed 22s>><<replace "#mount">><<type 50ms>>Royal Charter, as predicted, growing business for a few decades and the residencies within grew in value. 
 
-That wasn’t the best call.
+More developments kept the building prime through the 1500s. <</type>><</replace>><</timed>>  
+<<timed 34s>><<replace "#mount">><<type 50ms>>But there's turbulence in the third quartile of the 1600s Deary me! <</type>><</replace>><</timed>>  
+<<timed 41s>><<replace "#mount">><<type 60ms>>The Fire of London in 1666 caused serious damage. All that refurb gone to waste. 
 
-The Girdler’s Company had a small spike at the start of your investment, Royal Charter as predicted, growing business for a few decades and the residencies within grew in value. More developments kept the building prime through the 1500s. But there’s turbulence in the third quartile of the 1600s. 
+I can see they've even added an engraving. It's a pity you missed it. <</type>><</replace>><</timed>>  
+<<timed 56s>><<replace "#mount">><<type 50ms>>It's a shame you didn't go for the Armourer's. They grew, also got charter, but their building somehow avoided the fire. <</type>><</replace>><</timed>>  
+<<timed 65s>><<replace "#mount">><<type 50ms>>Ah, the gift of hindsight! 
 
-Deary me.
+If we cared too much about it, we wouldn't be in this game. <</type>><</replace>><</timed>>  
+<<timed 71s>><<replace "#mount">><<type 50ms>>I reshuffled some of your assets to absorb as much loss as possible. 
 
-The Fire of London in 1666 caused serious damage. All that refurb gone to waste. I can see they’ve even added an engraving: it’s a pity you missed it.
+But I think our best bet is to turn more of the space into rental homes. <</type>><</replace>><</timed>>  
+<<timed 81s>><<replace "#mount">><<type 50ms>>If you can lease 10 more rooms for a decade. I think we can swallow it.
 
-It’s a shame you didn’t go for the Armourer’s. They grew, also got Charter, but their building somehow avoided the fire. Ah, the gift of hindsight. If we cared too much about it, we wouldn’t be in this game.
+But we need to give the building a more residential feel. I'm not sure how to do that. <</type>><</replace>><</timed>>  
+<<timed 92s>><<replace "#mount">><<type 50ms>>I wonder which buildings around here were designed for residence. You can think about it or have your people think about it on Route. There's another opportunity I need you to see.<</type>><</replace>><</timed>>
 
-I reshuffled some of your assets to absorb as much loss as possible, but I think our  best bet is to turn more of the space into rental homes. If you can lease 10 more rooms for a decade, I think we can swallow it.
-
-But we need to give the building a more residential feel. I’m not sure how to do that. I wonder which buildings around here were designed for residents. You can think about it, or have your people think about it, en route. There’s another opportunity I need you to see.
-
+<<timed 100s>><<replace "#mount">>
 $map1
 
 <<button "We're here">><<set $prevpass to $passage>><<goto "EI-10">><</button>>
- 
- 
-</main>
-<<include "footer2">>
-
-
-:: EI-09B {"position":"513,716","size":"100,100"}
-<<set $passage to "EI-09B">><<set $nextpassage to "EI-10">><<audio ":all" stop>><<audio "EI_09B" play>><<set $map2 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.515441063732275, -0.09241821563548816])>>
-<main><<set $tally += 1>>
- 
-Signed off by client. Closing on Armourer, 1449, quarter century. Sec, sec. It’s yours!
-
-I’m going to run the numbers, see how it goes. Sec, sec.
-
-Ah.
-
-Fantastic.
-
-Brass is booming, exquisite growth through the 1500s. I’m glad we gambled on the Armourers in ‘449; they received the Royal Charter a few years later. And you really dodged a bullet with the other one. The Girdler Company took a massive hit in 1666. That Great Fire of London, sheesh. Maybe you saw the engraving on the side of the building. That’s coming through clear now.. And comparing it to your investment…
-
-Sec. Sec. YES! The Armourer’s Company miraculously avoided all fire damage. Your investment is still strong, crazy compared to the neighbouring buildings. The only thing is, if we want to maintain growth through the 1600s, you’ll need to make a few tweaks to the business. You have a stake so it’s your place to speak up.
-
-After the fire, there were restrictions on using hammers and forges. Makes sense, but it’s not great for brass. You still have a pristine workshop, a team of skilled crafts workers and a prime location in the City, but we need to pivot the business model for a few decades during the late 16s. Put brass on hold, what can we make instead? You can think about it, or have your people think about it, en route. There’s another opportunity I need you to see.
-
-$map2
-
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-10">><</button>>
- 
- 
-</main>
-<<include "footer2">>
-
-
-:: EI-10 {"position":"445,831","size":"100,100"}
-<<set $passage to "EI-10">><<audio ":all" stop>><<audio "EI_10" play>>
-<main>
-You’re going to thank me for this one. I’ve only gone and found you an in on the 1670s. This will diversify your portfolio, get you involved in an up-and-coming sector. The fires are extinguished. I have two major leaseholds available.
-
-Straight ahead, you’ll see St Lawrence Jewry Church. I know there’s a bit of work being done, but that’s the norm of this very special property. It’s one of the first Churches, we’re talking 1136. I tried to get you in on the 12th century but I think now is an even more exciting moment to get your hands on a small chunk: Christopher Wren, huge name in Architecture, is helping with the rebuild. He’s got his vision set on a gold-leaf interior to pair with those flashy windows. It’s high cost, but that’s where we find high-reward.
-
-And that’s not the only opportunity I’ve found in the ‘670s. Take a look to your right. I know, wow. I couldn’t believe it either: you have a chance to grab a small share of The Guildhall. It’s a bit newer than St Lawrence Jewry, this one is from the early 1400s. Gorgeous refurb after the fire and the footfall is a stand-out; the past fifty years have seen some high profile cases in the great hall. Henry Garnet, the one off the Gunpowder Plot, was sentenced for execution here. There’s lots of fancy buildings in this city, but you can’t buy history.
-
-Except, today you can. I’ve got a direct line to the sellers. You can invest in St Lawrence Jewry Church of The Guildhall. What are you closing on?
-
-<div class="menu-wrapper">
-  <<button "St Lawrence Jewry">><<set $prevpass to $passage>><<goto "EI-11A">><</button>>
-  <<button "The Guildhall">><<set $prevpass to $passage>><<goto "EI-11B">><</button>>
-</div>
+<</replace>><</timed>>
  
  
 </main>
 <<include "footer">>
 
 
-:: EI-11A {"position":"383,951","size":"100,100"}
-<<set $passage to "EI-11A">><<set $nextpassage to "EI-12">><<audio ":all" stop>><<audio "EI_11A" play>>
-<main><<set $tally -= 1>>
-Sec, sec, investing in St Lawrence Jewry Church. Closed.
+:: EI-09B {"position":"513,716","size":"100,100"}
+<<set $passage to "EI-09B">><<set $nextpassage to "EI-10">><<audio ":all" stop>><<audio "EI_09B" play>><<set $map2 = setup.generateDirectionsMap([51.51318914905516, -0.09147383074234947],[51.515451, -0.091948])>>
+<main><<set $tally += 1>>
+<div id="mount"></div>
+ 
+<<timed 0s>><<replace "#mount">><<type 50ms>>Signed off by client, closing on Armourer, 1449, quarter century. 
 
-Bravo. I mean, wait. Oh. That wasn’t the best call. Oh dear.
+Sec. Sec. It's yours! <</type>><</replace>><</timed>>  
+<<timed 8s>><<replace "#mount">><<type 50ms>>I'm going to run the numbers. See how it goes. Sec. Sec. <</type>><</replace>><</timed>>  
+<<timed 14s>><<replace "#mount">><<type 55ms>>Ah, fantastic. Brass is booming, exquisite growth through the 1500s. 
 
-I just crunched the numbers, and this investment does okay for a few decades, a steady climb; people love the new interior design. But the Church pivots and becomes more of a ceremonial space than a place of communal worship. It makes sense, as skyrocketing house prices force residents out of the area.
+I'm glad we gambled on the Armourer's in 1449. They received the Royal Charter a few years later. <</type>><</replace>><</timed>>  
+<<timed 30s>><<replace "#mount">><<type 50ms>>And you really dodged a bullet with the other one. 
 
-And to make matters worse, your prime real estate is a bit too prime. The neighbouring building, your other option, Guildhall, has a major glow up. Historians uncover the remains of a Roman Amphitheatre beneath it, there’s a buzz around artefacts that predate your Church, and legends say that Brutus of Troy once had a palace there. On all accounts, your footfall is down. Pedestrians walk straight past you to go next door.
+The Girdler Company took a massive hit in 1666. That Great Fire of London, sheesh. <</type>><</replace>><</timed>>  
+<<timed 41s>><<replace "#mount">><<type 50ms>>Maybe you saw the engraving on the side of the building? 
 
-Your portfolio has taken a slight hit, but we can mitigate the damage. Given that so many people are walking past the Church to go next door, we can monotise the space. Pick a few locations for some adverts, target the right products at the right people, and we should make some money back. Your people can definitely weigh-in on the strategy. Can you point them out on our way to Moorgate?
+That's coming through clear now and comparing it to your investment. Sec. Sec. <</type>><</replace>><</timed>>  
+<<timed 52s>><<replace "#mount">><<type 55ms>>Yes, the Armourer's Company miraculously avoided all fire damage.
 
+Your investment is still strong, crazy compared to the neighboring buildings. <</type>><</replace>><</timed>>  
+<<timed 64s>><<replace "#mount">><<type 50ms>>The only thing is, if we want to maintain growth through the 1600s you will need to make a few tweaks to the business. 
 
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-12">><</button>>
+You have a stake so it's your place to speak up. <</type>><</replace>><</timed>>  
+<<timed 74s>><<replace "#mount">><<type 50ms>>After the fire, there were restrictions on using hammers and forges. 
+
+Make sense, but it's not great for brass. <</type>><</replace>><</timed>>  
+<<timed 82s>><<replace "#mount">><<type 50ms>>You still have a pristine workshop, a team of skilled crafts workers and a prime location in the city. 
+
+But we need to pivot the business model for a few decades during the lead 1600s. <</type>><</replace>><</timed>>  
+<<timed 94s>><<replace "#mount">><<type 50ms>>Put brass on hold. What can we make instead? 
+
+You can think about it or have your people think about it en route. 
+
+There's another opportunity I need you to see.<</type>><</replace>><</timed>>
+
+<<timed 104s>>
+$map2
+
+<<button "We're here">><<set $prevpass to $passage>><<goto "EI-10">><</button>><</timed>>
  
  
 </main>
-<<include "footer2">>
+<<include "footer">>
+
+
+:: EI-10 {"position":"445,831","size":"100,100"}
+<<set $passage to "EI-10">><<audio ":all" stop>><<audio "EI_10" play>>
+<main>
+<div id="mount"></div>
+  
+<<timed 0s>><<replace "#mount">><<type 50ms>>You're going to thank me for this one. 
+
+I've only gone and found you an in on the 1670s. This will diversify your portfolio, get you involved in an up-and-coming sector.<</type>><</replace>><</timed>>   
+<<timed 11s>><<replace "#mount">><<type 55ms>>The fires are extinguished. 
+
+I have two major leaseholds available.<</type>><</replace>><</timed>>   
+<<timed 16s>><<replace "#mount">><<type 55ms>>Straight ahead, you'll see St. Lawrence Jewry church. I know there's a bit of work being done, but that's the norm of this very special property.<</type>><</replace>><</timed>>   
+<<timed 26s>><<replace "#mount">><<type 53ms>>It's one of the first churches, we're talking 1136. 
+
+I tried to get you in on the 12th century, but I think now is an even more exciting moment to get your hands on a small chunk.<</type>><</replace>><</timed>>   
+<<timed 38s>><<replace "#mount">><<type 55ms>>Christopher Wren, huge name in architecture, is helping with the rebuild. 
+
+He's got his vision set on a gold leaf interior to bear with those flashy windows.<</type>><</replace>><</timed>>   
+<<timed 49s>><<replace "#mount">><<type 50ms>>It's a high cost, but that's where we find high reward. 
+
+And that's not the only opportunity I found in the 1670s.<</type>><</replace>><</timed>>   
+<<timed 58s>><<replace "#mount">><<type 50ms>>Take a look to your right. I know, wow! 
+
+I couldn't believe it either. You have a chance to grab a small share of the Guildhall. 
+
+It's a bit newer than St. Lawrence Jewry.<</type>><</replace>><</timed>>   
+<<timed 72s>><<replace "#mount">><<type 55ms>>This one is from the early 1400s. 
+
+
+Gorgeous refurb after the fire and the footfall is a stand-out; the past 50 years have seen some high profile cases in the Great Hall.<</type>><</replace>><</timed>>   
+<<timed 85s>><<replace "#mount">><<type 55ms>>Henry Garnett, the one off the Gunpowder Plot, was sentenced for execution here. There's lots of fancy buildings in this city, but you can't buy history.<</type>><</replace>><</timed>>   
+<<timed 95s>><<replace "#mount">><<type 50ms>>Except today, you can. I've got a direct line to the sellers. 
+
+You can invest in St. Lawrence Jewry church, or the Guildhall.<</type>><</replace>><</timed>>   
+<<timed 105s>><<replace "#mount">><<type 50ms>>What are you closing on?<</type>>
+<div class="menu-wrapper">
+  <<button "St Lawrence Jewry">><<set $prevpass to $passage>><<goto "EI-11A">><</button>>
+  <<button "The Guildhall">><<set $prevpass to $passage>><<goto "EI-11B">><</button>>
+</div><</replace>><</timed>> 
+ 
+ 
+</main>
+<<include "footersimple">>
+
+
+:: EI-11A {"position":"383,951","size":"100,100"}
+<<set $passage to "EI-11A">><<set $nextpassage to "EI-12">><<audio ":all" stop>><<audio "EI_11A" play>><<set $map2a = setup.generateDirectionsMap([51.515451, -0.091948], [51.518367723552664, -0.08817740097553395])>>
+<main><<set $tally -= 1>>
+<div id="mount"></div>
+  
+<<timed 0s>><<replace "#mount">><<type 55ms>>Sec, sec, investing in St. Lawrence Jewry church. 
+
+Closed. <</type>><</replace>><</timed>>   
+<<timed 6s>><<replace "#mount">><<type 60ms>>Bravo! 
+
+I mean, wait. 
+
+Oh, that wasn't the best call. Oh dear.<</type>><</replace>><</timed>>   
+<<timed 18s>><<replace "#mount">><<type 55ms>>I just crunched the numbers and this investment does okay for a few decades, a steady climb, people love the new interior design. <</type>><</replace>><</timed>>   
+<<timed 27s>><<replace "#mount">><<type 55ms>>But the church pivots and becomes more of a ceremonial space than a place of communal worship. 
+
+It makes sense as skyrocketing house prices forced residents out of the area. <</type>><</replace>><</timed>>   
+<<timed 40s>><<replace "#mount">><<type 55ms>>And to make matters worse, your prime real estate is a bit too prime.
+
+The neighboring building, your other option, Guildhall, has a major glow up. <</type>><</replace>><</timed>>   
+<<timed 50s>><<replace "#mount">><<type 55ms>>Historians uncover the remains of a Roman amphitheater beneath it.
+
+There's a buzz around artifacts that predate your Church, and legend said that Brutus of Troy I once had a palace there.<</type>><</replace>><</timed>>   
+<<timed 62s>><<replace "#mount">><<type 55ms>>On all accounts, your footfall is down. 
+
+Pedestrians walk straight past you, to go next door. 
+
+Your portfolio has taken a slight hit but we can mitigate the damage. <</type>><</replace>><</timed>>   
+<<timed 74s>><<replace "#mount">><<type 50ms>>Given that so many people are walking past the church to go next door, we can monetize the space.<</type>><</replace>><</timed>>   
+<<timed 80s>><<replace "#mount">><<type 50ms>>Pick a few locations for some adverts, target the right products at the right people, and we should make some money back. <</type>><</replace>><</timed>>   
+<<timed 87.5s>><<replace "#mount">><<type 50ms>>Your people can definitely weigh in on the strategy. Can you point them out on our way to Moorgate?<</type>><</replace>><</timed>> 
+
+<<timed 92s>><<replace "#mount">>
+$map2a
+<<button "We're here">><<set $prevpass to $passage>><<goto "EI-12">><</button>><</replace>><</timed>>
+ 
+ 
+</main>
+<<include "footer">>
 
 
 :: EI-11B {"position":"522,951","size":"100,100"}
-<<set $passage to "EI-11B">><<set $nextpassage to "EI-12">><<audio ":all" stop>><<audio "EI_11B" play>>
+<<set $passage to "EI-11B">><<set $nextpassage to "EI-12">><<audio ":all" stop>><<audio "EI_11B" play>><<set $map2a = setup.generateDirectionsMap([51.515451, -0.091948], [51.518367723552664, -0.08817740097553395])>>
 <main><<set $tally += 1>>
-Sec, sec, investing in Guildhall. Closed.
+<div id="mount"></div>
+  
+<<timed 0s>><<replace "#mount">><<type 50ms>>Sec, sec, investing in Guildhall. Closed. Bravo! That was sec, sec.<</type>><</replace>><</timed>>   
+<<timed 10s>><<replace "#mount">><<type 50ms>>Yes, that was the right call. At first that seemed like the wrong call. There's been a lot of buzz around the church next door for a few decades, a steady climb.<</type>><</replace>><</timed>>   
+<<timed 21s>><<replace "#mount">><<type 50ms>>People love the new interior design. But then the church loses its regulars. Makes sense, as skyrocketing house prices force residents out of the area.<</type>><</replace>><</timed>>   
+<<timed 31s>><<replace "#mount">><<type 50ms>>Meanwhile, Guildhall, the building you invested in, has had a major glow up. Historians uncovered the remains of a Roman amphitheater beneath it.<</type>><</replace>><</timed>>   
+<<timed 42s>><<replace "#mount">><<type 50ms>>There's talk of artifacts that predate the church next door, and legends say that Brutus of Troy once had a palace there.<</type>><</replace>><</timed>>   
+<<timed 50s>><<replace "#mount">><<type 50ms>>On all accounts, your footfall is up. People enter to pay the government, or watch a criminal sentenced for execution. With death and taxes, you have a consistent stream of revenue.<</type>><</replace>><</timed>>   
+<<timed 62s>><<replace "#mount">><<type 50ms>>The only thing, and it's still good news, is that the City of London has bought you out for a sizable chunk. You make a huge profit, but your stake in this historical site is minor.<</type>><</replace>><</timed>>   
+<<timed 75s>><<replace "#mount">><<type 50ms>>The investment was good, but your ego takes a small hit. However, there is a clause in your buyout which stipulates your right to a legacy.<</type>><</replace>><</timed>>   
+<<timed 85s>><<replace "#mount">><<type 50ms>>The city lets you build a statue anywhere in the courtyard. I have no idea where they're going to put it. And goodness, imagine how you'd pose. You can get your proposal together on the way to Moorgate.<</type>><</replace>><</timed>> 
 
-Bravo. That was.. Sec, sec. Yes, that was the right call.
 
-At first, that seemed like the wrong call. There’s been a lot of buzz around the Church next door for a few decades, a steady climb; people love the new interior design. But then the Church loses its regulars: makes sense, as skyrocketing house prices force residents out of the area
-
-Meanwhile, Guildhall, the building you invested in, has had a major glow up. Historians uncover the remains of a Roman Amphitheatre beneath it, there’s talk of artefacts that predate the Church next door, and legends say that Brutus of Troy once had a palace there. On all accounts, your footfall is up. People enter to pay the government or watch a criminal sentenced for execution; with death and taxes you have a consistent stream of revenue.
-
-The only thing, and it’s still good news, is that The City of London has bought you out for a sizeable chunk. You make a huge profit, but your stake in this historical site is minor. The investment was good, but your ego takes a small hit. However: there is a clause in your buy-out which stipulates your right to a legacy; the City lets you build a statue anywhere in the courtyard. I have no idea where they’re going to put it? And, goodness, imagine how you’d pose? You can get your proposal together on our way to Moorgate?
-
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-12">><</button>>
+<<timed 92s>><<replace "#mount">>
+$map2a
+<<button "We're here">><<set $prevpass to $passage>><<goto "EI-12">><</button>><</replace>><</timed>>
  
  
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: EI-12 {"position":"450,1071","size":"100,100"}
 <<set $passage to "EI-12">><<audio ":all" stop>><<audio "EI_12" play>>
 <main>
-Pssst. Hi. Be discreet as I talk to you. We don’t want to raise alarms. I’ve been getting your affairs in order and there’s something I need to run past you.
+<div id="mount"></div>
+  
+<<timed 0s>><<replace "#mount">><<type 55ms>>Psst! Hi. Be discreet as I talk to you, we don't want to raise alarms.<</type>><</replace>><</timed>>    
+<<timed 10s>><<replace "#mount">><<type 50ms>>I've been getting your affairs in order, and there's something I need to run past you. 
 
-I have some intel from the 1920s you’ll want to know.
+I have some intel from the 1920s, you'll want to know.<</type>><</replace>><</timed>>    
+<<timed 20s>><<replace "#mount">><<type 50ms>>It's about the property you bought here 49 Moorgate, a few hundred years ago. 
 
-It’s about the property you bought here, 49 Moorgate, a few hundred years ago. Remember, I told you about it earlier?
+Remember I told you about it earlier? <</type>><</replace>><</timed>>   
+<<timed 28s>><<replace "#mount">><<type 55ms>>The investment has gradually grown, you're doing well. 
 
-The investment has gradually grown; you’re doing well.
+It's just, and it's nothing substantive yet, just earlier this year, another floor of the building was sold to the Soviet Union as part of a delicate trade deal.<</type>><</replace>><</timed>>    
+<<timed 45s>><<replace "#mount">><<type 50ms>>Your assets are now neighboring the closest thing Russia has to an embassy. 
 
-It’s just, and it’s nothing substantive, yet…
+Ever since that trade deal in 1921, there has been some suspicious activity outside the building. <</type>><</replace>><</timed>>   
+<<timed 58s>><<replace "#mount">><<type 55ms>>You can see it can't you? 
 
-Just earlier this year, another floor of the building was sold to the Soviet Union as part of a delicate trade-deal. Your assets are now neighbouring the closest thing Russia has to an embassy.
+Random people loitering, the feeling of being watched.<</type>><</replace>><</timed>>    
+<<timed 66s>><<replace "#mount">><<type 50ms>>An insider told me that there's heightened surveillance. 
 
-Ever since that trade deal in 1921, there has been some suspicious activity outside the building. You can see it? Can’t you? Random people loitering, the feeling of being watched.
-
-An insider told me that there’s heightened surveillance.
-
-I thought you’d want to know. If you want to heighten your own security in the building, we have an opportunity to make that investment. And if you want to get out, I can find a way to call it quits on this particular asset.
-
-All I need is your sign-off.
+I thought you'd want to know.<</type>><</replace>><</timed>>    
+<<timed 72s>><<replace "#mount">><<type 50ms>>If you want to heighten your own security in the building, we have an opportunity to make that investment.<</type>><</replace>><</timed>>    
+<<timed 77.5s>><<replace "#mount">>And if you want to get out I can find a way to call it quits on this particular asset. All I need is your sign off.
 
 <<button "Invest in security">><<set $prevpass to $passage>><<goto "EI-13A">><</button>>
 
-<<button "Sell your property">><<set $prevpass to $passage>><<goto "EI-13B">><</button>>
+<<button "Sell your property">><<set $prevpass to $passage>><<goto "EI-13B">><</button>><</replace>><</timed>> 
  
  
 </main>
@@ -823,98 +927,146 @@ All I need is your sign-off.
 :: EI-13A {"position":"381,1196","size":"100,100"}
 <<set $passage to "EI-13A">><<set $nextpassage to "EI-14">><<audio ":all" stop>><<audio "EI_13A" play>><<set $map3 = setup.generateDirectionsMap([51.515441063732275, -0.09241821563548816],[51.51773077098211, -0.08785270985178921])>>
 <main><<set $tally -= 1>>
-Got it. Sec, sec. Done. You’ve invested in a new surveillance system. Two additional guards and a refurb for their living quarters. It’s the best CCTV available in the 1920s.
+<div id="mount"></div>
+<<timed 0s>><<replace "#mount">><<type 60ms>>Got it! Sec, sec, sec. Done! 
 
-Sec. Sec, ah.
+You've invested in a new surveillance system, two additional guards, and a refurb for their living quarters. It's the best CCTV available in the 1920s.<</type>><</replace>><</timed>>   
+<<timed 15s>><<replace "#mount">><<type 50ms>>Sec, sec.<</type>><</replace>><</timed>>   
+<<timed 19s>><<replace "#mount">><<type 50ms>>I just got word from 1927. 
 
+I think we might have ruffled some feathers by flagging the security of the building.<</type>><</replace>><</timed>>   
+<<timed 27s>><<replace "#mount">><<type 50ms>>49 Moorgate was under surveillance before we upgraded our security, but it was mainly due to suspicions from the other floors. 
 
-I just got word from 1927. I think we might have ruffled some feathers by flagging the security of the building. 49 Moorgate was under surveillance before we upgraded our security, but it was mainly due to suspicions from the other floors. MI5 tapped all the calls coming in and out of the building; they found some fishy Soviet intelligence officers.
+MI5 tapped all the calls coming in and out of the building.<</type>><</replace>><</timed>>   
+<<timed 39s>><<replace "#mount">><<type 50ms>>They found some fishy Soviet intelligence officers. At 4:20pm, on 12th May 1927, 50 plainclothes detectives, plus additional uniformed police officers carried out a raid on the building.<</type>><</replace>><</timed>>   
+<<timed 53s>><<replace "#mount">><<type 50ms>>Smashed through countless hidden doors, locked vaults, booby traps on the other floors. 
 
-At 4:20pm on 12 May 1927, 50 plain clothes detectives plus additional uniformed police officers carried out a raid on the building. Smashed through countless hidden doors, locked vaults, booby traps on the other floors. They found tons of papers and secret communications between various international communist groups.
+They found tons of papers and secret communications between various international communist groups.<</type>><</replace>><</timed>>   
+<<timed 65s>><<replace "#mount">><<type 50ms>>Most of the damage has been repaired and I'll throw enough cash at some lawyers to get your name after the story. 
 
-Most of the damage has been repaired, and I’ll throw enough cash at some lawyers to get your name out of the story. But it’s costly, and upgrading your security wasn’t great optics. I’ll clean up that mess. You sneak off unnoticed. I’ll meet you at 84. And, maybe come up with a good cover story for why you’re here?
+But it's costly, and upgrading your security wasn't great optics.<</type>><</replace>><</timed>>   
+<<timed 77s>><<replace "#mount">><<type 60ms>>I'll clean up that mess. 
 
-$map3
+You sneak off, unnoticed! 
 
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-14">><</button>>
- 
- 
-</main>
-<<include "footer2">>
-
-
-:: EI-13B {"position":"521,1195","size":"100,100"}
-<<set $passage to "EI-13B">><<set $nextpassage to "EI-14">><<audio ":all" stop>><<audio "EI_13B" play>><<set $map4 = setup.generateDirectionsMap([51.515441063732275, -0.09241821563548816],[51.516641366744395, -0.08926837307096959])>>
-<main><<set $tally += 1>>
-Got it. Sec, sec. Done. You’ve sold your floor of the building.
-
-Sec. Sec, ah. That was a good call.
-
-I just got word from 1927. 49 Moorgate was under surveillance before we got out, but it was mainly due to suspicions from the other floors. MI5 tapped all the calls coming in and out of the building; they found some fishy Soviet intelligence officers.
-
-At 4:20pm on 12 May 1927, 50 plain clothes detectives plus additional uniformed police officers carried out a raid on the building. Smashedthrough countless hidden doors, locked vaults, booby traps on the other floors. They found tons of papers and secret communications between various international communist groups.
-
-Luckily you didn’t incur any financial damage. You got out just in time, turned a profit, even. There’s a slight diplomatic crisis that has ensued. Your selling seems a bit coincidental, ruffled some Soviet feathers, others think you were working with them. Press are asking questions. I’ll throw enough cash at some lawyers to get your name out of the narrative, but can you avoid any security systems whilst I take a phonecall? I’ll meet you round the corner.
-
-$map4
-
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-14">><</button>>
- 
- 
-</main>
-<<include "footer2">>
+I'll meet you at 84, and maybe come up with a good cover story for why you're here?<</type>><</replace>><</timed>> 
 
 
-:: EI-14 {"position":"452,1330","size":"100,100"}
-<<set $passage to "EI-14">><<audio ":all" stop>><<audio "EI_14" play>>
-<main>
-See Electra House over there?
+<<timed 85s>> $map3
 
-I have an opening here in the 1930s. It’s a turbulent period but I thought, after that kerfuffle in the 20s, you might want to hear this.
-
-You have the chance to invest in one of the floors. Two operations are currently housed across the building.
-
-There’s Cable and Wireless Limited, you’ve probably heard of them? The biggest telecoms provider at the moment. Half the world’s communications run through them. They’re sharing the space with The Foreign Office.
-
-You can buy some space but you’ll have to lease it to either entity.
-
-The Foreign Office has a capped rent, so it will take them longer to pay back your expenditure. I know, you’re looking for a good return ASAP. I just thought it might be tactical to make friends in high places. It might also be a risk; who knows?
-
-Cable and Wireless Ltd promise a fast return but it’s unclear if they have any more scope to grow. Telephone communication could become a saturated market in the next few decades. It’s your call, but I strongly encourage you to seize an opportunity at this junction.
-
-
-<div class="menu-wrapper">
-  <<button "Lease to Cable and Wireless Ltd">><<set $prevpass to $passage>><<goto "EI-15A">><</button>>
-  
-  <<button "Lease to The Foreign Office">><<set $prevpass to $passage>><<goto "EI-15B">><</button>>
-</div>
- 
+<<button "We're here">><<set $prevpass to $passage>><<goto "EI-14">><</button>><</timed>>
  
  
 </main>
 <<include "footer">>
 
 
+:: EI-13B {"position":"521,1195","size":"100,100"}
+<<set $passage to "EI-13B">><<set $nextpassage to "EI-14">><<audio ":all" stop>><<audio "EI_13B" play>><<set $map4 = setup.generateDirectionsMap([51.515441063732275, -0.09241821563548816],[51.516641366744395, -0.08926837307096959])>>
+<main><<set $tally += 1>> 
+<div id="mount"></div>
+  
+<<timed 0s>><<replace "#mount">><<type 50ms>>Got it. Sec, sec. You've sold your floor of the building. Sec. Sec.<</type>><</replace>><</timed>>    
+<<timed 9s>><<replace "#mount">><<type 55ms>>Ah, that was a good call. I just got word from 1927. 
+
+49 Moorgate was under surveillance before we got out, but it was mainly due to suspicions from the other floors.<</type>><</replace>><</timed>>    
+<<timed 22s>><<replace "#mount">><<type 50ms>>MI5 tapped all the calls coming in and out of the building. 
+
+They found some fishy Soviet intelligence officers.<</type>><</replace>><</timed>>    
+<<timed 30s>><<replace "#mount">><<type 53ms>>At 4:20pm, on 12th May 1927, 50 plainclothes detectives, plus additional uniformed police officers carried out a raid on the building.<</type>><</replace>><</timed>>    
+<<timed 40s>><<replace "#mount">><<type 50ms>>Smashed through countless hidden doors, locked vaults, booby traps on the other floors. 
+
+They found tons of papers and secret communications between various international communist groups.<</type>><</replace>><</timed>>    
+<<timed 51s>><<replace "#mount">><<type 50ms>>Luckily, you didn't incur any financial damage. 
+
+You got out just in time, turned a profit even. 
+
+There's a slight diplomatic crisis that has ensued.<</type>><</replace>><</timed>>    
+<<timed 62s>><<replace "#mount">><<type 50ms>>Your selling seems a bit coincidental, ruffled some Soviet feathers. 
+
+Others think you were working with them. 
+
+Press are asking questions.<</type>><</replace>><</timed>>    
+<<timed 72s>><<replace "#mount">><<type 50ms>>I'll throw enough cash at some lawyers to get your name out of the narrative. 
+
+But can you avoid any security systems while I take a phone call? 
+
+I'll meet you around the corner.<</type>><</replace>><</timed>> 
+/*MAP SHOWING UP Q LOW DOWN THE SCREEN*/
+<<timed 80s>> <<replace "#mount">>$map4
+
+<<button "We're here">><<set $prevpass to $passage>><<goto "EI-14">><</button>><</replace>><</timed>>
+ 
+ 
+</main>
+<<include "footer">>
+
+
+:: EI-14 {"position":"452,1330","size":"100,100"}
+<<set $passage to "EI-14">><<audio ":all" stop>><<audio "EI_14" play>>
+<main>
+<div id="mount"></div>
+  
+<<timed 0s>><<replace "#mount">><<type 50ms>>See Electra House over there? 
+
+I have an opening here in the 1930s. It's a turbulent period. 
+
+But I thought after that kerfuffle in the 20s, you might want to hear this.<</type>><</replace>><</timed>>    
+<<timed 11s>><<replace "#mount">><<type 50ms>>You have the chance to invest in one of the floors. 
+
+Two operations are currently housed across the building.<</type>><</replace>><</timed>>    
+<<timed 17s>><<replace "#mount">><<type 45ms>>There's Cable and Wireless limited, you've probably heard of them. 
+
+The biggest telecoms provider at the moment, half the world's communications run through them.<</type>><</replace>><</timed>>    
+<<timed 26s>><<replace "#mount">><<type 50ms>>They're sharing the space with the Foreign Office. 
+
+You can buy some space, but you'll have to lease it to either entity. 
+
+The Foreign Office has a capped rent so it will take them longer to pay back your expenditure.<</type>><</replace>><</timed>>    
+<<timed 40s>><<replace "#mount">><<type 50ms>>I know you're looking for a good return ASAP. 
+
+I just thought it might be tactical to make friends in high places. 
+
+It might also be at risk, who knows?<</type>><</replace>><</timed>>    
+<<timed 50s>><<replace "#mount">><<type 50ms>>Cable and Wireless limited promise a fast return, but it's unclear if they have any more scope to grow. 
+
+Telephone communication could become a saturated market in the next few decades.<</type>><</replace>><</timed>>    
+<<timed 61s>><<replace "#mount">>It's your call but I strongly encourage you to seize an opportunity at this junction.
+
+<div class="menu-wrapper">
+  <<button "Lease to Cable and Wireless Ltd">><<set $prevpass to $passage>><<goto "EI-15A">><</button>>
+  
+  <<button "Lease to The Foreign Office">><<set $prevpass to $passage>><<goto "EI-15B">><</button>>
+</div><</replace>><</timed>> 
+ 
+ 
+ 
+</main>
+<<include "footersimple">>
+
+
 :: EI-15A {"position":"393,1458","size":"100,100"}
 <<set $passage to "EI-15A">><<set $nextpassage to "EI-16A">><<audio ":all" stop>><<audio "EI_15A" play>>
-<main>
-<<set $tally -= 1>>
- 
-Bold choice. Let me track your investment. Sec, sec, sec.
+<main><<set $tally -= 1>>
+<div id="mount"></div>
+  
+<<timed 0s>><<replace "#mount">><<type 60ms>>Bold choice! Let me track your investment. Sec. Sec. Sec.<</type>><</replace>><</timed>>    
+<<timed 8s>><<replace "#mount">><<type 55ms>>Ah, disaster. I should have predicted this. 
 
-Ah. Disaster.
+Only a decade after you invested, Cable and Wireless merged with the foreign office during World War Two.<</type>><</replace>><</timed>>    
+<<timed 19s>><<replace "#mount">><<type 53ms>>Not only is your rental income capped at the government's rate, you also raised some suspicions about your movements, moving so proximate to British intelligence.<</type>><</replace>><</timed>>    
+<<timed 30s>><<replace "#mount">><<type 50ms>>And that's just the beginning. Oh dear! 
 
-I should have predicted this. Only a decade after you invested, Cable and Wireless merged with the Foreign Office during World War II. Not only is your rental income capped at the Government’s rate, you also raised some suspicions about your movements, moving so proximate to British intelligence.
+When your floor faced damage from the Blitz, you had to fork out huge amounts of cash.<</type>><</replace>><</timed>>    
+<<timed 40s>><<replace "#mount">><<type 50ms>>If you had signed with the foreign office's insurance plan, the government would have covered your loss. 
 
-And that’s just the beginning. Oh dear.
+This is not good!<</type>><</replace>><</timed>>    
+<<timed 49s>><<replace "#mount">><<type 50ms>>I can mitigate the damage, but I will need to sell some core assets. <</type>><</replace>><</timed>>   
+<<timed 54s>><<replace "#mount">><<type 50ms>>We need to look like we're humbling ourselves for the financial regulators too. So don't take it personally but I need you to remove a word from your trading name.<</type>><</replace>><</timed>> 
 
-When your floor faced damage from the Blitz, you had to fork out huge amounts of cash. If you had signed with Foreign Office’s insurance plan, the government would have covered your loss. This is not good.
-
-I can mitigate the damage but I will need to sell some core assets. We need to look like we’re humbling ourselves for the financial regulators too. So don’t take it personally, but I need you to remove a word from your trading name.
-
-
-<<timed 10s>>
-
+/*THIS BUTTON SHOWS UP Q FAR DOWN THE PAGE*/
+<<timed 62s>>
+<<replace "#mount">>
 <div class="namespace">
 <h2 class="tradingname">$stabilityname $opportunityname $strengthname</h2>
 </div>
@@ -924,28 +1076,36 @@ I can mitigate the damage but I will need to sell some core assets. We need to l
 <</replace>>
 <<timed 3s>><<set $prevpass to $passage>><<goto "EI-16A">><</timed>>
 <</button>>
+<</replace>>
 <</timed>>
  
  
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: EI-15B {"position":"519,1455","size":"100,100"}
 <<set $passage to "EI-15B">><<audio ":all" stop>><<audio "EI_15B" play>>
-<main>
-<<set $tally += 1>>
- 
-Bold choice. Let me track your investment. Sec, sec, sec.
+<main><<set $tally += 1>>
+<div id="mount"></div>
+  
+<<timed 0s>><<replace "#mount">><<type 55ms>>Bold choice, let me track your investment. Sec, sec, sec. 
 
-Ah. Ah, Um. YES! Excellent decision.
+Ah, ah, um.<</type>><</replace>><</timed>>   
+<<timed 12s>><<replace "#mount">><<type 55ms>>Yes! Excellent decision! 
 
-I know we were stuck on wireless for a moment, but only a decade after you invested, Cable and Wireless merged with the Foreign Office during World War II. You wouldn’t have gained much revenue renting to the private company, but you could have raised some suspicions about your movements, moving so proximate to British intelligence without supporting the government.
+I know we were stuck on wireless for a moment, but only a decade after you invested Cable and Wireless merged with the Foreign Office during World War Two.<</type>><</replace>><</timed>>    
+<<timed 25s>><<replace "#mount">><<type 45ms>>You wouldn't have gained much revenue from renting to the private company.<</type>><</replace>><</timed>>    
+<<timed 29.5s>><<replace "#mount">><<type 45ms>>But you could have raised some suspicions about your movements, moving so proximate to British intelligence without supporting the government.<</type>><</replace>><</timed>>    
+<<timed 37.7s>><<replace "#mount">><<type 45ms>>And that's just the beginning. 
 
-And that’s just the beginning. When your floor faced damage from the Blitz, you had a huge amount of support from the Foreign Office’s insurance plan. You’d be rinsed without it.
+When your floor faced damage from the Blitz, you had a huge amount of support from the foreign office's insurance plan. You'd be rinsed without it.<</type>><</replace>><</timed>>    
+<<timed 48.5s>><<replace "#mount">><<type 45ms>>This is a magnificent aspect of your portfolio. 
 
-This is a magnificent aspect of your portfolio. We should signal to the market that you’re bouncing back. Let’s add another word to your trading name. Something to demonstrate expansion?
+We should signal to the market that you're bouncing back!<</type>><</replace>><</timed>>    
+<<timed 55.5s>><<replace "#mount">>Let's add another word to your trading name. 
 
+Something do demonstrate expansion.
 <div class="namespace">
 <h2 class="tradingname">$stabilityname $opportunityname $strengthname</h2>
 </div>
@@ -955,13 +1115,13 @@ This is a magnificent aspect of your portfolio. We should signal to the market t
 
 <<button "Add a name">>
 <<if $addedname isnot "">>
-	<<set $name to $stabilityname + " " +$opportunityname + " " + $strengthname + " " + $addedname>>
-	<<replace ".namespace">>$name<</replace>>
-	<<timed 3s>><<set $prevpass to $passage>><<goto "EI-17">><</timed>>
+	<<set $name to $stabilityname + " " +$opportunityname + " " + $strengthname + " " + $addedname>> 
+	(<<replace ".namespace">>$name<</replace>>)
+	(<<timed 3s>><<set $prevpass to $passage>><<goto "EI-16B">>)<</timed>>
 <<else>>
 	<<replace ".error">>You need to add a name<</replace>>
 <</if>>	
-<</button>>
+<</button>><</replace>><</timed>> 
  
  
 </main>
@@ -971,123 +1131,144 @@ This is a magnificent aspect of your portfolio. We should signal to the market t
 :: EI-16A {"position":"393,1581","size":"100,100"}
 <<set $passage to "EI-16A">><<set $nextpassage to "EI-17">><<audio ":all" stop>><<audio "EI_16A" play>><<set $map7 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
 <main>
+<div id="mount"></div>
 <<set $name to $stabilityname +" "+$opportunityname>>
 
 <h2 class="tradingname">$name</h2>
 
-Ah, it doesn't sound the same, but I’m sure you can come up with a good explanation for the change to keep shareholders happy? Maybe rehearse something on our way to the park?
-
+<<timed 0s>><<replace "#mount">><<type 50ms>>Er, it doesn't sound the same, but I'm sure you can come up with a good explanation for the change to keep shareholders happy?<</type>><</replace>><</timed>> 
+<<timed 7s>><<replace "#mount">><<type 50ms>>Maybe rehearse something on our way to the park?<</type>><</replace>><</timed>> 
+<<timed 11s>>
 $map7
 
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-17">><</button>> 
+<<button "We're here">><<set $prevpass to $passage>><<goto "EI-17">><</button>> <</timed>>
  
 </main>
-<<include "footer2">>
+<<include "footersimple">>
 
 
 :: EI-16B {"position":"520,1585","size":"100,100"}
 <<set $passage to "EI-16B">><<set $nextpassage to "EI-17">><<audio ":all" stop>><<audio "EI_16B" play>><<set $map8 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
 <main>
+<div id="mount"></div>
 <h2 class="tradingname">$name</h2>
 
-How does that work for you? I love the four words. In a way, they now tell a story. I wonder if you could put together a slogan before we reach our next destination?
+<<timed 0s>><<replace "#mount">><<type 50ms>>How does that work for you? I love the four words! In a way they now tell a story!<</type>><</replace>><</timed>>  
+<<timed 6s>><<replace "#mount">><<type 50ms>>I wonder if you could put together a slogan before we reach our next destination<</type>><</replace>><</timed>> 
 
-$map8
+<<timed 10s>>$map8
 
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-17">><</button>> 
+<<button "We're here">><<set $prevpass to $passage>><<goto "EI-17">><</button>> <</timed>>
  
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: EI-17 {"position":"455,1716","size":"100,100"}
 <<set $passage to "EI-17">><<audio ":all" stop>><<audio "EI_17" play>>
 <main>
-Now this choice is a bit more local.
+<div id="mount"></div> 
+  
+<<timed 0s>><<replace "#mount">><<type 50ms>>Now, this choice is a bit more local. 
 
-I mean, literally: I work right over there.
+I mean, literally, I work right over there. But it's also an opening from 2023. 
 
-But it’s also an opening from 2023. You have the chance to invest in this patch.
+You have the chance to invest in this patch.<</type>><</replace>><</timed>>    
+<<timed 11s>><<replace "#mount">><<type 50ms>>There's a development opportunity in the middle of the park, or an opportunity in a disused part of an old tube tunnel.<</type>><</replace>><</timed>>    
+<<timed 18s>><<replace "#mount">><<type 55ms>>The two headlines are the hut in the middle of the park, or an underground carpark. 
 
-There’s a development opportunity in the middle of the park, or an opportunity in a disused part of an old tube tunnel.
+It's a question of car versus foot, land versus commerce, gray versus green.<</type>><</replace>><</timed>>    
+<<timed 30s>><<replace "#mount">><<type 50ms>>I'm sure you can think of tons of different uses for that stall in the middle. 
 
-The two headlines are the hut in the middle of the park, or an underground car-park.
+I can't calculate the footfall at the moment.<</type>><</replace>><</timed>>    
+<<timed 37s>><<replace "#mount">><<type 55ms>>But take a look and make a guess. 
 
-It’s a question of car vs foot, land vs commerce, grey vs green.
-
-I’m sure you can think of tons of different uses for that stall in the middle.
-
-I can’t calculate the footfall at the moment, but take a look and make a guess.
-
-How many people walk past in a minute, and how many would that be per year?
-
-And just look at how many cars drive here every minute. Imagine if you gave them a place to park.
-
-The possibilities are endless. Yet, right now, the possibilities are the hut or the road, and the window is closing.
-
-What is your 2023 circus headliner?
+How many people walk past in a minute? And how many would that be per year?<</type>><</replace>><</timed>>    
+<<timed 46s>><<replace "#mount">><<type 50ms>>And just look at how many cars drive here every minute. Imagine if you gave them a place to park. The possibilities are endless.<</type>><</replace>><</timed>>    
+<<timed 54s>><<replace "#mount">>Yet right now the possibilities are the hut or the road and the window is closing. What is your 2023 circus headliner.
 
 <div class="menu-wrapper">
   <<button "Invest in the car park">><<set $prevpass to $passage>><<goto "EI-18A">><</button>>
   
   <<button "Invest in the hut">><<set $prevpass to $passage>><<goto "EI-18B">><</button>>
-</div>
+</div><</replace>><</timed>> 
 
+ 
+ 
+</main>
+<<include "footersimple">>
+
+
+:: EI-18A {"position":"382,1846","size":"100,100"}
+<<set $passage to "EI-18A">><<set $nextpassage to "EI-19">><<audio ":all" stop>><<audio "EI_18A" play>>
+<main><<set $tally -= 1>>
+<div id="mount"></div> 
+  
+<<timed 0s>><<replace "#mount">><<type 55ms>>I'm locking that in! Sec, sec. Done! 
+
+I'll track your investment through the next 15 years. Sec. Sec.<</type>><</replace>><</timed>>    
+<<timed 11s>><<replace "#mount">><<type 55ms>>No, this isn't good. 
+
+The traffic restrictions in this part of town became tougher and tougher. It's a popular policy. 
+
+By 2029, most people's support pedestrianising most of the city.<</type>><</replace>><</timed>>    
+<<timed 25s>><<replace "#mount">><<type 50ms>>It's great news for that hut, but you gambled on the wrong side. 
+
+What's more, all your income from the parking is being taxed to offset carbon emissions from vehicles.<</type>><</replace>><</timed>>   
+<<timed 36s>><<replace "#mount">><<type 45ms>>You can try and lobby against the restrictions, but your relationship with the government has been a bit fraught this millennium.<</type>><</replace>><</timed>>    
+<<timed 43s>><<replace "#mount">><<type 50ms>>In any case, by 2031, it's pretty unfashionable to avoid the climate issue, especially when you have backing from a substantial number of micro-donors.<</type>><</replace>><</timed>>    
+<<timed 54s>><<replace "#mount">><<type 50ms>>They might hold off divesting from your fund if we match this catastrophic loss with some symbolic gesture?<</type>><</replace>><</timed>>   
+<<timed 61s>><<replace "#mount">><<type 50ms>>Perhaps you could sponsor the upkeep of some trees, five or six good ones in the park, which ones seemed the most impressive or the easiest to advertise? 
+
+You can point them out as we walk.<</type>><</replace>><</timed>> 
+
+<<timed 77s>><<set $prevpass to $passage>><<goto "EI-19">><</timed>>
  
  
 </main>
 <<include "footer">>
 
 
-:: EI-18A {"position":"382,1846","size":"100,100"}
-<<set $passage to "EI-18A">><<set $nextpassage to "EI-19">><<audio ":all" stop>><<audio "EI_18A" play>>
-<main><<set $tally -= 1>>
-I’m locking that in. Sec, sec, done.
-
-I’ll track your investment through the next fifteen years.
-
-Sec, sec, nah. This isn’t good.
-
-The traffic restrictions in this part of town become tougher and tougher. It’s a popular policy; by 2029, most people support pedestrianising most of the city. It’s great news for that hut. But you gambled on the wrong side. What’s more, all your income from the parking is being taxed to offset carbon emissions from vehicles. You can try and lobby against the restrictions, but your relationship with the government has been a bit fraught this millennium. In any case, by 2031, it’s pretty unfashionable to avoid the climate issue, especially when you have backing from a substantial number of microdonors. They might hold off divesting from your fund if we match this catastrophic loss with some symbolic gesture. Perhaps you could sponsor the upkeep of some trees, five or six good ones in this park? Which ones seem the most impressive, or the easiest to advertise? You can point them out as we walk.
-
-<<timed 3s>><<set $prevpass to $passage>><<goto "EI-19">><</timed>>
- 
- 
-</main>
-<<include "footer2">>
-
-
 :: EI-18B {"position":"525,1850","size":"100,100"}
 <<set $passage to "EI-18B">><<set $nextpassage to "EI-19">><<audio ":all" stop>><<audio "EI_18B" play>>
 <main>
 <<set $tally += 1>>
- 
-I’m locking that in. Sec, sec, done.
+<div id="mount"></div>
+  
+<<timed 0s>><<replace "#mount">><<type 65ms>>I'm locking that in. Sec, sec. Done. 
 
-I’ll track your investment through the next fifteen.
+I'll track your investment through the next 15. Sec. Sec.<</type>><</replace>><</timed>>    
+<<timed 11s>><<replace "#mount">><<type 50ms>>Wow, good call. 
 
-Sec, sec, wow. Good call.
+The traffic restrictions in this part of town become tougher and tougher. 
 
-The traffic restrictions in this part of town become tougher and tougher. It’s a popular policy; by 2029, most people support pedestrianising most of the city. And that’s excellent news for you. Luckily you didn’t go for the parking; that would have resulted in all sorts of taxes and pressure to offset your profits from carbon vehicles.Your small business thrives. Workers and visitors in the city waft past your hut for decades to come. Your investment strengthens in value. There’s a slight blip in 2031 where some highstreet chains feel threatened by your success, so they pressure the government to ban products with disposable packaging being sold in the park. The restrictions are passed with an ‘anti-litter’ sentiment, even though they’re clearly made to target you. However, you find a clever way to keep selling your products without any disposable packaging materials... I’m sure? Do you have any ideas?
+It's a popular policy, by 2029 most people support pedestrianising most of the city. And that's excellent news for you.<</type>><</replace>><</timed>>   
+<<timed 27s>><<replace "#mount">><<type 45ms>>Luckily, you didn't go for the parking, that would have resulted in all sorts of taxes and pressure to offset your profits from carbon vehicles.<</type>><</replace>><</timed>>    
+<<timed 35s>><<replace "#mount">><<type 50ms>>Your small business thrives, workers and visitors in the city waft past your hut for decades to come. 
 
-<<timed 20s>><<set $prevpass to $passage>><<goto "EI-19">><</timed>>
+Your investment strengthens in value.<</type>><</replace>><</timed>>    
+<<timed 45s>><<replace "#mount">><<type 50ms>>There's a slight blip in 2031, where some high street chains feel threatened by your success. 
+
+So they pressure the government to ban products with disposable packaging being sold in the park.<</type>><</replace>><</timed>>    
+<<timed 57s>><<replace "#mount">><<type 50ms>>The restrictions are passed with an anti litter sentiment, even though they're clearly made to target to you.<</type>><</replace>><</timed>>    
+<<timed 64s>><<replace "#mount">><<type 50ms>>However, you'll find a clever way to keep selling your products without any disposable packaging materials, I'm sure! Do you have any ideas?<</type>><</replace>><</timed>> 
+
+<<timed 80s>><<set $prevpass to $passage>><<goto "EI-19">><</timed>>
  
  
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: EI-19 {"position":"457,1976","size":"100,100"}
 <<set $passage to "EI-19">><<audio ":all" stop>><<audio "EI_19" play>><<set $map9 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
 <main>
-There’s my office, right over there!
+<div id="mount"></div>
 
-I’m going to head up pre the market opening.
+<<timed 0s>><<replace "#mount">><<type 50ms>>There's my office, right over there! I'm going to head up, pre the market opening. I need a coffee before I engage with 2022! <</type>><</replace>><</timed>>  
+<<timed 9s>><<replace "#mount">><<type 50ms>>Keep your eyes peeled, if you see anything you want to invest in. I'll call about your portfolio a bit later.<</type>><</replace>><</timed>> 
 
-I need a coffee before I engage with 2022.
-
-Keep your eyes peeled if you see anything you want to invest in? I’ll call about your portfolio a bit later.
-
+<<timed 21s>><<replace "#mount">>
 $map9
 
 <<button "We're here">>
@@ -1096,7 +1277,7 @@ $map9
 <<else>>
 	<<set $prevpass to $passage>><<goto "EI-20B">>
 <</if>>
-<</button>>
+<</button>><</replace>><</timed>>
 
  
  
@@ -1107,40 +1288,38 @@ $map9
 :: EI-20A {"position":"394,2110","size":"100,100"}
 <<set $passage to "EI-20A">><<set $nextpassage to "end">><<audio ":all" stop>><<audio "EI_20A" play>>
 <main>
-Hi, it’s me?
+<div id="mount"></div>
+  
+<<timed 1s>><<replace "#mount">><<type 50ms>>Hi, it's me. Where are you? Oh, really?<</type>><</replace>><</timed>>    
+<<timed 8s>><<replace "#mount">><<type 50ms>>Well, I hope you're wearing something because I'm certainly not covering you any longer. 
 
-Where are you?
+You made some disastrous decisions earlier.<</type>><</replace>><</timed>>    
+<<timed 17s>><<replace "#mount">><<type 50ms>>The market isn't thanking you. 
 
-Oh. Really? Well, I hope you are wearing something, because I’m certainly not covering you any longer. You made some disastrous decisions earlier. The market isn’t thanking you. In many ways, your portfolio is like that bath house.
+In many ways your portfolio is like that bath house. At first. It looks so tiny from the outside but who knew it could descend so low? 
 
-At first, it looked tiny from the outside. But who knew it could descend so low.
+Go down and sort yourself out.<</type>><</replace>><</timed>> 
 
-Go down and sort yourself out.
-
-<<timed 2-s>><<set $prevpass to $passage>><<goto "end">><</timed>>
+<<timed 38s>><<set $prevpass to $passage>><<goto "end">><</timed>>
  
  
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: EI-20B {"position":"520,2113","size":"100,100"}
 <<set $passage to "EI-20B">><<set $nextpassage to "end">><<audio ":all" stop>><<audio "EI_20B" play>>
 <main>
-Hi, it’s me?
-
-Where are you?
-
-Oh. Really? That’s certainly one way to celebrate.
-
-I know I put you through a journey and a half, but your portfolio is stronger than when we started. The market just opened; you’re a rockstar.
-
-Go down, enjoy a bath or a drink or a dance or a meal or a debate or a new book or a private function or whatever the property is used for when you meet it. It’s a dynamic asset; if we could predict the future, this game would be no fun.
-
-<<timed 3s>><<set $prevpass to $passage>><<goto "end">><</timed>>
+<div id="mount"></div>
+  
+<<timed 1s>><<replace "#mount">><<type 50ms>>Hi, it's me. Where are you? Oh, really? That's certainly one way to celebrate.<</type>><</replace>><</timed>>    
+<<timed 12s>><<replace "#mount">><<type 50ms>>I know I put you through a journey and a half, but your portfolio is stronger than when we started.<</type>><</replace>><</timed>>    
+<<timed 18s>><<replace "#mount">><<type 50ms>>The market just opened. You're a rock star. Go down enjoy a bath, or a drink, or dance, or a meal, or a debate, or new book, or a private function, or whatever the property is used for when you meet it.<</type>><</replace>><</timed>>   
+<<timed 33s>><<replace "#mount">><<type 50ms>>It's a dynamic asset. If we could predict the future, this game would be no fun.<</type>><</replace>><</timed>> 
+<<timed 45s>><<set $prevpass to $passage>><<goto "end">><</timed>>
  
  
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
