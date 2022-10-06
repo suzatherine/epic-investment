@@ -197,7 +197,7 @@ body{
   color:#fff;
   /* color:#000; */
   overflow:scroll;
-  background: #1c8f93;
+  background: #188081;
   /* padding: 1.5rem */
   display:flex;
   flex-direction: column
@@ -229,7 +229,7 @@ align-items: end;
   bottom: 0;
   padding: 2rem;
   width: 100%;
-background: #1c8f93;
+background: #188081;
 }
 
 nav{
@@ -521,7 +521,7 @@ setup.checkForRepeats = (array,element) => {
 
 
 :: lost {"position":"253,41","size":"100,100"}
-<<set $passage to "lost">>
+<<set $passage to "lost">><<audio ":all" stop>>
 <main>
 You have two options:
 
@@ -921,7 +921,7 @@ I thought you'd want to know.<</type>><</replace>><</timed>>
  
  
 </main>
-<<include "footer">>
+<<include "footersimple">>
 
 
 :: EI-13A {"position":"381,1196","size":"100,100"}

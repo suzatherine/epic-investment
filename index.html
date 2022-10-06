@@ -282,7 +282,7 @@ body{
   color:#fff;
   /* color:#000; */
   overflow:scroll;
-  background: #1c8f93;
+  background: #188081;
   /* padding: 1.5rem */
   display:flex;
   flex-direction: column
@@ -314,7 +314,7 @@ align-items: end;
   bottom: 0;
   padding: 2rem;
   width: 100%;
-background: #1c8f93;
+background: #188081;
 }
 
 nav{
@@ -578,7 +578,7 @@ setup.checkForRepeats = (array,element) => {
 &lt;div class=&quot;nav-item forward&quot;&gt;&lt;&lt;button &quot;&gt;&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto $nextpassage&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 &lt;/footer&gt;</tw-passagedata><tw-passagedata pid="5" name="footerend" tags="" position="219,485" size="100,100">&lt;footer&gt;
 &lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Start again&quot;&gt;&gt;&lt;&lt;goto &quot;landing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="6" name="lost" tags="" position="253,41" size="100,100">&lt;&lt;set $passage to &quot;lost&quot;&gt;&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="6" name="lost" tags="" position="253,41" size="100,100">&lt;&lt;set $passage to &quot;lost&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 &lt;main&gt;
 You have two options:
 
@@ -930,7 +930,7 @@ I thought you&#39;d want to know.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&l
  
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="EI-13A" tags="" position="381,1196" size="100,100">&lt;&lt;set $passage to &quot;EI-13A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;EI-14&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;EI_13A&quot; play&gt;&gt;&lt;&lt;set $map3 = setup.generateDirectionsMap([51.515441063732275, -0.09241821563548816],[51.51773077098211, -0.08785270985178921])&gt;&gt;
+&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="EI-13A" tags="" position="381,1196" size="100,100">&lt;&lt;set $passage to &quot;EI-13A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;EI-14&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;EI_13A&quot; play&gt;&gt;&lt;&lt;set $map3 = setup.generateDirectionsMap([51.515441063732275, -0.09241821563548816],[51.51773077098211, -0.08785270985178921])&gt;&gt;
 &lt;main&gt;&lt;&lt;set $tally -= 1&gt;&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 0s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Got it! Sec, sec, sec. Done! 
