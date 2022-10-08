@@ -7,17 +7,14 @@ Epic Investment
 	"ifid": "50CA173C-50F4-4323-A03D-66B99D5E62AB",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "landing",
+	"start": "EI-15A",
 	"zoom": 1
 }
 
 
 :: Story Stylesheet [stylesheet]
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
-@font-face {
-  font-family: "Big John";
-  src: url("/assets/fonts/bigjohn.otf") format("opentype");
-}
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 /* GENERICS */
 html {
@@ -289,7 +286,7 @@ margin-block-end: 10px
 }
 
 h2.tradingname{
-   font-family: "Big John";
+font-family: 'Archivo Black', sans-serif;
   font-size: 2.5rem
 }
 
@@ -436,7 +433,7 @@ iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
 iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=17&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
 const mount = document.getElementById("mapMount")
-console.log(iFrame)
+// console.log(iFrame)
 return iFrame
 // this.mapMount.appendChild(iFrame)
 }
@@ -467,11 +464,11 @@ setup.checkForRepeats = (array,element) => {
 <<cacheaudio "EI_06" "https://www.youhavefoundconey.net/tgksnd/EI/EI_06.mp3">>
 <<cacheaudio "EI_07" "https://www.youhavefoundconey.net/tgksnd/EI/EI_07.mp3">>
 <<cacheaudio "EI_08" "https://www.youhavefoundconey.net/tgksnd/EI/EI_08.mp3">>
-<<cacheaudio "EI_09" "https://www.youhavefoundconey.net/tgksnd/EI/EI_09.mp3">>
+
 <<cacheaudio "EI_09A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_09A.mp3">>
 <<cacheaudio "EI_09B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_09B.mp3">>
 <<cacheaudio "EI_10" "https://www.youhavefoundconey.net/tgksnd/EI/EI_10.mp3">>
-<<cacheaudio "EI_11" "https://www.youhavefoundconey.net/tgksnd/EI/EI_11.mp3">>
+
 <<cacheaudio "EI_11A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_11A.mp3">>
 <<cacheaudio "EI_11B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_11B.mp3">>
 <<cacheaudio "EI_12" "https://www.youhavefoundconey.net/tgksnd/EI/EI_12.mp3">>
@@ -497,7 +494,7 @@ setup.checkForRepeats = (array,element) => {
 
 
 :: header {"position":"100,225","size":"100,100"}
-<header>Epic Investment</header>
+<header><h2 class="tradingname">$stabilityname $opportunityname $strengthname</h2></header>
 
 
 :: footersimple {"position":"100,353","size":"100,100"}
@@ -575,7 +572,7 @@ I've been managing your portfolios - all pretty stable at the moment. I took you
 You are, after all, my most important client. And no, I don't say that to everyone. <</type>><</replace>><</timed>>  
 <<timed 46s>><<replace "#mount">><<type 55ms>>I know your time is valuable. I've tried to do as much as I can independently. 
 
-I've already acted on your two Morgate investments, 84 is doing well, but there are other local opportunities I want to run past you. <</type>><</replace>><</timed>>  
+I've already acted on your two Moorgate investments, 84 is doing well, but there are other local opportunities I want to run past you. <</type>><</replace>><</timed>>  
 <<timed 60s>><<replace "#mount">><<type 50ms>>Some major openings have appeared across time in the city. 
 
 We're going to open the market tomorrow with a stronger portfolio than we have today, right? <</type>><</replace>><</timed>>  
@@ -595,7 +592,7 @@ But ultimately your assets are traded with your sign-off. And you need to be pre
 If you weren't ready to deal with the unexpected. You'd never make a deal. You wouldn't be in the industry of prediction. And you wouldn't be the best.<</type>><</replace>><</timed>>
 
 /*CHECK TIMESTAMP*/
-<<timed 120s>><<set $prevpass to $passage>><<goto "EI-06">><</timed>>
+<<timed 125s>><<set $prevpass to $passage>><<goto "EI-06">><</timed>>
 </main>
 <<include "footer">>
 
@@ -603,20 +600,15 @@ If you weren't ready to deal with the unexpected. You'd never make a deal. You w
 :: EI-06 {"position":"445,344","size":"100,100"}
 <<set $passage to "EI-05">><<set $nextpassage to "EI-07">><<audio ":all" stop>><<audio "EI_06" play>>
 <main>
-<div id="mount"></div>
-
-<<timed 1s>><<replace "#mount">><<type 50ms>>That's the market about to open. Quick, we need a trading name for today. I want to make the assets easier to track through time. <</type>><</replace>><</timed>>
-<<timed 9s>><<replace "#mount">><<type 50ms>>I need something with three words. You can delegate and discuss this with your team, or give me all three. We want to keep it vague but easy to remember. <</type>><</replace>><</timed>>
-
-<<timed 18s>><<replace "#mount">><<type 50ms>>I need one word that demonstrates stability.<</type>>
+<div id="mount"></div><<timed 1s>><<replace "#mount">><<type 50ms>>That's the market about to open. Quick, we need a trading name for today. I want to make the assets easier to track through time. <</type>><</replace>><</timed>><<timed 9s>><<replace "#mount">><<type 50ms>>I need something with three words. You can delegate and discuss this with your team, or give me all three. We want to keep it vague but easy to remember. <</type>><</replace>><</timed>><<timed 18s>><<replace "#mount">><<type 50ms>>I need one word that demonstrates stability.<</type>>
 <<textbox "$stabilityname" "">>
 
 <<type 50ms>>I need one word that demonstrates opportunity.<</type>>
 <<textbox "$opportunityname" "">>
 
 <<type 50ms>>And one word that demonstrates some kind of strength. <</type>>
-<<textbox "$strengthname" "">>
-<</replace>><</timed>><<timed 23s>><<button "Enter">>
+<<textbox "$strengthname" "">><</replace>><</timed>><<timed 23s>>
+<<button "Enter">>
   <<if $stabilityname isnot "" and $opportunityname isnot "" and $strengthname isnot "">>
   <<set $prevpass to $passage>>
   <<goto "EI-07">>
@@ -633,7 +625,7 @@ If you weren't ready to deal with the unexpected. You'd never make a deal. You w
  
  
 </main>
-<<include "footer">>
+<<include "footersimple">>
 
 
 :: EI-07 {"position":"448,476","size":"100,100"}
@@ -652,8 +644,8 @@ If you weren't ready to deal with the unexpected. You'd never make a deal. You w
 
 
 :: EI-08 {"position":"448,595","size":"100,100"}
-<<set $passage to "EI-08">><<audio ":all" stop>><<audio "EI_08" play>>
-<main><<set $tally to 0>><div id="mount"></div>
+<<set $passage to "EI-08">><<audio ":all" stop>><<audio "EI_08" play>><main><<set $tally to 0>>
+<div id="mount"></div>
  
 <<timed 0s>><<replace "#mount">><<type 57ms>>Here's our first stop. 
 
@@ -720,7 +712,7 @@ But I think our best bet is to turn more of the space into rental homes. <</type
 But we need to give the building a more residential feel. I'm not sure how to do that. <</type>><</replace>><</timed>>  
 <<timed 92s>><<replace "#mount">><<type 50ms>>I wonder which buildings around here were designed for residence. You can think about it or have your people think about it on Route. There's another opportunity I need you to see.<</type>><</replace>><</timed>>
 
-<<timed 100s>><<replace "#mount">>
+<<timed 110s>><<replace "#mount">>
 $map1
 
 <<button "We're here">><<set $prevpass to $passage>><<goto "EI-10">><</button>>
@@ -868,7 +860,7 @@ $map2a
 <main><<set $tally += 1>>
 <div id="mount"></div>
   
-<<timed 0s>><<replace "#mount">><<type 50ms>>Sec, sec, investing in Guildhall. Closed. Bravo! That was sec, sec.<</type>><</replace>><</timed>>   
+<<timed 0s>><<replace "#mount">><<type 50ms>>Sec, sec, investing in Guildhall. Closed. Bravo! That was... sec, sec.<</type>><</replace>><</timed>>   
 <<timed 10s>><<replace "#mount">><<type 50ms>>Yes, that was the right call. At first that seemed like the wrong call. There's been a lot of buzz around the church next door for a few decades, a steady climb.<</type>><</replace>><</timed>>   
 <<timed 21s>><<replace "#mount">><<type 50ms>>People love the new interior design. But then the church loses its regulars. Makes sense, as skyrocketing house prices force residents out of the area.<</type>><</replace>><</timed>>   
 <<timed 31s>><<replace "#mount">><<type 50ms>>Meanwhile, Guildhall, the building you invested in, has had a major glow up. Historians uncovered the remains of a Roman amphitheater beneath it.<</type>><</replace>><</timed>>   
@@ -879,7 +871,7 @@ $map2a
 <<timed 85s>><<replace "#mount">><<type 50ms>>The city lets you build a statue anywhere in the courtyard. I have no idea where they're going to put it. And goodness, imagine how you'd pose. You can get your proposal together on the way to Moorgate.<</type>><</replace>><</timed>> 
 
 
-<<timed 92s>><<replace "#mount">>
+<<timed 100s>><<replace "#mount">>
 $map2a
 <<button "We're here">><<set $prevpass to $passage>><<goto "EI-12">><</button>><</replace>><</timed>>
  
@@ -913,7 +905,7 @@ Random people loitering, the feeling of being watched.<</type>><</replace>><</ti
 
 I thought you'd want to know.<</type>><</replace>><</timed>>    
 <<timed 72s>><<replace "#mount">><<type 50ms>>If you want to heighten your own security in the building, we have an opportunity to make that investment.<</type>><</replace>><</timed>>    
-<<timed 77.5s>><<replace "#mount">>And if you want to get out I can find a way to call it quits on this particular asset. All I need is your sign off.
+<<timed 79.5s>><<replace "#mount">>And if you want to get out I can find a way to call it quits on this particular asset. All I need is your sign off.
 
 <<button "Invest in security">><<set $prevpass to $passage>><<goto "EI-13A">><</button>>
 
@@ -993,7 +985,7 @@ But can you avoid any security systems while I take a phone call?
 
 I'll meet you around the corner.<</type>><</replace>><</timed>> 
 /*MAP SHOWING UP Q LOW DOWN THE SCREEN*/
-<<timed 80s>> <<replace "#mount">>$map4
+<<timed 85s>> <<replace "#mount">>$map4
 
 <<button "We're here">><<set $prevpass to $passage>><<goto "EI-14">><</button>><</replace>><</timed>>
  
@@ -1063,8 +1055,6 @@ When your floor faced damage from the Blitz, you had to fork out huge amounts of
 This is not good!<</type>><</replace>><</timed>>    
 <<timed 49s>><<replace "#mount">><<type 50ms>>I can mitigate the damage, but I will need to sell some core assets. <</type>><</replace>><</timed>>   
 <<timed 54s>><<replace "#mount">><<type 50ms>>We need to look like we're humbling ourselves for the financial regulators too. So don't take it personally but I need you to remove a word from your trading name.<</type>><</replace>><</timed>> 
-
-/*THIS BUTTON SHOWS UP Q FAR DOWN THE PAGE*/
 <<timed 62s>>
 <<replace "#mount">>
 <div class="namespace">
@@ -1081,7 +1071,7 @@ This is not good!<</type>><</replace>><</timed>>
  
  
 </main>
-<<include "footer">>
+<<include "footersimple">>
 
 
 :: EI-15B {"position":"519,1455","size":"100,100"}
@@ -1129,19 +1119,17 @@ Something do demonstrate expansion.
 
 
 :: EI-16A {"position":"393,1581","size":"100,100"}
-<<set $passage to "EI-16A">><<set $nextpassage to "EI-17">><<audio ":all" stop>><<audio "EI_16A" play>><<set $map7 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
+<<set $passage to "EI-16A">><<set $nextpassage to "EI-17">><<audio ":all" stop>><<audio "EI_16A" play>><<set $map7 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>><<set $name to $stabilityname +" "+$opportunityname>>
 <main>
-<div id="mount"></div>
-<<set $name to $stabilityname +" "+$opportunityname>>
-
 <h2 class="tradingname">$name</h2>
+<div id="mount"></div>
+
 
 <<timed 0s>><<replace "#mount">><<type 50ms>>Er, it doesn't sound the same, but I'm sure you can come up with a good explanation for the change to keep shareholders happy?<</type>><</replace>><</timed>> 
-<<timed 7s>><<replace "#mount">><<type 50ms>>Maybe rehearse something on our way to the park?<</type>><</replace>><</timed>> 
-<<timed 11s>>
-$map7
+<<timed 9s>><<replace "#mount">><<type 50ms>>Maybe rehearse something on our way to the park?<</type>><</replace>><</timed>> 
+<<timed 15s>><<replace "#mount">>$map7
 
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-17">><</button>> <</timed>>
+<<button "We're here">><<set $prevpass to $passage>><<goto "EI-17">><</button>><</replace>> <</timed>>
  
 </main>
 <<include "footersimple">>
@@ -1222,7 +1210,7 @@ What's more, all your income from the parking is being taxed to offset carbon em
 
 You can point them out as we walk.<</type>><</replace>><</timed>> 
 
-<<timed 77s>><<set $prevpass to $passage>><<goto "EI-19">><</timed>>
+<<timed 80s>><<set $prevpass to $passage>><<goto "EI-19">><</timed>>
  
  
 </main>
@@ -1265,11 +1253,9 @@ So they pressure the government to ban products with disposable packaging being 
 <main>
 <div id="mount"></div>
 
-<<timed 0s>><<replace "#mount">><<type 50ms>>There's my office, right over there! I'm going to head up, pre the market opening. I need a coffee before I engage with 2022! <</type>><</replace>><</timed>>  
+<<timed 0.1s>><<replace "#mount">><<type 50ms>>There's my office, right over there! I'm going to head up, pre the market opening. I need a coffee before I engage with 2022! <</type>><</replace>><</timed>>  
 <<timed 9s>><<replace "#mount">><<type 50ms>>Keep your eyes peeled, if you see anything you want to invest in. I'll call about your portfolio a bit later.<</type>><</replace>><</timed>> 
-
-<<timed 21s>><<replace "#mount">>
-$map9
+<<timed 21s>><<replace "#mount">>$map9
 
 <<button "We're here">>
 <<if $tally lt 0>>

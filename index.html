@@ -98,11 +98,8 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://50CA173C-50F4-4323-A03D-66B99D5E62AB// --><tw-storydata name="Epic Investment" startnode="7" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="50CA173C-50F4-4323-A03D-66B99D5E62AB" zoom="1" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
-@font-face {
-  font-family: "Big John";
-  src: url("/assets/fonts/bigjohn.otf") format("opentype");
-}
+	<!-- UUID://50CA173C-50F4-4323-A03D-66B99D5E62AB// --><tw-storydata name="Epic Investment" startnode="22" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="50CA173C-50F4-4323-A03D-66B99D5E62AB" zoom="1" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 /* GENERICS */
 html {
@@ -374,7 +371,7 @@ margin-block-end: 10px
 }
 
 h2.tradingname{
-   font-family: "Big John";
+font-family: 'Archivo Black', sans-serif;
   font-size: 2.5rem
 }
 
@@ -517,7 +514,7 @@ iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
 iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=17&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
 const mount = document.getElementById("mapMount")
-console.log(iFrame)
+// console.log(iFrame)
 return iFrame
 // this.mapMount.appendChild(iFrame)
 }
@@ -544,11 +541,11 @@ setup.checkForRepeats = (array,element) => {
 &lt;&lt;cacheaudio &quot;EI_06&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_06.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;EI_07&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_07.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;EI_08&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_08.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;EI_09&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_09.mp3&quot;&gt;&gt;
+
 &lt;&lt;cacheaudio &quot;EI_09A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_09A.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;EI_09B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_09B.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;EI_10&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_10.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;EI_11&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_11.mp3&quot;&gt;&gt;
+
 &lt;&lt;cacheaudio &quot;EI_11A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_11A.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;EI_11B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_11B.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;EI_12&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_12.mp3&quot;&gt;&gt;
@@ -570,7 +567,7 @@ setup.checkForRepeats = (array,element) => {
 &lt;&lt;cacheaudio &quot;EI_20B(1)&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI_20B(1).mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;EI10&quot; &quot;https://www.youhavefoundconey.net/tgksnd/EI/EI10.mp3&quot;&gt;&gt;
 
-&lt;&lt;waitforaudio&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="header" tags="" position="100,225" size="100,100">&lt;header&gt;Epic Investment&lt;/header&gt;</tw-passagedata><tw-passagedata pid="3" name="footersimple" tags="" position="100,353" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-item replay&quot;&gt;&lt;&lt;button &quot;Replay&quot;&gt;&gt;&lt;&lt;goto $passage&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;
+&lt;&lt;waitforaudio&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="header" tags="" position="100,225" size="100,100">&lt;header&gt;&lt;h2 class=&quot;tradingname&quot;&gt;$stabilityname $opportunityname $strengthname&lt;/h2&gt;&lt;/header&gt;</tw-passagedata><tw-passagedata pid="3" name="footersimple" tags="" position="100,353" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-item replay&quot;&gt;&lt;&lt;button &quot;Replay&quot;&gt;&gt;&lt;&lt;goto $passage&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;
 &lt;div class=&quot;nav-item end&quot;&gt;&lt;&lt;button &quot;Take me to the end&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;lost&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="footer" tags="" position="99,485" size="100,100">&lt;footer&gt;
 &lt;div class=&quot;nav-item back&quot;&gt;&lt;&lt;button &quot;&lt;&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 &lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Replay&quot;&gt;&gt;&lt;&lt;goto $passage&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;
@@ -620,7 +617,7 @@ I&#39;ve been managing your portfolios - all pretty stable at the moment. I took
 You are, after all, my most important client. And no, I don&#39;t say that to everyone. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 &lt;&lt;timed 46s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 55ms&gt;&gt;I know your time is valuable. I&#39;ve tried to do as much as I can independently. 
 
-I&#39;ve already acted on your two Morgate investments, 84 is doing well, but there are other local opportunities I want to run past you. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
+I&#39;ve already acted on your two Moorgate investments, 84 is doing well, but there are other local opportunities I want to run past you. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 &lt;&lt;timed 60s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Some major openings have appeared across time in the city. 
 
 We&#39;re going to open the market tomorrow with a stronger portfolio than we have today, right? &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
@@ -640,24 +637,19 @@ But ultimately your assets are traded with your sign-off. And you need to be pre
 If you weren&#39;t ready to deal with the unexpected. You&#39;d never make a deal. You wouldn&#39;t be in the industry of prediction. And you wouldn&#39;t be the best.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 /*CHECK TIMESTAMP*/
-&lt;&lt;timed 120s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;EI-06&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 125s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;EI-06&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="EI-06" tags="" position="445,344" size="100,100">&lt;&lt;set $passage to &quot;EI-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;EI-07&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;EI_06&quot; play&gt;&gt;
 &lt;main&gt;
-&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-
-&lt;&lt;timed 1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;That&#39;s the market about to open. Quick, we need a trading name for today. I want to make the assets easier to track through time. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 9s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I need something with three words. You can delegate and discuss this with your team, or give me all three. We want to keep it vague but easy to remember. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
-
-&lt;&lt;timed 18s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I need one word that demonstrates stability.&lt;&lt;/type&gt;&gt;
+&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;&lt;&lt;timed 1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;That&#39;s the market about to open. Quick, we need a trading name for today. I want to make the assets easier to track through time. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 9s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I need something with three words. You can delegate and discuss this with your team, or give me all three. We want to keep it vague but easy to remember. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 18s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I need one word that demonstrates stability.&lt;&lt;/type&gt;&gt;
 &lt;&lt;textbox &quot;$stabilityname&quot; &quot;&quot;&gt;&gt;
 
 &lt;&lt;type 50ms&gt;&gt;I need one word that demonstrates opportunity.&lt;&lt;/type&gt;&gt;
 &lt;&lt;textbox &quot;$opportunityname&quot; &quot;&quot;&gt;&gt;
 
 &lt;&lt;type 50ms&gt;&gt;And one word that demonstrates some kind of strength. &lt;&lt;/type&gt;&gt;
-&lt;&lt;textbox &quot;$strengthname&quot; &quot;&quot;&gt;&gt;
-&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 23s&gt;&gt;&lt;&lt;button &quot;Enter&quot;&gt;&gt;
+&lt;&lt;textbox &quot;$strengthname&quot; &quot;&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 23s&gt;&gt;
+&lt;&lt;button &quot;Enter&quot;&gt;&gt;
   &lt;&lt;if $stabilityname isnot &quot;&quot; and $opportunityname isnot &quot;&quot; and $strengthname isnot &quot;&quot;&gt;&gt;
   &lt;&lt;set $prevpass to $passage&gt;&gt;
   &lt;&lt;goto &quot;EI-07&quot;&gt;&gt;
@@ -674,7 +666,7 @@ If you weren&#39;t ready to deal with the unexpected. You&#39;d never make a dea
  
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="EI-07" tags="" position="448,476" size="100,100">&lt;&lt;set $passage to &quot;EI-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;EI-08&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;EI_07&quot; play&gt;&gt;&lt;&lt;set $map = setup.generateDirectionsMap([51.51711535985901, -0.09051914401030728],[51.517326229857304, -0.08935757297797439])&gt;&gt;
+&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="EI-07" tags="" position="448,476" size="100,100">&lt;&lt;set $passage to &quot;EI-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;EI-08&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;EI_07&quot; play&gt;&gt;&lt;&lt;set $map = setup.generateDirectionsMap([51.51711535985901, -0.09051914401030728],[51.517326229857304, -0.08935757297797439])&gt;&gt;
 &lt;main&gt;&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;h2 class=&quot;tradingname&quot;&gt;$stabilityname $opportunityname $strengthname&lt;/h2&gt;
 &lt;&lt;type 50ms&gt;&gt; Sounds perfectly obtuse. Let’s get this show on the road. &lt;&lt;/type&gt;&gt;
@@ -685,8 +677,8 @@ If you weren&#39;t ready to deal with the unexpected. You&#39;d never make a dea
  
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="EI-08" tags="" position="448,595" size="100,100">&lt;&lt;set $passage to &quot;EI-08&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;EI_08&quot; play&gt;&gt;
-&lt;main&gt;&lt;&lt;set $tally to 0&gt;&gt;&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="EI-08" tags="" position="448,595" size="100,100">&lt;&lt;set $passage to &quot;EI-08&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;EI_08&quot; play&gt;&gt;&lt;main&gt;&lt;&lt;set $tally to 0&gt;&gt;
+&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
  
 &lt;&lt;timed 0s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 57ms&gt;&gt;Here&#39;s our first stop. 
 
@@ -749,7 +741,7 @@ But I think our best bet is to turn more of the space into rental homes. &lt;&lt
 But we need to give the building a more residential feel. I&#39;m not sure how to do that. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 &lt;&lt;timed 92s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I wonder which buildings around here were designed for residence. You can think about it or have your people think about it on Route. There&#39;s another opportunity I need you to see.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 100s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+&lt;&lt;timed 110s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
 $map1
 
 &lt;&lt;button &quot;We&#39;re here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;EI-10&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
@@ -881,7 +873,7 @@ $map2a
 &lt;main&gt;&lt;&lt;set $tally += 1&gt;&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
   
-&lt;&lt;timed 0s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Sec, sec, investing in Guildhall. Closed. Bravo! That was sec, sec.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;   
+&lt;&lt;timed 0s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Sec, sec, investing in Guildhall. Closed. Bravo! That was... sec, sec.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;   
 &lt;&lt;timed 10s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Yes, that was the right call. At first that seemed like the wrong call. There&#39;s been a lot of buzz around the church next door for a few decades, a steady climb.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;   
 &lt;&lt;timed 21s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;People love the new interior design. But then the church loses its regulars. Makes sense, as skyrocketing house prices force residents out of the area.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;   
 &lt;&lt;timed 31s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Meanwhile, Guildhall, the building you invested in, has had a major glow up. Historians uncovered the remains of a Roman amphitheater beneath it.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;   
@@ -892,7 +884,7 @@ $map2a
 &lt;&lt;timed 85s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;The city lets you build a statue anywhere in the courtyard. I have no idea where they&#39;re going to put it. And goodness, imagine how you&#39;d pose. You can get your proposal together on the way to Moorgate.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt; 
 
 
-&lt;&lt;timed 92s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+&lt;&lt;timed 100s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
 $map2a
 &lt;&lt;button &quot;We&#39;re here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;EI-12&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
  
@@ -922,7 +914,7 @@ Random people loitering, the feeling of being watched.&lt;&lt;/type&gt;&gt;&lt;&
 
 I thought you&#39;d want to know.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;    
 &lt;&lt;timed 72s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;If you want to heighten your own security in the building, we have an opportunity to make that investment.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;    
-&lt;&lt;timed 77.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;And if you want to get out I can find a way to call it quits on this particular asset. All I need is your sign off.
+&lt;&lt;timed 79.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;And if you want to get out I can find a way to call it quits on this particular asset. All I need is your sign off.
 
 &lt;&lt;button &quot;Invest in security&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;EI-13A&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
@@ -994,7 +986,7 @@ But can you avoid any security systems while I take a phone call?
 
 I&#39;ll meet you around the corner.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt; 
 /*MAP SHOWING UP Q LOW DOWN THE SCREEN*/
-&lt;&lt;timed 80s&gt;&gt; &lt;&lt;replace &quot;#mount&quot;&gt;&gt;$map4
+&lt;&lt;timed 85s&gt;&gt; &lt;&lt;replace &quot;#mount&quot;&gt;&gt;$map4
 
 &lt;&lt;button &quot;We&#39;re here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;EI-14&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
  
@@ -1056,8 +1048,6 @@ When your floor faced damage from the Blitz, you had to fork out huge amounts of
 This is not good!&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;    
 &lt;&lt;timed 49s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I can mitigate the damage, but I will need to sell some core assets. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;   
 &lt;&lt;timed 54s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;We need to look like we&#39;re humbling ourselves for the financial regulators too. So don&#39;t take it personally but I need you to remove a word from your trading name.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt; 
-
-/*THIS BUTTON SHOWS UP Q FAR DOWN THE PAGE*/
 &lt;&lt;timed 62s&gt;&gt;
 &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
 &lt;div class=&quot;namespace&quot;&gt;
@@ -1074,7 +1064,7 @@ This is not good!&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;
  
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="EI-15B" tags="" position="519,1455" size="100,100">&lt;&lt;set $passage to &quot;EI-15B&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;EI_15B&quot; play&gt;&gt;
+&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="EI-15B" tags="" position="519,1455" size="100,100">&lt;&lt;set $passage to &quot;EI-15B&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;EI_15B&quot; play&gt;&gt;
 &lt;main&gt;&lt;&lt;set $tally += 1&gt;&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
   
@@ -1114,19 +1104,17 @@ Something do demonstrate expansion.
  
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="EI-16A" tags="" position="393,1581" size="100,100">&lt;&lt;set $passage to &quot;EI-16A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;EI-17&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;EI_16A&quot; play&gt;&gt;&lt;&lt;set $map7 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="EI-16A" tags="" position="393,1581" size="100,100">&lt;&lt;set $passage to &quot;EI-16A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;EI-17&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;EI_16A&quot; play&gt;&gt;&lt;&lt;set $map7 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])&gt;&gt;&lt;&lt;set $name to $stabilityname +&quot; &quot;+$opportunityname&gt;&gt;
 &lt;main&gt;
-&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-&lt;&lt;set $name to $stabilityname +&quot; &quot;+$opportunityname&gt;&gt;
-
 &lt;h2 class=&quot;tradingname&quot;&gt;$name&lt;/h2&gt;
+&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+
 
 &lt;&lt;timed 0s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Er, it doesn&#39;t sound the same, but I&#39;m sure you can come up with a good explanation for the change to keep shareholders happy?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt; 
-&lt;&lt;timed 7s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Maybe rehearse something on our way to the park?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt; 
-&lt;&lt;timed 11s&gt;&gt;
-$map7
+&lt;&lt;timed 9s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Maybe rehearse something on our way to the park?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt; 
+&lt;&lt;timed 15s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;$map7
 
-&lt;&lt;button &quot;We&#39;re here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;EI-17&quot;&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;&lt;/timed&gt;&gt;
+&lt;&lt;button &quot;We&#39;re here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;EI-17&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt; &lt;&lt;/timed&gt;&gt;
  
 &lt;/main&gt;
 &lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="EI-16B" tags="" position="520,1585" size="100,100">&lt;&lt;set $passage to &quot;EI-16B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;EI-17&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;EI_16B&quot; play&gt;&gt;&lt;&lt;set $map8 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])&gt;&gt;
@@ -1195,7 +1183,7 @@ What&#39;s more, all your income from the parking is being taxed to offset carbo
 
 You can point them out as we walk.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt; 
 
-&lt;&lt;timed 77s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;EI-19&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 80s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;EI-19&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
  
  
 &lt;/main&gt;
@@ -1230,11 +1218,9 @@ So they pressure the government to ban products with disposable packaging being 
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 
-&lt;&lt;timed 0s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;There&#39;s my office, right over there! I&#39;m going to head up, pre the market opening. I need a coffee before I engage with 2022! &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;There&#39;s my office, right over there! I&#39;m going to head up, pre the market opening. I need a coffee before I engage with 2022! &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 &lt;&lt;timed 9s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Keep your eyes peeled, if you see anything you want to invest in. I&#39;ll call about your portfolio a bit later.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt; 
-
-&lt;&lt;timed 21s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
-$map9
+&lt;&lt;timed 21s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;$map9
 
 &lt;&lt;button &quot;We&#39;re here&quot;&gt;&gt;
 &lt;&lt;if $tally lt 0&gt;&gt;
