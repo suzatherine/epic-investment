@@ -540,7 +540,7 @@ You have two options:
 
 
 :: end {"position":"100,625","size":"100,100"}
-<<set $passage to "end">><<set $nextpassage to "end">><<audio ":all" stop>><<set $endMap = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
+<<set $passage to "end">><<set $nextpassage to "end">><<audio ":all" stop>><<set $endMap = setup.generateDirectionsMap([51.51668008618492, -0.0828478914446183],[51.51668008618492, -0.0828478914446183])>>
 <main>
 End location
 
@@ -815,7 +815,7 @@ You can invest in St. Lawrence Jewry church, or the Guildhall.<</type>><</replac
 
 
 :: EI-11A {"position":"383,951","size":"100,100"}
-<<set $passage to "EI-11A">><<set $nextpassage to "EI-12">><<audio ":all" stop>><<audio "EI_11A" play>><<set $map2a = setup.generateDirectionsMap([51.515451, -0.091948], [51.518367723552664, -0.08817740097553395])>>
+<<set $passage to "EI-11A">><<set $nextpassage to "EI-12">><<audio ":all" stop>><<audio "EI_11A" play>><<set $map2a = setup.generateDirectionsMap([51.515451, -0.091948], [51.5166212724641, -0.08924692868342911])>>
 <main><<set $tally -= 1>>
 <div id="mount"></div>
   
@@ -856,7 +856,7 @@ $map2a
 
 
 :: EI-11B {"position":"522,951","size":"100,100"}
-<<set $passage to "EI-11B">><<set $nextpassage to "EI-12">><<audio ":all" stop>><<audio "EI_11B" play>><<set $map2a = setup.generateDirectionsMap([51.515451, -0.091948], [51.518367723552664, -0.08817740097553395])>>
+<<set $passage to "EI-11B">><<set $nextpassage to "EI-12">><<audio ":all" stop>><<audio "EI_11B" play>><<set $map2a = setup.generateDirectionsMap([51.515451, -0.091948], [51.5166212724641, -0.08924692868342911])>>
 <main><<set $tally += 1>>
 <div id="mount"></div>
   
@@ -917,7 +917,7 @@ I thought you'd want to know.<</type>><</replace>><</timed>>
 
 
 :: EI-13A {"position":"381,1196","size":"100,100"}
-<<set $passage to "EI-13A">><<set $nextpassage to "EI-14">><<audio ":all" stop>><<audio "EI_13A" play>><<set $map3 = setup.generateDirectionsMap([51.515441063732275, -0.09241821563548816],[51.51773077098211, -0.08785270985178921])>>
+<<set $passage to "EI-13A">><<set $nextpassage to "EI-14">><<audio ":all" stop>><<audio "EI_13A" play>><<set $map2a = setup.generateDirectionsMap([51.515451, -0.091948], [51.5166212724641, -0.08924692868342911])>>
 <main><<set $tally -= 1>>
 <div id="mount"></div>
 <<timed 0s>><<replace "#mount">><<type 60ms>>Got it! Sec, sec, sec. Done! 
@@ -944,7 +944,7 @@ You sneak off, unnoticed!
 I'll meet you at 84, and maybe come up with a good cover story for why you're here?<</type>><</replace>><</timed>> 
 
 
-<<timed 85s>> $map3
+<<timed 85s>> $map2a
 
 <<button "We're here">><<set $prevpass to $passage>><<goto "EI-14">><</button>><</timed>>
  
@@ -954,7 +954,7 @@ I'll meet you at 84, and maybe come up with a good cover story for why you're he
 
 
 :: EI-13B {"position":"521,1195","size":"100,100"}
-<<set $passage to "EI-13B">><<set $nextpassage to "EI-14">><<audio ":all" stop>><<audio "EI_13B" play>><<set $map4 = setup.generateDirectionsMap([51.515441063732275, -0.09241821563548816],[51.516641366744395, -0.08926837307096959])>>
+<<set $passage to "EI-13B">><<set $nextpassage to "EI-14">><<audio ":all" stop>><<audio "EI_13B" play>><<set $map2a = setup.generateDirectionsMap([51.515451, -0.091948], [51.5166212724641, -0.08924692868342911])>>
 <main><<set $tally += 1>> 
 <div id="mount"></div>
   
@@ -985,7 +985,7 @@ But can you avoid any security systems while I take a phone call?
 
 I'll meet you around the corner.<</type>><</replace>><</timed>> 
 /*MAP SHOWING UP Q LOW DOWN THE SCREEN*/
-<<timed 85s>> <<replace "#mount">>$map4
+<<timed 85s>> <<replace "#mount">>$map2a
 
 <<button "We're here">><<set $prevpass to $passage>><<goto "EI-14">><</button>><</replace>><</timed>>
  
@@ -1119,7 +1119,7 @@ Something do demonstrate expansion.
 
 
 :: EI-16A {"position":"393,1581","size":"100,100"}
-<<set $passage to "EI-16A">><<set $nextpassage to "EI-17">><<audio ":all" stop>><<audio "EI_16A" play>><<set $map7 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>><<set $name to $stabilityname +" "+$opportunityname>>
+<<set $passage to "EI-16A">><<set $nextpassage to "EI-17">><<audio ":all" stop>><<audio "EI_16A" play>><<set $map7 = setup.generateDirectionsMap([51.5166212724641, -0.08924692868342911],[51.51680431387839, -0.08286947319846268])>><<set $name to $stabilityname +" "+$opportunityname>>
 <main>
 <h2 class="tradingname">$name</h2>
 <div id="mount"></div>
@@ -1136,7 +1136,7 @@ Something do demonstrate expansion.
 
 
 :: EI-16B {"position":"520,1585","size":"100,100"}
-<<set $passage to "EI-16B">><<set $nextpassage to "EI-17">><<audio ":all" stop>><<audio "EI_16B" play>><<set $map8 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
+<<set $passage to "EI-16B">><<set $nextpassage to "EI-17">><<audio ":all" stop>><<audio "EI_16B" play>><<set $map7 = setup.generateDirectionsMap([51.5166212724641, -0.08924692868342911],[51.51680431387839, -0.08286947319846268])>>
 <main>
 <div id="mount"></div>
 <h2 class="tradingname">$name</h2>
@@ -1144,7 +1144,7 @@ Something do demonstrate expansion.
 <<timed 0s>><<replace "#mount">><<type 50ms>>How does that work for you? I love the four words! In a way they now tell a story!<</type>><</replace>><</timed>>  
 <<timed 6s>><<replace "#mount">><<type 50ms>>I wonder if you could put together a slogan before we reach our next destination<</type>><</replace>><</timed>> 
 
-<<timed 10s>>$map8
+<<timed 10s>>$map7
 
 <<button "We're here">><<set $prevpass to $passage>><<goto "EI-17">><</button>> <</timed>>
  
@@ -1249,13 +1249,13 @@ So they pressure the government to ban products with disposable packaging being 
 
 
 :: EI-19 {"position":"457,1976","size":"100,100"}
-<<set $passage to "EI-19">><<audio ":all" stop>><<audio "EI_19" play>><<set $map9 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
+<<set $passage to "EI-19">><<audio ":all" stop>><<audio "EI_19" play>><<set $map7 = setup.generateDirectionsMap([51.5166212724641, -0.08924692868342911],[51.51680431387839, -0.08286947319846268])>>
 <main>
 <div id="mount"></div>
 
 <<timed 0.1s>><<replace "#mount">><<type 50ms>>There's my office, right over there! I'm going to head up, pre the market opening. I need a coffee before I engage with 2022! <</type>><</replace>><</timed>>  
 <<timed 9s>><<replace "#mount">><<type 50ms>>Keep your eyes peeled, if you see anything you want to invest in. I'll call about your portfolio a bit later.<</type>><</replace>><</timed>> 
-<<timed 21s>><<replace "#mount">>$map9
+<<timed 21s>><<replace "#mount">>$map7
 
 <<button "We're here">>
 <<if $tally lt 0>>
