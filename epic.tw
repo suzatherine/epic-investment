@@ -7,7 +7,7 @@ Epic Investment
 	"ifid": "50CA173C-50F4-4323-A03D-66B99D5E62AB",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "EI-15A",
+	"start": "landing",
 	"zoom": 1
 }
 
@@ -251,7 +251,8 @@ align-items: flex-end
 }
 
 .nav-item.replay, .nav-item.end{
-justify-content: center
+/* justify-content: center */
+justify-content: right
 }
 .nav-item.replay, .nav-item.forward{
 justify-content: end
@@ -438,6 +439,24 @@ return iFrame
 // this.mapMount.appendChild(iFrame)
 }
 
+// MAKE MAP WITH WAYPOINTS FUNCTION
+
+setup.generateDirectionsMapWP = function (origin, dest, wayp){
+const iFrame = document.createElement("iframe")
+iFrame.classList.add("map")
+iFrame.setAttribute("loading", "lazy")
+iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
+// iFrame.setAttribute("allowfullscreen")
+iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&waypoints=${wayp}&mode=walking`)
+const mount = document.getElementById("mapMount")
+// console.log(iFrame)
+return iFrame
+// this.mapMount.appendChild(iFrame)
+}
+
+// <<set $map = setup.generateDirectionsMap([], [])>>
+// <<set $map = setup.generateDirectionsMap([], [], "Blah St")>>
+
 
 //Get random 5 letter word
 
@@ -533,10 +552,9 @@ You have two options:
 <<set $passage to "landing">><<audio ":all" stop>>
 
 <main>
-<<button "start">><<set $prevpass to $passage>><<goto "EI-05">><</button>>
+<<button "start">><<set $prevpass to $passage>><<goto "EI-01">><</button>>
 
 </main>
-/* <<include "footer">> */
 
 
 :: end {"position":"100,625","size":"100,100"}
@@ -549,6 +567,102 @@ $endMap
 </main>
 <<include "footerend">>
 
+:: EI-01 {"position":"449,226","size":"100,100"}
+<<set $passage to "EI-01">><<set $nextpassage to "EI-02B">>
+/* <<audio ":all" stop>><<audio "EI-01" play>> */
+<main>
+<div id="mount"></div> 
+Felix, keeper of the Maze, and small dragon, here at your service.
+
+I’m opening up the City to you, a City you’ve never experienced before, and its secrets too. For the City is full of treasure. Not the kind of treasure that glitters in candlelight, but something more precious: stories, and the people who carry them. 
+
+You’re now in Dragontime. Past present and future happening all at once. Two thousand years of messy, pulsing, fiery history since the Romans first called their new home Londinium. Almost as long as I’ve been alive. 
+
+You’ve opened up door #2 into the maze of adventures. 
+
+You’ll be led presently through the streets of the City by a guide from one of its many pasts or possible futures.
+
+If you follow them all the way along their adventure, I’ll be there to meet you near another door, opening into an amazing experience for you, hidden in one of the secret gems of the City.
+
+What kind of amazing experience? Well, it’s a surprise. Otherwise this wouldn’t be an adventure.
+
+Now - are you playing this adventure solo, or in a group?
+ 
+<div class="menu-wrapper">
+  <<button "Solo">><<set $prevpass to $passage>><<goto "EI-02A">><</button>>
+  
+  <<button "Group">><<set $prevpass to $passage>><<goto "EI-02B">><</button>></div>
+</main>
+<<include "footer">>
+
+:: EI-02A {"position":"448,476","size":"100,100"}
+<<set $passage to "EI-02A">><<set $nextpassage to "EI-03.1">>
+/* <<audio ":all" stop>><<audio "EI_02A" play>> */
+<main>
+<div id="mount"></div> 
+This adventure is perfect for a solo adventurer!
+
+<<button "Next">><<set $prevpass to $passage>><<goto "EI-03.1">><</button>>
+ 
+</main>
+<<include "footer">>
+
+:: EI-02B {"position":"448,476","size":"100,100"}
+<<set $passage to "EI-02B">><<set $nextpassage to "EI-03.1">>
+/* <<audio ":all" stop>><<audio "EI_02A" play>> */
+<main>
+<div id="mount"></div> 
+This is perfect for a group! If you’re playing on separate devices try to press your buttons at the same time to stay in sync. 
+
+<<button "Next">><<set $prevpass to $passage>><<goto "EI-03.1">><</button>>
+ 
+ 
+</main>
+<<include "footer">>
+
+:: EI-03.1 {"position":"448,476","size":"100,100"}
+<<set $passage to "EI-03.1">><<set $nextpassage to "EI-03.1map">>
+/* <<audio ":all" stop>><<audio "EI_02A" play>> */
+<main>
+<div id="mount"></div> 
+You can always use the arrows or the replay button if you need to hear or read anything again. 
+
+I’ll provide maps when needed.
+
+And the "Take me to the end" button will skip the adventure and show you how to get to the surprise at the end.
+
+My friend Shreya will be here soon to guide you, connecting from across history. 
+
+Let’s go meet up with them!
+
+<<button "Show map">><<set $prevpass to $passage>><<goto "EI-03.1map">><</button>>
+ 
+ 
+</main>
+<<include "footer">>
+
+:: EI-03.1map {"position":"448,476","size":"100,100"}
+<<set $passage to "EI-03.1map">><<set $nextpassage to "EI-03.2">><<audio ":all" stop>><<set $mapA = setup.generateDirectionsMap([51.51709539592872, -0.09050840193044228],[51.51724681569763, -0.08937036562353118])>><main>
+Head up Coleman Street just around the big shiny building. Just opposite you’ll see #81. Stop there. 
+
+<<button "I'm here">><<set $prevpass to $passage>><<goto "EI-03.2">><</button>>
+
+$mapA
+
+</main>
+<<include "footer">>
+
+:: EI-03.2 {"position":"448,476","size":"100,100"}
+<<set $passage to "EI-05">><<set $nextpassage to "EI_05">>
+<<audio ":all" stop>>
+<main>
+Shreya, oh Shreya, I’ve got your client right here. 
+You’re in good hands now. 
+
+
+<<button "Next">><<set $prevpass to $passage>><<goto "EI-05">><</button>>
+</main>
+<<include "footer">>
 
 :: EI-05 {"position":"449,226","size":"100,100"}
 <<set $passage to "EI-05">><<set $nextpassage to "EI-06">><<audio ":all" stop>><<audio "EI_05" play>>
@@ -598,7 +712,7 @@ If you weren't ready to deal with the unexpected. You'd never make a deal. You w
 
 
 :: EI-06 {"position":"445,344","size":"100,100"}
-<<set $passage to "EI-05">><<set $nextpassage to "EI-07">><<audio ":all" stop>><<audio "EI_06" play>>
+<<set $passage to "EI-06">><<set $nextpassage to "EI-07">><<audio ":all" stop>><<audio "EI_06" play>>
 <main>
 <div id="mount"></div><<timed 1s>><<replace "#mount">><<type 50ms>>That's the market about to open. Quick, we need a trading name for today. I want to make the assets easier to track through time. <</type>><</replace>><</timed>><<timed 9s>><<replace "#mount">><<type 50ms>>I need something with three words. You can delegate and discuss this with your team, or give me all three. We want to keep it vague but easy to remember. <</type>><</replace>><</timed>><<timed 18s>><<replace "#mount">><<type 50ms>>I need one word that demonstrates stability.<</type>>
 <<textbox "$stabilityname" "">>
@@ -629,22 +743,33 @@ If you weren't ready to deal with the unexpected. You'd never make a deal. You w
 
 
 :: EI-07 {"position":"448,476","size":"100,100"}
-<<set $passage to "EI-05">><<set $nextpassage to "EI-08">><<audio ":all" stop>><<audio "EI_07" play>><<set $map = setup.generateDirectionsMap([51.51711535985901, -0.09051914401030728],[51.517326229857304, -0.08935757297797439])>>
+<<set $passage to "EI-05">><<set $nextpassage to "EI-08">><<audio ":all" stop>><<audio "EI_07" play>>
 <main><div id="mount"></div>
 <h2 class="tradingname">$stabilityname $opportunityname $strengthname</h2>
 <<type 50ms>> Sounds perfectly obtuse. Let’s get this show on the road. <</type>>
-<<timed 5s>>$map
 
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-08">><</button>><</timed>>
 
- 
- 
+<<timed 10s>><<set $prevpass to $passage>><<goto "EI-07map">><</timed>>
+
+</main>
+<<include "footer">>
+
+:: EI-07map {"position":"448,476","size":"100,100"}
+<<set $map = setup.generateDirectionsMapWP([51.51724681569763, -0.08937036562353118],[51.51541461665199, -0.09211131729728766], "95 Gresham Street")>>
+<main>
+Head back down Coleman St the way that you came from. When you get to the main road, take a left on Gresham St.
+On the right you will come to a building that is covered. Take a right on the path just before it, leading you into an open courtyard.
+
+<<button "We're here">><<set $prevpass to $passage>><<goto "EI-08">><</button>>
+
+$map
+
 </main>
 <<include "footer">>
 
 
 :: EI-08 {"position":"448,595","size":"100,100"}
-<<set $passage to "EI-08">><<audio ":all" stop>><<audio "EI_08" play>><main><<set $tally to 0>>
+<<set $passage to "EI-08">><<set $nextpassage to "EI-09A">><<audio ":all" stop>><<audio "EI_08" play>><main><<set $tally to 0>>
 <div id="mount"></div>
  
 <<timed 0s>><<replace "#mount">><<type 57ms>>Here's our first stop. 
@@ -679,7 +804,7 @@ Both are coming in at 1449 almost identical share price and both asking for a qu
  
  
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: EI-09A {"position":"390,716","size":"100,100"}
@@ -724,7 +849,7 @@ $map1
 
 
 :: EI-09B {"position":"513,716","size":"100,100"}
-<<set $passage to "EI-09B">><<set $nextpassage to "EI-10">><<audio ":all" stop>><<audio "EI_09B" play>><<set $map2 = setup.generateDirectionsMap([51.51318914905516, -0.09147383074234947],[51.515451, -0.091948])>>
+<<set $passage to "EI-09B">><<set $nextpassage to "EI-10">><<audio ":all" stop>><<audio "EI_09B" play>>
 <main><<set $tally += 1>>
 <div id="mount"></div>
  
@@ -762,7 +887,18 @@ There's another opportunity I need you to see.<</type>><</replace>><</timed>>
 <<timed 104s>>
 $map2
 
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-10">><</button>><</timed>>
+<<button "Show Map">><<set $prevpass to $passage>><<goto "EI-09Bmap">><</button>><</timed>>
+ 
+ 
+</main>
+<<include "footer">>
+
+:: EI-09Bmap {"position":"513,716","size":"100,100"}
+<<set $passage to "EI-09Bmap">><<set $nextpassage to "EI-10">><<audio ":all" stop>><<set $map2 = setup.generateDirectionsMap([51.51542111414683, -0.0924235648852084],[51.51542111414683, -0.0924235648852084])>>
+<main>
+$map2
+
+<<button "We're here">><<set $prevpass to $passage>><<goto "EI-10">><</button>>
  
  
 </main>
@@ -770,7 +906,7 @@ $map2
 
 
 :: EI-10 {"position":"445,831","size":"100,100"}
-<<set $passage to "EI-10">><<audio ":all" stop>><<audio "EI_10" play>>
+<<set $passage to "EI-10">><<audio ":all" stop>><<audio "EI_10" play>><<set $nextpassage to "EI-11B">>
 <main>
 <div id="mount"></div>
   
@@ -811,11 +947,11 @@ You can invest in St. Lawrence Jewry church, or the Guildhall.<</type>><</replac
  
  
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: EI-11A {"position":"383,951","size":"100,100"}
-<<set $passage to "EI-11A">><<set $nextpassage to "EI-12">><<audio ":all" stop>><<audio "EI_11A" play>><<set $map2a = setup.generateDirectionsMap([51.515451, -0.091948], [51.5166212724641, -0.08924692868342911])>>
+<<set $passage to "EI-11A">><<set $nextpassage to "EI-11ABmap">><<audio ":all" stop>><<audio "EI_11A" play>>
 <main><<set $tally -= 1>>
 <div id="mount"></div>
   
@@ -847,8 +983,7 @@ Your portfolio has taken a slight hit but we can mitigate the damage. <</type>><
 <<timed 87.5s>><<replace "#mount">><<type 50ms>>Your people can definitely weigh in on the strategy. Can you point them out on our way to Moorgate?<</type>><</replace>><</timed>> 
 
 <<timed 92s>><<replace "#mount">>
-$map2a
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-12">><</button>><</replace>><</timed>>
+<<button "Show map">><<set $prevpass to $passage>><<goto "EI-11ABmap">><</button>><</replace>><</timed>>
  
  
 </main>
@@ -856,7 +991,7 @@ $map2a
 
 
 :: EI-11B {"position":"522,951","size":"100,100"}
-<<set $passage to "EI-11B">><<set $nextpassage to "EI-12">><<audio ":all" stop>><<audio "EI_11B" play>><<set $map2a = setup.generateDirectionsMap([51.515451, -0.091948], [51.5166212724641, -0.08924692868342911])>>
+<<set $passage to "EI-11B">><<set $nextpassage to "EI-11ABmap">><<audio ":all" stop>><<audio "EI_11B" play>>
 <main><<set $tally += 1>>
 <div id="mount"></div>
   
@@ -872,8 +1007,24 @@ $map2a
 
 
 <<timed 100s>><<replace "#mount">>
-$map2a
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-12">><</button>><</replace>><</timed>>
+
+<<button "Show map">><<set $prevpass to $passage>><<goto "EI-11ABmap">><</button>><</replace>><</timed>>
+ 
+ 
+</main>
+<<include "footer">>
+
+:: EI-11ABmap {"position":"513,716","size":"100,100"}
+<<set $passage to "EI-09Bmap">><<set $nextpassage to "EI-12">><<audio ":all" stop>><<set $map2 = setup.generateDirectionsMap([51.51542111414683, -0.0924235648852084],[51.51658795546908, -0.08926837298725265])>>
+<main>
+On the right of the Guildhall Art Gallery you’ll see a path. Head down that. 
+When you get to the end take a left. 
+Just before the road curves, you’ll see an opening with a grey header saying “Masons Ave”, head down there. 
+Cross over Coleman Street and continue until you reach the busy road (Moorgate) turn left, you’re heading to #49. You’ll see #51 on the street front in 2022.
+ 
+$map2
+
+<<button "We're here">><<set $prevpass to $passage>><<goto "EI-12">><</button>>
  
  
 </main>
@@ -881,7 +1032,7 @@ $map2a
 
 
 :: EI-12 {"position":"450,1071","size":"100,100"}
-<<set $passage to "EI-12">><<audio ":all" stop>><<audio "EI_12" play>>
+<<set $passage to "EI-12">><<audio ":all" stop>><<audio "EI_12" play>><<set $nextpassage to "EI-13B">>
 <main>
 <div id="mount"></div>
   
@@ -913,11 +1064,11 @@ I thought you'd want to know.<</type>><</replace>><</timed>>
  
  
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: EI-13A {"position":"381,1196","size":"100,100"}
-<<set $passage to "EI-13A">><<set $nextpassage to "EI-14">><<audio ":all" stop>><<audio "EI_13A" play>><<set $map2a = setup.generateDirectionsMap([51.515451, -0.091948], [51.5166212724641, -0.08924692868342911])>>
+<<set $passage to "EI-13A">><<set $nextpassage to "EI-13ABmap">><<audio ":all" stop>><<audio "EI_13A" play>>
 <main><<set $tally -= 1>>
 <div id="mount"></div>
 <<timed 0s>><<replace "#mount">><<type 60ms>>Got it! Sec, sec, sec. Done! 
@@ -941,12 +1092,25 @@ But it's costly, and upgrading your security wasn't great optics.<</type>><</rep
 
 You sneak off, unnoticed! 
 
-I'll meet you at 84, and maybe come up with a good cover story for why you're here?<</type>><</replace>><</timed>> 
+I'll meet you at 84, and maybe come up with a good cover story for why you're here?
+
+<<button "Show map">><<set $prevpass to $passage>><<goto "EI-13ABmap">><</button>><</type>><</replace>><</timed>> 
 
 
-<<timed 85s>> $map2a
 
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-14">><</button>><</timed>>
+
+ 
+</main>
+<<include "footer">>
+
+:: EI-13ABmap {"position":"381,1196","size":"100,100"}
+<<set $passage to "EI-13Amap">><<set $nextpassage to "EI-14">><<audio ":all" stop>><<set $map2a = setup.generateDirectionsMap([51.51658795546908, -0.08926837298725265], [51.51776530061314, -0.08831954783113839])>>
+<main>
+Continue up Moorgate.  When you get to the intersection, cross to the other side of the road because we’re heading up to #84 (currently under construction and labeled Osborne)
+
+$map2a
+
+<<button "We're here">><<set $prevpass to $passage>><<goto "EI-14">><</button>>
  
  
 </main>
@@ -954,7 +1118,7 @@ I'll meet you at 84, and maybe come up with a good cover story for why you're he
 
 
 :: EI-13B {"position":"521,1195","size":"100,100"}
-<<set $passage to "EI-13B">><<set $nextpassage to "EI-14">><<audio ":all" stop>><<audio "EI_13B" play>><<set $map2a = setup.generateDirectionsMap([51.515451, -0.091948], [51.5166212724641, -0.08924692868342911])>>
+<<set $passage to "EI-13B">><<set $nextpassage to "EI-13ABmap">><<audio ":all" stop>><<audio "EI_13B" play>>
 <main><<set $tally += 1>> 
 <div id="mount"></div>
   
@@ -983,11 +1147,12 @@ Press are asking questions.<</type>><</replace>><</timed>>
 
 But can you avoid any security systems while I take a phone call? 
 
-I'll meet you around the corner.<</type>><</replace>><</timed>> 
-/*MAP SHOWING UP Q LOW DOWN THE SCREEN*/
-<<timed 85s>> <<replace "#mount">>$map2a
+I'll meet you around the corner.
 
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-14">><</button>><</replace>><</timed>>
+<<button "Show Map">><<set $prevpass to $passage>><<goto "EI-13ABmap">><</button>><</type>><</replace>><</timed>> 
+
+
+
  
  
 </main>
@@ -995,7 +1160,7 @@ I'll meet you around the corner.<</type>><</replace>><</timed>>
 
 
 :: EI-14 {"position":"452,1330","size":"100,100"}
-<<set $passage to "EI-14">><<audio ":all" stop>><<audio "EI_14" play>>
+<<set $passage to "EI-14">><<set $nextpassage to "EI-15A">><<audio ":all" stop>><<audio "EI_14" play>>
 <main>
 <div id="mount"></div>
   
@@ -1034,11 +1199,11 @@ Telephone communication could become a saturated market in the next few decades.
  
  
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: EI-15A {"position":"393,1458","size":"100,100"}
-<<set $passage to "EI-15A">><<set $nextpassage to "EI-16A">><<audio ":all" stop>><<audio "EI_15A" play>>
+<<set $passage to "EI-15A">><<set $nextpassage to "EI-15Aremove">><<audio ":all" stop>><<audio "EI_15A" play>>
 <main><<set $tally -= 1>>
 <div id="mount"></div>
   
@@ -1055,8 +1220,20 @@ When your floor faced damage from the Blitz, you had to fork out huge amounts of
 This is not good!<</type>><</replace>><</timed>>    
 <<timed 49s>><<replace "#mount">><<type 50ms>>I can mitigate the damage, but I will need to sell some core assets. <</type>><</replace>><</timed>>   
 <<timed 54s>><<replace "#mount">><<type 50ms>>We need to look like we're humbling ourselves for the financial regulators too. So don't take it personally but I need you to remove a word from your trading name.<</type>><</replace>><</timed>> 
-<<timed 62s>>
-<<replace "#mount">>
+<<timed 63s>>
+<<goto "EI-15Aremove">>
+<</timed>>
+ 
+ 
+</main>
+<<include "footer">>
+
+:: EI-15Aremove {"position":"393,1458","size":"100,100"}
+<<set $passage to "EI-15Aremove">><<set $nextpassage to "EI-16A">><<audio ":all" stop>>
+<main><<set $tally -= 1>>
+<div id="mount"></div>
+Remove a word from your trading name.
+
 <div class="namespace">
 <h2 class="tradingname">$stabilityname $opportunityname $strengthname</h2>
 </div>
@@ -1066,8 +1243,6 @@ This is not good!<</type>><</replace>><</timed>>
 <</replace>>
 <<timed 3s>><<set $prevpass to $passage>><<goto "EI-16A">><</timed>>
 <</button>>
-<</replace>>
-<</timed>>
  
  
 </main>
@@ -1075,7 +1250,7 @@ This is not good!<</type>><</replace>><</timed>>
 
 
 :: EI-15B {"position":"519,1455","size":"100,100"}
-<<set $passage to "EI-15B">><<audio ":all" stop>><<audio "EI_15B" play>>
+<<set $passage to "EI-15B">><<set $nextpassage to "EI-15Badd ">><<audio ":all" stop>><<audio "EI_15B" play>>
 <main><<set $tally += 1>>
 <div id="mount"></div>
   
@@ -1096,6 +1271,22 @@ We should signal to the market that you're bouncing back!<</type>><</replace>><<
 <<timed 55.5s>><<replace "#mount">>Let's add another word to your trading name. 
 
 Something do demonstrate expansion.
+<</replace>><</timed>> 
+
+<<timed 60.5s>><<replace "#mount">><<goto "EI-15Badd">>
+<</replace>><</timed>> 
+ 
+ 
+</main>
+<<include "footersimple">>
+
+:: EI-15Badd {"position":"519,1455","size":"100,100"}
+<<set $passage to "EI-15Badd">><<audio ":all" stop>><<audio "EI_15B" play>>
+<main><<set $tally += 1>>
+<div id="mount"></div>
+Let's add another word to your trading name. 
+
+Something do demonstrate expansion.
 <div class="namespace">
 <h2 class="tradingname">$stabilityname $opportunityname $strengthname</h2>
 </div>
@@ -1111,49 +1302,60 @@ Something do demonstrate expansion.
 <<else>>
 	<<replace ".error">>You need to add a name<</replace>>
 <</if>>	
-<</button>><</replace>><</timed>> 
+<</button>>
  
  
 </main>
-<<include "footer">>
+<<include "footersimple">>
 
 
 :: EI-16A {"position":"393,1581","size":"100,100"}
-<<set $passage to "EI-16A">><<set $nextpassage to "EI-17">><<audio ":all" stop>><<audio "EI_16A" play>><<set $map7 = setup.generateDirectionsMap([51.5166212724641, -0.08924692868342911],[51.51680431387839, -0.08286947319846268])>><<set $name to $stabilityname +" "+$opportunityname>>
+<<set $passage to "EI-16A">><<set $nextpassage to "EI-16ABmap">><<audio ":all" stop>><<audio "EI_16A" play>><<set $name to $stabilityname +" "+$opportunityname>>
 <main>
 <h2 class="tradingname">$name</h2>
 <div id="mount"></div>
 
 
 <<timed 0s>><<replace "#mount">><<type 50ms>>Er, it doesn't sound the same, but I'm sure you can come up with a good explanation for the change to keep shareholders happy?<</type>><</replace>><</timed>> 
-<<timed 9s>><<replace "#mount">><<type 50ms>>Maybe rehearse something on our way to the park?<</type>><</replace>><</timed>> 
-<<timed 15s>><<replace "#mount">>$map7
+<<timed 9s>><<replace "#mount">><<type 50ms>>Maybe rehearse something on our way to the park?
 
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-17">><</button>><</replace>> <</timed>>
+<<button "Show Map">><<set $prevpass to $passage>><<goto "EI-16ABmap">><</button>><</type>><</replace>><</timed>> 
  
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: EI-16B {"position":"520,1585","size":"100,100"}
-<<set $passage to "EI-16B">><<set $nextpassage to "EI-17">><<audio ":all" stop>><<audio "EI_16B" play>><<set $map7 = setup.generateDirectionsMap([51.5166212724641, -0.08924692868342911],[51.51680431387839, -0.08286947319846268])>>
+<<set $passage to "EI-16B">><<set $nextpassage to "EI-16ABmap">><<audio ":all" stop>>
 <main>
 <div id="mount"></div>
 <h2 class="tradingname">$name</h2>
 
 <<timed 0s>><<replace "#mount">><<type 50ms>>How does that work for you? I love the four words! In a way they now tell a story!<</type>><</replace>><</timed>>  
-<<timed 6s>><<replace "#mount">><<type 50ms>>I wonder if you could put together a slogan before we reach our next destination<</type>><</replace>><</timed>> 
+<<timed 6s>><<replace "#mount">><<type 50ms>>I wonder if you could put together a slogan before we reach our next destination
 
-<<timed 10s>>$map7
+<<button "Show Map">><<set $prevpass to $passage>><<goto "EI-16ABmap">><</button>><</type>><</replace>><</timed>> 
 
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-17">><</button>> <</timed>>
+ 
+</main>
+<<include "footer">>
+
+:: EI-16ABmap {"position":"520,1585","size":"100,100"}
+<<set $passage to "EI-16ABmap">><<set $nextpassage to "EI-17">><<audio ":all" stop>><<set $map7 = setup.generateDirectionsMap([51.5166212724641, -0.08924692868342911],[51.517629490213665, -0.08637161597557277])>>
+<main>
+Continue further up Moorgate. At the end of the Osborn consternation, you’ll see an alleyway with two red phone boxes. Turn right there. 
+Ahead of you, you’ll see an oval garden. Head in.
+
+$map7
+
+<<button "We're here">><<set $prevpass to $passage>><<goto "EI-17">><</button>>
  
 </main>
 <<include "footer">>
 
 
 :: EI-17 {"position":"455,1716","size":"100,100"}
-<<set $passage to "EI-17">><<audio ":all" stop>><<audio "EI_17" play>>
+<<set $passage to "EI-17">><<audio ":all" stop>><<audio "EI_17" play>><<set $nextpassage to "EI-18A">>
 <main>
 <div id="mount"></div> 
   
@@ -1184,7 +1386,7 @@ How many people walk past in a minute? And how many would that be per year?<</ty
  
  
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: EI-18A {"position":"382,1846","size":"100,100"}
@@ -1249,13 +1451,28 @@ So they pressure the government to ban products with disposable packaging being 
 
 
 :: EI-19 {"position":"457,1976","size":"100,100"}
-<<set $passage to "EI-19">><<audio ":all" stop>><<audio "EI_19" play>><<set $map7 = setup.generateDirectionsMap([51.5166212724641, -0.08924692868342911],[51.51680431387839, -0.08286947319846268])>>
+<<set $passage to "EI-19">><<audio ":all" stop>><<audio "EI_19" play>><<set $nextpassage to "EI-19map">>
 <main>
 <div id="mount"></div>
 
 <<timed 0.1s>><<replace "#mount">><<type 50ms>>There's my office, right over there! I'm going to head up, pre the market opening. I need a coffee before I engage with 2022! <</type>><</replace>><</timed>>  
-<<timed 9s>><<replace "#mount">><<type 50ms>>Keep your eyes peeled, if you see anything you want to invest in. I'll call about your portfolio a bit later.<</type>><</replace>><</timed>> 
-<<timed 21s>><<replace "#mount">>$map7
+<<timed 9s>><<replace "#mount">><<type 50ms>>Keep your eyes peeled, if you see anything you want to invest in. I'll call about your portfolio a bit later.
+
+<<button "Show Map">><<goto "EI-19map">><</button>><</type>><</replace>><</timed>> 
+ 
+ 
+</main>
+<<include "footer">>
+
+:: EI-19map {"position":"457,1976","size":"100,100"}
+<<set $passage to "EI-19">><<audio ":all" stop>><<set $map7 = setup.generateDirectionsMapWP([51.517629490213665, -0.08637161597557277],[51.51668682394757, -0.08294443738785182], "23 Finsbury Circus | 20 Blomfield St | New Broad St")>><<if $tally lt 0>><<set $nextpassage to "EI-20A">><<else>><<set $nextpassage to "EI-20B">><</if>>
+<main>
+Exit the park at the opposite end from which you entered. 
+Head down the road, straight ahead until you come to the T. 
+Take a right onto Bloomfield St, and then a left onto New Broad St. 
+Continue and cross over Old Broad St, then walk through the the archway to find Bath House.
+
+$map7
 
 <<button "We're here">>
 <<if $tally lt 0>>
@@ -1263,7 +1480,7 @@ So they pressure the government to ban products with disposable packaging being 
 <<else>>
 	<<set $prevpass to $passage>><<goto "EI-20B">>
 <</if>>
-<</button>><</replace>><</timed>>
+<</button>>
 
  
  
@@ -1286,7 +1503,7 @@ In many ways your portfolio is like that bath house. At first. It looks so tiny 
 
 Go down and sort yourself out.<</type>><</replace>><</timed>> 
 
-<<timed 38s>><<set $prevpass to $passage>><<goto "end">><</timed>>
+<<timed 38s>><<set $prevpass to $passage>><<goto "EI-21">><</timed>>
  
  
 </main>
@@ -1302,10 +1519,73 @@ Go down and sort yourself out.<</type>><</replace>><</timed>>
 <<timed 12s>><<replace "#mount">><<type 50ms>>I know I put you through a journey and a half, but your portfolio is stronger than when we started.<</type>><</replace>><</timed>>    
 <<timed 18s>><<replace "#mount">><<type 50ms>>The market just opened. You're a rock star. Go down enjoy a bath, or a drink, or dance, or a meal, or a debate, or new book, or a private function, or whatever the property is used for when you meet it.<</type>><</replace>><</timed>>   
 <<timed 33s>><<replace "#mount">><<type 50ms>>It's a dynamic asset. If we could predict the future, this game would be no fun.<</type>><</replace>><</timed>> 
-<<timed 45s>><<set $prevpass to $passage>><<goto "end">><</timed>>
+<<timed 45s>><<set $prevpass to $passage>><<goto "EI-21">><</timed>>
  
  
 </main>
 <<include "footer">>
 
 
+
+:: EI-21 {"position":"520,2113","size":"100,100"}
+<<set $passage to "EI-21">><<set $nextpassage to "EI-22">>
+/* <<audio ":all" stop>><<audio "EI_21" play>> */
+<main>
+<div id="mount"></div>
+Well then, Shreya’s signed off for the day. 
+
+This building you're standing in front of, the Bathhouse ? It has hidden depths.
+
+I’ll leave you here, handing you over to our friends The Cocoa Butter Club, who you’ll meet soon but first wanted to introduce themselves.
+(insert their audio here)
+
+<<button "Let’s go in!">><<set $prevpass to $passage>><<goto "EI-22">><</button>>
+
+</main>
+<<include "footer">>
+
+:: EI-22 {"position":"520,2113","size":"100,100"}
+<<set $passage to "EI-22">><<set $nextpassage to "EI_23A">>
+/* <<audio ":all" stop>><<audio "EI_21" play>> */
+<main>
+<div id="mount"></div>
+To get through the door you will need this key
+
+Image of the key
+
+Start a new adventure: 
+
+Phillis Wheatley Visits London! Read all about it! 
+5 min walk away
+<<button "Show Map">><<goto "EI-23A">><</button>>
+
+
+Daniel Mendoza's Art of Boxing 
+6 min walk away
+<<button "Show Map">><<goto "EI-23B">><</button>>
+
+
+</main>
+<<include "footer">>
+
+:: EI-23A {"position":"520,2113","size":"100,100"}
+<<set $passage to "EI-23A">><<set $nextpassage to "EI_23A">><<set $map = setup.generateDirectionsMap([51.51668682394757, -0.08294443738785182], [51.518041986954934, -0.08709402883647466])>>
+/* <<audio ":all" stop>><<audio "EI_21" play>> */
+<main>
+<h2>Phillis Wheatley Visits London! Read all about it</h2>
+
+$map
+
+</main>
+<<include "footerend">>
+
+:: EI-23B {"position":"520,2113","size":"100,100"}
+<<set $passage to "EI-23A">><<set $nextpassage to "EI_23A">><<set $map = setup.generateDirectionsMap([51.51668682394757, -0.08294443738785182], [51.514537298132346, -0.08078852883647465])>>
+/* <<audio ":all" stop>><<audio "EI_21" play>> */
+<main>
+
+<h2>Daniel Mendoza's Art of Boxing</h2>
+$map
+
+</main>
+<<include "footerend">>
