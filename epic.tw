@@ -559,36 +559,36 @@ setup.checkForRepeats = (array,element) => {
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "EI_05" "https://www.youhavefoundconey.net/tgksnd/EI/EI_05.mp3">>
-<<cacheaudio "EI_06" "https://www.youhavefoundconey.net/tgksnd/EI/EI_06.mp3">>
-<<cacheaudio "EI_07" "https://www.youhavefoundconey.net/tgksnd/EI/EI_07.mp3">>
-<<cacheaudio "EI_08" "https://www.youhavefoundconey.net/tgksnd/EI/EI_08.mp3">>
+<<cacheaudio "EI_05" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_05.mp3">>
+<<cacheaudio "EI_06" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_06.mp3">>
+<<cacheaudio "EI_07" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_07.mp3">>
+<<cacheaudio "EI_08" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_08.mp3">>
 
-<<cacheaudio "EI_09A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_09A.mp3">>
-<<cacheaudio "EI_09B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_09B.mp3">>
-<<cacheaudio "EI_10" "https://www.youhavefoundconey.net/tgksnd/EI/EI_10.mp3">>
+<<cacheaudio "EI_09A" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_09A.mp3">>
+<<cacheaudio "EI_09B" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_09B.mp3">>
+<<cacheaudio "EI_10" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_10.mp3">>
 
-<<cacheaudio "EI_11A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_11A.mp3">>
-<<cacheaudio "EI_11B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_11B.mp3">>
-<<cacheaudio "EI_12" "https://www.youhavefoundconey.net/tgksnd/EI/EI_12.mp3">>
-<<cacheaudio "EI_13B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_13B.mp3">>
-<<cacheaudio "EI_13A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_13A.mp3">>
-<<cacheaudio "EI_13A(1)" "https://www.youhavefoundconey.net/tgksnd/EI/EI_13A(1).mp3">>
-<<cacheaudio "EI_14" "https://www.youhavefoundconey.net/tgksnd/EI/EI_14.mp3">>
-<<cacheaudio "EI_14(1)" "https://www.youhavefoundconey.net/tgksnd/EI/EI_14(1).mp3">>
-<<cacheaudio "EI_15A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_15A.mp3">>
-<<cacheaudio "EI_15B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_15B.mp3">>
-<<cacheaudio "EI_16A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_16A.mp3">>
-<<cacheaudio "EI_16B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_16B.mp3">>
-<<cacheaudio "EI_17" "https://www.youhavefoundconey.net/tgksnd/EI/EI_17.mp3">>
-<<cacheaudio "EI_18A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_18A.mp3">>
-<<cacheaudio "EI_18B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_18B.mp3">>
-<<cacheaudio "EI_19" "https://www.youhavefoundconey.net/tgksnd/EI/EI_19.mp3">>
-<<cacheaudio "EI_20A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_20A.mp3">>
-<<cacheaudio "EI_20B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_20B.mp3">>
-<<cacheaudio "EI_20B(1)" "https://www.youhavefoundconey.net/tgksnd/EI/EI_20B(1).mp3">>
-<<cacheaudio "EI10" "https://www.youhavefoundconey.net/tgksnd/EI/EI10.mp3">>
-<<cacheaudio "cocoa" "https://www.youhavefoundconey.net/tgksnd/EI/cocoabutterclub.mp3">>
+<<cacheaudio "EI_11A" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_11A.mp3">>
+<<cacheaudio "EI_11B" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_11B.mp3">>
+<<cacheaudio "EI_12" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_12.mp3">>
+<<cacheaudio "EI_13B" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_13B.mp3">>
+<<cacheaudio "EI_13A" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_13A.mp3">>
+<<cacheaudio "EI_13A(1)" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_13A(1).mp3">>
+<<cacheaudio "EI_14" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_14.mp3">>
+<<cacheaudio "EI_14(1)" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_14(1).mp3">>
+<<cacheaudio "EI_15A" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_15A.mp3">>
+<<cacheaudio "EI_15B" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_15B.mp3">>
+<<cacheaudio "EI_16A" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_16A.mp3">>
+<<cacheaudio "EI_16B" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_16B.mp3">>
+<<cacheaudio "EI_17" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_17.mp3">>
+<<cacheaudio "EI_18A" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_18A.mp3">>
+<<cacheaudio "EI_18B" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_18B.mp3">>
+<<cacheaudio "EI_19" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_19.mp3">>
+<<cacheaudio "EI_20A" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_20A.mp3">>
+<<cacheaudio "EI_20B" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_20B.mp3">>
+<<cacheaudio "EI_20B(1)" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_20B(1).mp3">>
+<<cacheaudio "EI10" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI10.mp3">>
+<<cacheaudio "cocoa" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/cocoabutterclub.mp3">>
 
 <<waitforaudio>>
 
@@ -638,6 +638,7 @@ You have two options:
 <<set $passage to "landing">><<audio ":all" stop>>
 
 <main>
+<h2>Epic Investment</h2>
 <<button "start">><<set $prevpass to $passage>><<goto "EI-01">><</button>>
 
 </main>
@@ -740,7 +741,7 @@ $mapA
 <<include "footer">>
 
 :: EI-03.2 {"position":"448,476","size":"100,100"}
-<<set $passage to "EI-03.2">><<set $nextpassage to "EI_05">>
+<<set $passage to "EI-03.2">><<set $nextpassage to "EI-05">>
 <<audio ":all" stop>>
 <main>
 Shreya, oh Shreya, I’ve got your client right here. 
