@@ -559,36 +559,45 @@ setup.checkForRepeats = (array,element) => {
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
+<<cacheaudio "EI_01" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_01.mp3">>
+<<cacheaudio "EI_03.1" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI-03.1.mp3">>
+<<cacheaudio "EI_03.2" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI-03.2.mp3">>
 <<cacheaudio "EI_05" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_05.mp3">>
-<<cacheaudio "EI_06" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_06.mp3">>
-<<cacheaudio "EI_07" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_07.mp3">>
-<<cacheaudio "EI_08" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_08.mp3">>
+<<cacheaudio "EI_06" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_06.mp3">>
+<<cacheaudio "EI_07" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_07.mp3">>
+<<cacheaudio "EI_08" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_08.mp3">>
 
-<<cacheaudio "EI_09A" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_09A.mp3">>
-<<cacheaudio "EI_09B" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_09B.mp3">>
-<<cacheaudio "EI_10" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_10.mp3">>
+<<cacheaudio "EI_09A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_09A.mp3">>
+<<cacheaudio "EI_09B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_09B.mp3">>
+<<cacheaudio "EI_10" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_10.mp3">>
 
-<<cacheaudio "EI_11A" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_11A.mp3">>
-<<cacheaudio "EI_11B" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_11B.mp3">>
-<<cacheaudio "EI_12" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_12.mp3">>
-<<cacheaudio "EI_13B" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_13B.mp3">>
-<<cacheaudio "EI_13A" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_13A.mp3">>
-<<cacheaudio "EI_13A(1)" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_13A(1).mp3">>
-<<cacheaudio "EI_14" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_14.mp3">>
-<<cacheaudio "EI_14(1)" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_14(1).mp3">>
-<<cacheaudio "EI_15A" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_15A.mp3">>
-<<cacheaudio "EI_15B" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_15B.mp3">>
-<<cacheaudio "EI_16A" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_16A.mp3">>
-<<cacheaudio "EI_16B" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_16B.mp3">>
-<<cacheaudio "EI_17" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_17.mp3">>
-<<cacheaudio "EI_18A" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_18A.mp3">>
-<<cacheaudio "EI_18B" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_18B.mp3">>
-<<cacheaudio "EI_19" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_19.mp3">>
-<<cacheaudio "EI_20A" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_20A.mp3">>
-<<cacheaudio "EI_20B" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_20B.mp3">>
-<<cacheaudio "EI_20B(1)" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI_20B(1).mp3">>
-<<cacheaudio "EI10" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/EI10.mp3">>
-<<cacheaudio "cocoa" "https://magic.fra1.cdn.digitaloceanspaces.com/EI/cocoabutterclub.mp3">>
+<<cacheaudio "EI_11A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_11A.mp3">>
+<<cacheaudio "EI_11B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_11B.mp3">>
+<<cacheaudio "EI_12" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_12.mp3">>
+<<cacheaudio "EI_13B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_13B.mp3">>
+<<cacheaudio "EI_13A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_13A.mp3">>
+<<cacheaudio "EI_13A(1)" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_13A(1).mp3">>
+<<cacheaudio "EI_14" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_14.mp3">>
+<<cacheaudio "EI_14(1)" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_14(1).mp3">>
+<<cacheaudio "EI_15A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_15A.mp3">>
+<<cacheaudio "EI_15B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_15B.mp3">>
+<<cacheaudio "EI_16A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_16A.mp3">>
+<<cacheaudio "EI_16B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_16B.mp3">>
+<<cacheaudio "EI_17" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_17.mp3">>
+<<cacheaudio "EI_18A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_18A.mp3">>
+<<cacheaudio "EI_18B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_18B.mp3">>
+<<cacheaudio "EI_19" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_19.mp3">>
+<<cacheaudio "EI_20A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_20A.mp3">>
+<<cacheaudio "EI_20B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_20B.mp3">>
+<<cacheaudio "EI_20B(1)" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_20B(1).mp3">>
+<<cacheaudio "EI10" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI10.mp3">>
+<<cacheaudio "cocoa" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/cocoabutterclub.mp3">>
+<<cacheaudio "EI_21" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI-21.mp3">>
+<<cacheaudio "EI_22" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI-22.mp3">>
+<<cacheaudio "perfectgroup" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_perfectgroup.mp3">>
+<<cacheaudio "solo" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_solo.mp3">>
+<<cacheaudio "03" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_03.mp3">>
+
 
 <<waitforaudio>>
 
@@ -657,22 +666,38 @@ $endMap
 
 :: EI-01 {"position":"449,226","size":"100,100"}
 <<set $passage to "EI-01">><<set $nextpassage to "EI-02B">>
-/* <<audio ":all" stop>><<audio "EI-01" play>> */
+<<audio ":all" stop>><<audio "EI_01" play>>
 <main>
 <div id="mount"></div> 
-Felix, keeper of the Maze, and small dragon, here at your service.
+<<timed 2s>><<replace "#mount">>
+  Felix, keeper of the Maze, and small dragon, here at your service.
+  <</replace>>
+<</timed>>
+  <<timed 8s>><<replace "#mount">>
+  I’m opening up the City to you, a City you’ve never experienced before, and its secrets too. 
+  
+  For the City is full of treasure. 
+  <</replace>>
+<</timed>>
+  <<timed 16s>><<replace "#mount">> Not the kind of treasure that glitters in candlelight, but something more precious: stories, and the people who carry them. 
+  <</replace>>
+<</timed>>
 
-I’m opening up the City to you, a City you’ve never experienced before, and its secrets too. For the City is full of treasure. Not the kind of treasure that glitters in candlelight, but something more precious: stories, and the people who carry them. 
+<<timed 24s>><<replace "#mount">>You’re now in Dragontime. Past present and future happening all at once. Two thousand years of messy, pulsing, fiery history since the Romans first called their new home Londinium. Almost as long as I’ve been alive. 
+ <</replace>>
+<</timed>>
 
-You’re now in Dragontime. Past present and future happening all at once. Two thousand years of messy, pulsing, fiery history since the Romans first called their new home Londinium. Almost as long as I’ve been alive. 
-
-You’ve opened up door #2 into the maze of adventures. 
+<<timed 38s>><<replace "#mount">>You’ve opened up door #2 into the maze of adventures. 
 
 You’ll be led presently through the streets of the City by a guide from one of its many pasts or possible futures.
+ <</replace>>
+<</timed>>
 
-If you follow them all the way along their adventure, I’ll be there to meet you near another door, opening into an amazing experience for you, hidden in one of the secret gems of the City.
+<<timed 47s>><<replace "#mount">>If you follow them all the way along their adventure, I’ll be there to meet you near another door, opening into an amazing experience for you, hidden in one of the secret gems of the City.
+ <</replace>>
+<</timed>>
 
-What kind of amazing experience? Well, it’s a surprise. Otherwise this wouldn’t be an adventure.
+<<timed 57s>><<replace "#mount">>What kind of amazing experience? Well, it’s a surprise. Otherwise this wouldn’t be an adventure.
 
 Now - are you playing this adventure solo, or in a group?
  
@@ -680,12 +705,14 @@ Now - are you playing this adventure solo, or in a group?
   <<button "Solo">><<set $prevpass to $passage>><<goto "EI-02A">><</button>>
   
   <<button "Group">><<set $prevpass to $passage>><<goto "EI-02B">><</button>></div>
+   <</replace>>
+<</timed>>
 </main>
 <<include "footer">>
 
 :: EI-02A {"position":"448,476","size":"100,100"}
 <<set $passage to "EI-02A">><<set $nextpassage to "EI-03.1">>
-/* <<audio ":all" stop>><<audio "EI_02A" play>> */
+<<audio ":all" stop>><<audio "EI_02A" play>>
 <main>
 <div id="mount"></div> 
 This adventure is perfect for a solo adventurer!
@@ -697,7 +724,7 @@ This adventure is perfect for a solo adventurer!
 
 :: EI-02B {"position":"448,476","size":"100,100"}
 <<set $passage to "EI-02B">><<set $nextpassage to "EI-03.1">>
-/* <<audio ":all" stop>><<audio "EI_02A" play>> */
+<<audio ":all" stop>><<audio "perfectgroup" play>>
 <main>
 <div id="mount"></div> 
 This is perfect for a group! If you’re playing on separate devices try to press your buttons at the same time to stay in sync. 
@@ -709,21 +736,20 @@ This is perfect for a group! If you’re playing on separate devices try to pres
 <<include "footer">>
 
 :: EI-03.1 {"position":"448,476","size":"100,100"}
-<<set $passage to "EI-03.1">><<set $nextpassage to "EI-03.1map">>
-/* <<audio ":all" stop>><<audio "EI_02A" play>> */
-<main>
+<<set $passage to "EI-03.1">><<set $nextpassage to "EI-03.1map">><<audio ":all" stop>><<audio "EI_03.1" play>><main>
 <div id="mount"></div> 
-You can always use the arrows or the replay button if you need to hear or read anything again. 
+<<timed 0s>><<replace "#mount">>You can always use the arrows or the replay button if you need to hear or read anything again. 
 
 I’ll provide maps when needed.
-
-And the "Take me to the end" button will skip the adventure and show you how to get to the surprise at the end.
+ <</replace>><</timed>>
+<<timed 6s>><<replace "#mount">>And the "Take me to the end" button will skip the adventure and show you how to get to the surprise at the end.
 
 My friend Shreya will be here soon to guide you, connecting from across history. 
 
 Let’s go meet up with them!
 
 <<button "Show map">><<set $prevpass to $passage>><<goto "EI-03.1map">><</button>>
+ <</replace>><</timed>>
  
  
 </main>
@@ -742,13 +768,15 @@ $mapA
 
 :: EI-03.2 {"position":"448,476","size":"100,100"}
 <<set $passage to "EI-03.2">><<set $nextpassage to "EI-05">>
+<<audio ":all" stop>><<audio "EI_03.2" play>>
+
 <<audio ":all" stop>>
 <main>
 Shreya, oh Shreya, I’ve got your client right here. 
 You’re in good hands now. 
 
 
-<<timed 5s>><<set $prevpass to $passage>><<goto "EI-05">><</timed>>
+<<timed 15s>><<set $prevpass to $passage>><<goto "EI-05">><</timed>>
 </main>
 <<include "footer">>
 
@@ -1612,7 +1640,7 @@ Go down and sort yourself out.<</type>><</replace>><</timed>>
 
 :: EI-21 {"position":"520,2113","size":"100,100"}
 <<set $passage to "EI-21">><<set $nextpassage to "EI-21a">>
-/* <<audio ":all" stop>><<audio "EI_21" play>> */
+<<audio ":all" stop>><<audio "EI_21" play>>
 <main><div id="mount"></div>
 Well then, Shreya’s signed off for the day. 
 
@@ -1664,8 +1692,7 @@ And Sadie Sinner the songbird who moves with delicacy, gliding across the room. 
 
 :: EI-22 {"position":"520,2113","size":"100,100"}
 <<set $passage to "EI-22">><<set $nextpassage to "EI-22adventures">>
-<<audio ":all" stop>>
-/* <<audio "EI_21" play>> */
+<<audio ":all" stop>><<audio "EI_22" play>>
 <main>
 <div class="key-wrapper glowing"><img src="./assets/VictorianBathhouse.png"></div>
 <h2 class="endpoint">VICTORIAN BATHHOUSE</h2>
