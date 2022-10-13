@@ -16,6 +16,11 @@ Epic Investment
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
+@font-face {
+  font-family: "Big John";
+  src: url("/assets/fonts/bigjohn.otf") format("opentype");
+}
+
 /* GENERICS */
 html {
   box-sizing: border-box;
@@ -244,6 +249,11 @@ align-items: flex-start
 align-items: flex-end
 }
 
+.nav-wrapper.end > .nav-item{
+justify-content: flex-end;
+}
+
+
 .nav-item{
   margin-block-end: 0.5rem;
   width:100%;
@@ -337,6 +347,76 @@ textarea{
     }
 }
 
+/* KEY  */
+.key-wrapper{
+  width:fit-content;
+  display:flex;
+  justify-content:center;
+  padding: 2rem;
+  margin:auto
+}
+
+
+.key-wrapper > img{
+    width:100px
+}
+
+.adventure-wrapper{
+border: solid 1px white;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.adv-item{
+display: flex;
+   justify-content: space-between;
+    align-items: end;
+}
+
+.adventure-title{
+  margin-block-end:0;
+  text-align:center
+}
+
+.endpoint {
+  font-family: "Big John";
+  font-size:3rem;
+  text-align:center
+}
+
+.glowing {
+  /* width: 100px;
+  height: 100px; */
+  border-radius:50%;
+  background-color: transparent;
+  -webkit-animation: glowing 3s ease-in-out infinite alternate;
+  -moz-animation: glowing 3s ease-in-out infinite alternate;
+  animation: glowing 3s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glowing {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f0f, 0 0 40px #0ff, 0 0 50px #DAA520, 0 0 60px #DAA520, 0 0 70px #DAA520;
+  }
+  to {
+    box-shadow: 0 0 20px #fff, 0 0 30px #FAFAD2, 0 0 40px #FAFAD2, 0 0 50px #FAFAD2, 0 0 60px #FAFAD2, 0 0 70px #FAFAD26, 0 0 80px #FAFAD2;
+  }
+}
+
+@media screen and (min-width: 450px) {
+.choices{
+  display:flex;
+  justify-content: space-between;
+  
+}
+
+.adventure-wrapper{
+  padding: 2rem
+}
+
+}
 
 /* MAP */
 	.map{
@@ -508,6 +588,7 @@ setup.checkForRepeats = (array,element) => {
 <<cacheaudio "EI_20B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_20B.mp3">>
 <<cacheaudio "EI_20B(1)" "https://www.youhavefoundconey.net/tgksnd/EI/EI_20B(1).mp3">>
 <<cacheaudio "EI10" "https://www.youhavefoundconey.net/tgksnd/EI/EI10.mp3">>
+<<cacheaudio "cocoa" "https://www.youhavefoundconey.net/tgksnd/EI/cocoabutterclub.mp3">>
 
 <<waitforaudio>>
 
@@ -535,6 +616,11 @@ setup.checkForRepeats = (array,element) => {
 <div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div>
 </footer>
 
+:: footerlost {"position":"100,600","size":"100,100"}
+<footer><div class="nav-wrapper "><div class="nav-item"><<button "Back">><<goto $prevpass>><</button>></div></div></footer>
+
+:: footerkey
+<footer><div class="nav-wrapper"><div class="nav-item"><<button "<">><<goto $prevpass>><</button>></div><div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div></div><div class="nav-wrapper end"><div class="nav-item"><<button "Key">><<set $prevpass to $passage>><<goto "EI-22">><</button>> </div><div class="nav-item"><<button "Try another adventure">><<set $prevpass to $passage>><<goto "EI-22adventures">><</button>></div></div></footer>
 
 :: lost {"position":"253,41","size":"100,100"}
 <<set $passage to "lost">><<audio ":all" stop>>
@@ -545,7 +631,7 @@ You have two options:
 
 <<button "Take me straight to the end location!">><<goto "end">><</button>>
 </main>
-<<include "footer">>
+<<include "footerlost">>
 
 
 :: landing {"position":"450,54","size":"100,100"}
@@ -558,14 +644,15 @@ You have two options:
 
 
 :: end {"position":"100,625","size":"100,100"}
-<<set $passage to "end">><<set $nextpassage to "end">><<audio ":all" stop>><<set $endMap = setup.generateDirectionsMap([51.51668008618492, -0.0828478914446183],[51.51668008618492, -0.0828478914446183])>>
+<<set $passage to "end">><<set $nextpassage to "end">><<audio ":all" stop>><<set $endMap = setup.generateDirectionsMap([51.51709539592872, -0.09050840193044228],[51.51668008618492, -0.0828478914446183])>>
 <main>
 End location
 
 $endMap
-  
+
+<<button "More Info">><<set $prevpass to $passage>><<goto "EI-21">><</button>>
 </main>
-<<include "footerend">>
+<<include "footerlost">>
 
 :: EI-01 {"position":"449,226","size":"100,100"}
 <<set $passage to "EI-01">><<set $nextpassage to "EI-02B">>
@@ -653,14 +740,14 @@ $mapA
 <<include "footer">>
 
 :: EI-03.2 {"position":"448,476","size":"100,100"}
-<<set $passage to "EI-05">><<set $nextpassage to "EI_05">>
+<<set $passage to "EI-03.2">><<set $nextpassage to "EI_05">>
 <<audio ":all" stop>>
 <main>
 Shreya, oh Shreya, I’ve got your client right here. 
 You’re in good hands now. 
 
 
-<<button "Next">><<set $prevpass to $passage>><<goto "EI-05">><</button>>
+<<timed 5s>><<set $prevpass to $passage>><<goto "EI-05">><</timed>>
 </main>
 <<include "footer">>
 
@@ -743,7 +830,7 @@ If you weren't ready to deal with the unexpected. You'd never make a deal. You w
 
 
 :: EI-07 {"position":"448,476","size":"100,100"}
-<<set $passage to "EI-05">><<set $nextpassage to "EI-08">><<audio ":all" stop>><<audio "EI_07" play>>
+<<set $passage to "EI-07">><<set $nextpassage to "EI-08">><<audio ":all" stop>><<audio "EI_07" play>>
 <main><div id="mount"></div>
 <h2 class="tradingname">$stabilityname $opportunityname $strengthname</h2>
 <<type 50ms>> Sounds perfectly obtuse. Let’s get this show on the road. <</type>>
@@ -784,7 +871,7 @@ There's whispers that they're going to get the Royal Charter in 1450. <</type>><
 <<timed 30s>><<replace "#mount">><<type 50ms>>And you can see the developments they've made to the building. 
 
 Keep that in mind. 1450 is really hot right now. <</type>><</replace>><</timed>>  
-<<timed 39s>><<replace "#mount">><<type 55ms>>I also have an opportunity around the corner coming in at Armourer's Hall.
+<<timed 39s>><<replace "#mount">><<type 55ms>>I also have Armourer's Hall.
 
 Take a look. That's a prime facade. A metallurgical gem in the heart of the city. <</type>><</replace>><</timed>>  
 <<timed 52s>><<replace "#mount">><<type 50ms>>This is another up-and-coming medieval hotspot. 
@@ -835,13 +922,9 @@ But I think our best bet is to turn more of the space into rental homes. <</type
 <<timed 81s>><<replace "#mount">><<type 50ms>>If you can lease 10 more rooms for a decade. I think we can swallow it.
 
 But we need to give the building a more residential feel. I'm not sure how to do that. <</type>><</replace>><</timed>>  
-<<timed 92s>><<replace "#mount">><<type 50ms>>I wonder which buildings around here were designed for residence. You can think about it or have your people think about it on Route. There's another opportunity I need you to see.<</type>><</replace>><</timed>>
+<<timed 92s>><<replace "#mount">><<type 50ms>>I wonder which buildings around here were designed for residence. You can think about it or have your people think about it on Route. There's another opportunity I need you to see.
 
-<<timed 110s>><<replace "#mount">>
-$map1
-
-<<button "We're here">><<set $prevpass to $passage>><<goto "EI-10">><</button>>
-<</replace>><</timed>>
+<<button "Next">><<set $prevpass to $passage>><<goto "EI-10">><</button>><</type>><</replace>><</timed>>
  
  
 </main>
@@ -882,12 +965,11 @@ But we need to pivot the business model for a few decades during the lead 1600s.
 
 You can think about it or have your people think about it en route. 
 
-There's another opportunity I need you to see.<</type>><</replace>><</timed>>
+There's another opportunity I need you to see.
 
-<<timed 104s>>
-$map2
+<<button "Next">><<set $prevpass to $passage>><<goto "EI-10">><</button>><</type>><</replace>><</timed>>
 
-<<button "Show Map">><<set $prevpass to $passage>><<goto "EI-09Bmap">><</button>><</timed>>
+
  
  
 </main>
@@ -1015,7 +1097,7 @@ Your portfolio has taken a slight hit but we can mitigate the damage. <</type>><
 <<include "footer">>
 
 :: EI-11ABmap {"position":"513,716","size":"100,100"}
-<<set $passage to "EI-09Bmap">><<set $nextpassage to "EI-12">><<audio ":all" stop>><<set $map2 = setup.generateDirectionsMap([51.51542111414683, -0.0924235648852084],[51.51658795546908, -0.08926837298725265])>>
+<<set $passage to "EI-11ABmap">><<set $nextpassage to "EI-12">><<audio ":all" stop>><<set $map2 = setup.generateDirectionsMap([51.51542111414683, -0.0924235648852084],[51.51658795546908, -0.08926837298725265])>>
 <main>
 On the right of the Guildhall Art Gallery you’ll see a path. Head down that. 
 When you get to the end take a left. 
@@ -1104,7 +1186,7 @@ I'll meet you at 84, and maybe come up with a good cover story for why you're he
 <<include "footer">>
 
 :: EI-13ABmap {"position":"381,1196","size":"100,100"}
-<<set $passage to "EI-13Amap">><<set $nextpassage to "EI-14">><<audio ":all" stop>><<set $map2a = setup.generateDirectionsMap([51.51658795546908, -0.08926837298725265], [51.51776530061314, -0.08831954783113839])>>
+<<set $passage to "EI-13ABmap">><<set $nextpassage to "EI-14">><<audio ":all" stop>><<set $map2a = setup.generateDirectionsMap([51.51658795546908, -0.08926837298725265], [51.51776530061314, -0.08831954783113839])>>
 <main>
 Continue up Moorgate.  When you get to the intersection, cross to the other side of the road because we’re heading up to #84 (currently under construction and labeled Osborne)
 
@@ -1465,7 +1547,7 @@ So they pressure the government to ban products with disposable packaging being 
 <<include "footer">>
 
 :: EI-19map {"position":"457,1976","size":"100,100"}
-<<set $passage to "EI-19">><<audio ":all" stop>><<set $map7 = setup.generateDirectionsMapWP([51.517629490213665, -0.08637161597557277],[51.51668682394757, -0.08294443738785182], "23 Finsbury Circus | 20 Blomfield St | New Broad St")>><<if $tally lt 0>><<set $nextpassage to "EI-20A">><<else>><<set $nextpassage to "EI-20B">><</if>>
+<<set $passage to "EI-19map">><<audio ":all" stop>><<set $map7 = setup.generateDirectionsMapWP([51.517629490213665, -0.08637161597557277],[51.51668682394757, -0.08294443738785182], "23 Finsbury Circus | 20 Blomfield St | New Broad St")>><<if $tally lt 0>><<set $nextpassage to "EI-20A">><<else>><<set $nextpassage to "EI-20B">><</if>>
 <main>
 Exit the park at the opposite end from which you entered. 
 Head down the road, straight ahead until you come to the T. 
@@ -1489,7 +1571,7 @@ $map7
 
 
 :: EI-20A {"position":"394,2110","size":"100,100"}
-<<set $passage to "EI-20A">><<set $nextpassage to "end">><<audio ":all" stop>><<audio "EI_20A" play>>
+<<set $passage to "EI-20A">><<set $nextpassage to "EI-21">><<audio ":all" stop>><<audio "EI_20A" play>>
 <main>
 <div id="mount"></div>
   
@@ -1528,64 +1610,92 @@ Go down and sort yourself out.<</type>><</replace>><</timed>>
 
 
 :: EI-21 {"position":"520,2113","size":"100,100"}
-<<set $passage to "EI-21">><<set $nextpassage to "EI-22">>
+<<set $passage to "EI-21">><<set $nextpassage to "EI-21a">>
 /* <<audio ":all" stop>><<audio "EI_21" play>> */
-<main>
-<div id="mount"></div>
+<main><div id="mount"></div>
 Well then, Shreya’s signed off for the day. 
 
 This building you're standing in front of, the Bathhouse ? It has hidden depths.
 
 I’ll leave you here, handing you over to our friends The Cocoa Butter Club, who you’ll meet soon but first wanted to introduce themselves.
-(insert their audio here)
+
+<<button "Meet The Cocoa Butter Club">><<set $prevpass to $passage>><<goto "EI-21a">><</button>>
+
+</main>
+<<include "footerkey">>
+
+
+:: EI-21a {"position":"520,2113","size":"100,100"}
+<<set $passage to "EI-21a">><<set $nextpassage to "EI-22">>
+<<audio ":all" stop>><<audio "cocoa" play>>
+<main>
+<div id="mount"></div>
+Welcome to The Cocoa Butter Club. 
+
+The lair of splendour that will take you on a journey.
+
+This is a space that has been carved out by the most brilliant of  talents, the honoured, the creators. This is a physical place, a digital place, a place that will exist in your history books. Books that have skipped our stores for long enough. We are here to rewrite our narrative and you are here to experience them, take them in, tell your friends and pass the story on. It will be your job to keep these stories alive once we have left and we are determined to keep them alive, take our place in the books, put our stamp on the world and create memories that will eternalise our existence 
+
+As you make your way down the winding staircase past the green and gold tinted tiles into the beautifully arched bath house you will find  walls covered in gold leaf, and warm blues, forest greens and clay reds.  A place that holds messages of the past, peoples whispers, peoples laughter and peoples future plans and is now the luxurious home of our story tellers, The cocoa BUtter Clubs tales .
+
+Here at The Cocoa Butter Club we ask you to ponder what has passed and imagine what could be. Take in what you see, consider the unknown and question.  Always question. 
+
+please throw away the tropes, disregard the archetype and let us tell you our story.
+
+
+On your journey you may see Mr Wesley Dykes. He stands at a generous 5"4, dark brown skin glistening under the heat of the lights, his hat cocked to the side oozing confidence, elegance.
+ His braces ready to snap as they hold on tight to his chest feeling his heartbeat. His white shirt resting under his flamboyant pink blazer. 
+
+Or you may come across LAMS, who rises above us standing tall at 5’8, her deep red gown tumbling to her feet that bolden's her dark skin. She is graceful with her hair wrapped high and her glasses resting peacefully framing her face. 
+
+Lasana with strong broad shoulders and leather to compliment the gold accents of their skin. They have a beard that frames their jawline that tells their tale.
+
+Donna Divine's curls bounce as she flicks her wrists to make her fans dance. Big Blue and grey goose feathers that make her brown of her skin pop. She wears Olive green crushed velvet paired with long elegant gloves that woos you as she moves.
+
+And Sadie Sinner the songbird who moves with delicacy, gliding across the room. A tall, dark skinned black woman whose opulence speaks 1000 words. She shines in burnt orange, one shoulder exposed as the silk of their dress kisses their skin. Her hair electric blue that sits high on their shoulders, shern  cheeks glistening in the light as it catches the diamonds 
+
 
 <<button "Let’s go in!">><<set $prevpass to $passage>><<goto "EI-22">><</button>>
 
 </main>
 <<include "footer">>
 
+
 :: EI-22 {"position":"520,2113","size":"100,100"}
-<<set $passage to "EI-22">><<set $nextpassage to "EI_23A">>
-/* <<audio ":all" stop>><<audio "EI_21" play>> */
+<<set $passage to "EI-22">><<set $nextpassage to "EI-22adventures">>
+<<audio ":all" stop>>
+/* <<audio "EI_21" play>> */
 <main>
-<div id="mount"></div>
-To get through the door you will need this key
+<div class="key-wrapper glowing"><img src="./assets/VictorianBathhouse.png"></div>
+<h2 class="endpoint">VICTORIAN BATHHOUSE</h2>
+</main>
+<<include "footerkey">>
 
-Image of the key
+:: EI-22adventures {"position":"520,2113","size":"100,100"}
+<<set $passage to "EI-22adventures">><<set $nextpassage to "EI_23A">>
+<<audio ":all" stop>>
+<main><h3>Start another adventure...</h3><div class="choices"><div class="adventure-wrapper"><h3>Phillis Wheatley Visits London! Read all about it! </h3><div class="adv-item"><div>5 min walk away</div><<button "Show Map">><<set $prevpass to $passage>><<goto "EI-23A">><</button>></div></div>
 
-Start a new adventure: 
+<div class="adventure-wrapper"><h3>Daniel Mendoza's Art of Boxing </h3><div class="adv-item"><div>6 min walk away</div><<button "Show Map">><<set $prevpass to $passage>><<goto "EI-23B">><</button>></div></div>
+</div>
 
-Phillis Wheatley Visits London! Read all about it! 
-5 min walk away
-<<button "Show Map">><<goto "EI-23A">><</button>>
-
-
-Daniel Mendoza's Art of Boxing 
-6 min walk away
-<<button "Show Map">><<goto "EI-23B">><</button>>
 
 
 </main>
-<<include "footer">>
+<<include "footerkey">>
 
 :: EI-23A {"position":"520,2113","size":"100,100"}
 <<set $passage to "EI-23A">><<set $nextpassage to "EI_23A">><<set $map = setup.generateDirectionsMap([51.51668682394757, -0.08294443738785182], [51.518041986954934, -0.08709402883647466])>>
-/* <<audio ":all" stop>><<audio "EI_21" play>> */
-<main>
-<h2>Phillis Wheatley Visits London! Read all about it</h2>
-
+<main><h2>Phillis Wheatley Visits London! Read all about it</h2>
 $map
 
 </main>
-<<include "footerend">>
+<<include "footerkey">>
 
 :: EI-23B {"position":"520,2113","size":"100,100"}
 <<set $passage to "EI-23A">><<set $nextpassage to "EI_23A">><<set $map = setup.generateDirectionsMap([51.51668682394757, -0.08294443738785182], [51.514537298132346, -0.08078852883647465])>>
-/* <<audio ":all" stop>><<audio "EI_21" play>> */
-<main>
-
-<h2>Daniel Mendoza's Art of Boxing</h2>
+<main><h2>Daniel Mendoza's Art of Boxing</h2>
 $map
 
 </main>
-<<include "footerend">>
+<<include "footerkey">>
