@@ -547,7 +547,7 @@ iFrame.classList.add("map")
 iFrame.setAttribute("loading", "lazy")
 iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
-iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=17&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
+iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyCSbMwR1cUMfnIAh0Pxi0F1N16kvDGZXGU&center=${origin[0]},${origin[1]}&zoom=17&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
 const mount = document.getElementById("mapMount")
 // console.log(iFrame)
 return iFrame
@@ -562,7 +562,7 @@ iFrame.classList.add("map")
 iFrame.setAttribute("loading", "lazy")
 iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
-iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&waypoints=${wayp}&mode=walking`)
+iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyCSbMwR1cUMfnIAh0Pxi0F1N16kvDGZXGU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&waypoints=${wayp}&mode=walking`)
 const mount = document.getElementById("mapMount")
 // console.log(iFrame)
 return iFrame
@@ -594,44 +594,44 @@ setup.checkForRepeats = (array,element) => {
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "EI_01" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_01.mp3">>
-<<cacheaudio "EI_03.1" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI-03.1.mp3">>
-<<cacheaudio "EI_03.2" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI-03.2.mp3">>
-<<cacheaudio "EI_05" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_05.mp3">>
-<<cacheaudio "EI_06" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_06.mp3">>
-<<cacheaudio "EI_07" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_07.mp3">>
-<<cacheaudio "EI_08" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_08.mp3">>
+<<cacheaudio "EI_01" "https://www.youhavefoundconey.net/tgksnd/EI/EI_01.mp3">>
+<<cacheaudio "EI_03.1" "https://www.youhavefoundconey.net/tgksnd/EI/EI-03.1.mp3">>
+<<cacheaudio "EI_03.2" "https://www.youhavefoundconey.net/tgksnd/EI/EI-03.2.mp3">>
+<<cacheaudio "EI_05" "https://www.youhavefoundconey.net/tgksnd/EI/EI_05.mp3">>
+<<cacheaudio "EI_06" "https://www.youhavefoundconey.net/tgksnd/EI/EI_06.mp3">>
+<<cacheaudio "EI_07" "https://www.youhavefoundconey.net/tgksnd/EI/EI_07.mp3">>
+<<cacheaudio "EI_08" "https://www.youhavefoundconey.net/tgksnd/EI/EI_08.mp3">>
 
-<<cacheaudio "EI_09A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_09A.mp3">>
-<<cacheaudio "EI_09B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_09B.mp3">>
-<<cacheaudio "EI_10" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_10.mp3">>
+<<cacheaudio "EI_09A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_09A.mp3">>
+<<cacheaudio "EI_09B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_09B.mp3">>
+<<cacheaudio "EI_10" "https://www.youhavefoundconey.net/tgksnd/EI/EI_10.mp3">>
 
-<<cacheaudio "EI_11A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_11A.mp3">>
-<<cacheaudio "EI_11B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_11B.mp3">>
-<<cacheaudio "EI_12" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_12.mp3">>
-<<cacheaudio "EI_13B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_13B.mp3">>
-<<cacheaudio "EI_13A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_13A.mp3">>
-<<cacheaudio "EI_13A(1)" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_13A(1).mp3">>
-<<cacheaudio "EI_14" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_14.mp3">>
-<<cacheaudio "EI_14(1)" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_14(1).mp3">>
-<<cacheaudio "EI_15A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_15A.mp3">>
-<<cacheaudio "EI_15B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_15B.mp3">>
-<<cacheaudio "EI_16A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_16A.mp3">>
-<<cacheaudio "EI_16B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_16B.mp3">>
-<<cacheaudio "EI_17" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_17.mp3">>
-<<cacheaudio "EI_18A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_18A.mp3">>
-<<cacheaudio "EI_18B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_18B.mp3">>
-<<cacheaudio "EI_19" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_19.mp3">>
-<<cacheaudio "EI_20A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_20A.mp3">>
-<<cacheaudio "EI_20B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_20B.mp3">>
-<<cacheaudio "EI_20B(1)" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI_20B(1).mp3">>
-<<cacheaudio "EI10" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI10.mp3">>
-<<cacheaudio "cocoa" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/cocoabutterclub.mp3">>
-<<cacheaudio "EI_21" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI-21.mp3">>
-<<cacheaudio "EI_22" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/EI/EI-22.mp3">>
-<<cacheaudio "perfectgroup" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_perfectgroup.mp3">>
-<<cacheaudio "solo" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_solo.mp3">>
-<<cacheaudio "03" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_03.mp3">>
+<<cacheaudio "EI_11A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_11A.mp3">>
+<<cacheaudio "EI_11B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_11B.mp3">>
+<<cacheaudio "EI_12" "https://www.youhavefoundconey.net/tgksnd/EI/EI_12.mp3">>
+<<cacheaudio "EI_13B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_13B.mp3">>
+<<cacheaudio "EI_13A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_13A.mp3">>
+<<cacheaudio "EI_13A(1)" "https://www.youhavefoundconey.net/tgksnd/EI/EI_13A(1).mp3">>
+<<cacheaudio "EI_14" "https://www.youhavefoundconey.net/tgksnd/EI/EI_14.mp3">>
+<<cacheaudio "EI_14(1)" "https://www.youhavefoundconey.net/tgksnd/EI/EI_14(1).mp3">>
+<<cacheaudio "EI_15A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_15A.mp3">>
+<<cacheaudio "EI_15B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_15B.mp3">>
+<<cacheaudio "EI_16A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_16A.mp3">>
+<<cacheaudio "EI_16B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_16B.mp3">>
+<<cacheaudio "EI_17" "https://www.youhavefoundconey.net/tgksnd/EI/EI_17.mp3">>
+<<cacheaudio "EI_18A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_18A.mp3">>
+<<cacheaudio "EI_18B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_18B.mp3">>
+<<cacheaudio "EI_19" "https://www.youhavefoundconey.net/tgksnd/EI/EI_19.mp3">>
+<<cacheaudio "EI_20A" "https://www.youhavefoundconey.net/tgksnd/EI/EI_20A.mp3">>
+<<cacheaudio "EI_20B" "https://www.youhavefoundconey.net/tgksnd/EI/EI_20B.mp3">>
+<<cacheaudio "EI_20B(1)" "https://www.youhavefoundconey.net/tgksnd/EI/EI_20B(1).mp3">>
+<<cacheaudio "EI10" "https://www.youhavefoundconey.net/tgksnd/EI/EI10.mp3">>
+<<cacheaudio "cocoa" "https://www.youhavefoundconey.net/tgksnd/EI/cocoabutterclub.mp3">>
+<<cacheaudio "EI_21" "https://www.youhavefoundconey.net/tgksnd/EI/EI-21.mp3">>
+<<cacheaudio "EI_22" "https://www.youhavefoundconey.net/tgksnd/EI/EI-22.mp3">>
+<<cacheaudio "perfectgroup" "https://www.youhavefoundconey.net/tgksnd/MC/XX_02_perfectgroup.mp3">>
+<<cacheaudio "solo" "https://www.youhavefoundconey.net/tgksnd/MC/XX_02_solo.mp3">>
+<<cacheaudio "03" "https://www.youhavefoundconey.net/tgksnd/MC/XX_03.mp3">>
 
 
 <<waitforaudio>>
@@ -900,7 +900,7 @@ If you weren't ready to deal with the unexpected. You'd never make a deal. You w
  
  
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: EI-07 {"position":"450,475","size":"100,100"}
@@ -1040,8 +1040,10 @@ There's another opportunity I need you to see.
 :: EI-09Bmap {"position":"675,725","size":"100,100"}
 <<set $passage to "EI-09Bmap">><<set $nextpassage to "EI-10">><<audio ":all" stop>><<set $map2 = setup.generateDirectionsMap([51.516661, -0.089730],[51.515177, -0.092130])>>
 <main>
-Head back down Coleman St the was you came from. When you get to the main road take a Left on Gresham St.
-On the Right you will come to a building that is covered. Take a Right on the path just before it. Leading you into an open courtyard.
+Head back down Coleman St the was you came from.
+When you get to the main road take a Left on Gresham St.
+On the Right you will come to a building that is covered. 
+Take a Right on the path just before it. Walk up to barriers and get a good view of the buildings. 
 $map2
 
 <<button "We're here">><<set $prevpass to $passage>><<goto "EI-10">><</button>>
@@ -1162,10 +1164,9 @@ Your portfolio has taken a slight hit but we can mitigate the damage. <</type>><
 
 
 :: EI-11ABmap {"position":"650,950","size":"100,100"}
-<<set $passage to "EI-11ABmap">><<set $nextpassage to "EI-12">><<audio ":all" stop>><<set $map2 = setup.generateDirectionsMap([51.51542111414683, -0.0924235648852084],[51.51658795546908, -0.08926837298725265])>>
+<<set $passage to "EI-11ABmap">><<set $nextpassage to "EI-12">><<audio ":all" stop>><<set $map2 = setup.generateDirectionsMapWP([51.515177, -0.092130],[51.51658795546908, -0.08926837298725265], "10-12 Basinghall St, London EC2V 5BQ | 12 Masons Ave, London EC2V 5BT")>>
 <main>
-On the right of the Guildhall Art Gallery you’ll see a path. Head down that. 
-When you get to the end take a left. 
+Turn around, take a left and a left again around Guildhall, onto Basinghall Street.
 Just before the road curves, you’ll see an opening with a grey header saying “Masons Ave”, head down there. 
 Cross over Coleman Street and continue until you reach the main road (Moorgate) turn left, you’re heading to #49. You’ll see #51 on the street front in 2022.
  
@@ -1377,7 +1378,7 @@ This is not good!<</type>><</replace>><</timed>>
 <<include "footer">>
 
 
-:: EI-15Aremove {"position":"393,1458","size":"100,100"}
+:: EI-15Aremove {"position":"275,1450","size":"100,100"}
 <<set $passage to "EI-15Aremove">><<set $nextpassage to "EI-16A">><<audio ":all" stop>>
 <main><<set $tally -= 1>>
 <div id="mount"></div>
@@ -1395,10 +1396,10 @@ Remove a word from your trading name.
  
  
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
-:: EI-15B {"position":"519,1455","size":"100,100"}
+:: EI-15B {"position":"525,1450","size":"100,100"}
 <<set $passage to "EI-15B">><<set $nextpassage to "EI-15Badd ">><<audio ":all" stop>><<audio "EI_15B" play>>
 <main><<set $tally += 1>>
 <div id="mount"></div>
@@ -1430,8 +1431,8 @@ Something do demonstrate expansion.
 <<include "footersimple">>
 
 
-:: EI-15Badd {"position":"519,1455","size":"100,100"}
-<<set $passage to "EI-15Badd">><<audio ":all" stop>><<audio "EI_15B" play>>
+:: EI-15Badd {"position":"650,1450","size":"100,100"}
+<<set $passage to "EI-15Badd">><<audio ":all" stop>>
 <main><<set $tally += 1>>
 <div id="mount"></div>
 Let's add another word to your trading name. 
@@ -1456,7 +1457,7 @@ Something do demonstrate expansion.
  
  
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: EI-16A {"position":"393,1581","size":"100,100"}
@@ -1640,7 +1641,7 @@ $map7
 <<include "footer">>
 
 
-:: EI-20A {"position":"394,2110","size":"100,100"}
+:: EI-20A {"position":"400,2100","size":"100,100"}
 <<set $passage to "EI-20A">><<set $nextpassage to "EI-21">><<audio ":all" stop>><<audio "EI_20A" play>>
 <main>
 <div id="mount"></div>
@@ -1694,7 +1695,7 @@ I’ll leave you here, handing you over to our friends The Cocoa Butter Club, wh
 <<include "footerkey">>
 
 
-:: EI-21a {"position":"525,2225","size":"100,100"}
+:: EI-21a {"position":"525,2250","size":"100,100"}
 <<set $passage to "EI-21a">><<set $nextpassage to "EI-22">>
 <<audio ":all" stop>><<audio "cocoa" play>>
 <main>
@@ -1740,7 +1741,7 @@ And Sadie Sinner the songbird who moves with delicacy, gliding across the room. 
 <<include "footerkey">>
 
 
-:: EI-22adventures {"position":"775,2000","size":"100,100"}
+:: EI-22adventures {"position":"450,2500","size":"100,100"}
 <<set $passage to "EI-22adventures">><<set $nextpassage to "EI_23A">>
 <<audio ":all" stop>>
 <main><h3>Start another adventure...</h3><div class="choices"><div class="adventure-wrapper"><h3>Phillis Wheatley Visits London! Read all about it! </h3><div class="adv-item"><div>5 min walk away</div><<button "Show Map">><<set $prevpass to $passage>><<goto "EI-23A">><</button>></div></div>
@@ -1754,7 +1755,7 @@ And Sadie Sinner the songbird who moves with delicacy, gliding across the room. 
 <<include "footerkey">>
 
 
-:: EI-23A {"position":"650,2225","size":"100,100"}
+:: EI-23A {"position":"375,2625","size":"100,100"}
 <<set $passage to "EI-23A">><<set $nextpassage to "EI_23A">><<set $map = setup.generateDirectionsMap([51.51668682394757, -0.08294443738785182], [51.518041986954934, -0.08709402883647466])>>
 <main><h2>Phillis Wheatley Visits London! Read all about it</h2>
 $map
@@ -1763,7 +1764,7 @@ $map
 <<include "footerkey">>
 
 
-:: EI-23B {"position":"750,2125","size":"100,100"}
+:: EI-23B {"position":"525,2625","size":"100,100"}
 <<set $passage to "EI-23A">><<set $nextpassage to "EI_23A">><<set $map = setup.generateDirectionsMap([51.51668682394757, -0.08294443738785182], [51.514537298132346, -0.08078852883647465])>>
 <main><h2>Daniel Mendoza's Art of Boxing</h2>
 $map
